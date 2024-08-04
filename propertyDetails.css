@@ -192,8 +192,8 @@ overflow-y: auto;
 }
 
 .property-details-heading-div h1 {
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: #434343;
 }
 
@@ -280,6 +280,10 @@ margin-left: 10px;
     border-radius: 50%;
     width: 2.5rem !important;
     height: 2.5rem !important;
+}
+
+.carousel-control-prev {
+    left: 10px !important;
 }
 
 .carousel-control-prev-icon {
@@ -847,6 +851,7 @@ border-radius: 10px;
 
 .loan-container-content {
 align-items: flex-end;
+padding: 3rem;
 }
 
 .loan-container-content h2 {
@@ -2199,6 +2204,12 @@ align-items: flex-start;
         margin-bottom: 25px;
     }
 
+    .brochure-container .view-btn {
+        left: 35%;
+        padding: 7px 15px;
+        font-size: 0.9rem;
+    }
+
 }
 
 @media screen and (min-width: 767px) {
@@ -2343,6 +2354,15 @@ align-items: flex-start;
         width: 300px;
     }
 
+}
+
+@media screen and (max-width: 420px) {
+    .loan-container .loan-container-content {
+        padding: 20px;
+    }
+    .brochure-container .view-btn {
+        left: 30%;
+    }
 }
 
 @media screen and (max-width: 405px) {
