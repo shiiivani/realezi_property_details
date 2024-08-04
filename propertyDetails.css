@@ -2253,9 +2253,10 @@ align-items: flex-start;
         flex-wrap: wrap;
     }
     .image-video-container {
-        width: 180px;
+        width: calc(100%/2.1);
         height: 140px;
         margin-bottom: 15px;
+        margin-right: 5px;
     }
 }
 
@@ -2325,6 +2326,9 @@ align-items: flex-start;
     }
     .property-overview-content .d-flex:last-child button{
         margin-bottom: 15px;
+    }
+    .image-video-container {
+        width: calc(100%/1);
     }
 }
 
