@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/propertyDetails.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Realezi</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar p-0">
+        <div class="container">
+            <div id="left-nav-items" class="d-flex align-items-center ">
+                <div class="navbar-brand px-4 br-light ">
+                    <a href="#">
+                        <img src="./images/logo.png" alt="" width="100" class="d-inline-block align-text-top">
+                    </a>
+                </div>
+
+                <div id="location-dropdown" class="dropdown pe-4 br-light d-flex justify-content-lg-start"
+                    style="min-height: 49px;">
+                    <button class="btn btn-outline-light " type="button" id="locationDropdownBtn"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="location-selection">
+                            Location
+                        </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+                        <li><a class="dropdown-item dropdown-location" href="#">Location 1</a></li>
+                        <li><a class="dropdown-item dropdown-location" href="#">Location 2</a></li>
+                        <li><a class="dropdown-item dropdown-location" href="#">Location 3</a></li>
+                    </ul>
+                </div>
+                <!-- Search Box -->
+                <div id="nav-search-box-div" style="min-height: 49px;" class="px-4 br-light d-flex align-items-center ">
+                    <div class="input-group bg-white rounded-2 flex-nowrap" style="height: fit-content;">
+                        <div class="d-flex align-items-center px-2 bg-transparent ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="Search" clip-path="url(#clip0_1_282)">
+                                    <path id="Vector"
+                                        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+                                        fill="#434343" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_282">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <input id="nav-search" type="text" class="form-control border-0 "
+                            placeholder="Search locality, landmark, building or project" aria-label="Search"
+                            aria-describedby="button-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div id="right-nav-items" class="d-flex gap-4">
+                <div id="list-property">
+                    <button class="btn btn-list-property py-1 px-2">List Property</button>
+                </div>
+                <button id="hamBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarHam" aria-controls="navbarHam" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <img src="./images/Menu.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse border-top border-1 border-secondary" id="navbarHam">
+                <ul class="navbar-nav  d-flex align-items-end">
+                    <li class="nav-item  me-4">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <hr class="border-bottom border-1 border-secondary h-100 w-100 my-0" />
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <hr class="border-bottom border-1 border-secondary h-100 w-100 my-0" />
+                    <li class="nav-item me-4">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="property-details-heading-div d-flex my-5">
+            <div class="property-details-heading-left">
+                <h1>6 BHK Independent Building Floor</h1>
+                <p>Suri Buiildtech</p>
+                <div class="d-flex">
+                    <button>Managed by Realezi</button>
+                    <button class="d-flex align-items-center">
+                        <img src="./images/star.png" width="20px" alt="Star icon">
+                        <p>4.2</p>
+                    </button>
+                </div>
+            </div>
+            <div class="property-details-heading-right">
+                <div class="d-flex align-items-center">
+                    <button class="d-flex align-items-center">
+                        <img src="./images/Flag.png" width="25px" alt="Flag icon">
+                        <p>Report</p>
+                    </button>
+                    <img src="./images/Share.png" width="30px" alt="Share icon" class="share-icon">
+                    <img src="./images/send.png" width="30px" alt="Send icon">
+                </div>
+                <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
+            </div>
+        </div>
+
+        <div class="disclamer-modal-container active">
+            <div class="disclamer-container">
+                <p>Realezi only acts as a medium for advertisement / information content. We do not in any way
+                    facilitate and cannot be deemed to be facilitating any transaction between seller / developer and
+                    the visitors / users of our website. The details displayed on our website are for information
+                    purposes only. Information regarding real estate projects (including the property / project detail,
+                    listings, floor area, location, price etc.) are either third party content or sourced from public
+                    sources. Nothing contained herein shall be deemed to constitute any sort of legal advise,
+                    solicitation, marketing, offer of sale, invitation to offer, invitation to acquire etc. by
+                    Housing.com. Users of this website are hereby advised to exercise due diligence and to independently
+                    validate and verify all information about any property / project before deciding to purchase the
+                    same or taking any other action. Information on this website does not guarantee that the developer /
+                    project is registered under the Real Estate (Regulation and Development) Act, 2016 or is compliant
+                    with the same, and the same should also be verified independently.</p>
+                <button class="blue-btn" id="close-disclamer">Got it!</button>
+            </div>
+        </div>
+
+        <div class="property-images-div mb-5">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active w-100">
+                        <div class="carousal-item-inner grid-container">
+                            <div class="carousel-item-left">
+                                <div class="carousel-item-left-top"><img src="./images/property-image-1.jpg"
+                                        alt="Bedroom">
+                                </div>
+                                <div class="carousel-item-left-bottom"><img src="./images/property-image-1.jpg"
+                                        alt="Bedroom"></div>
+                            </div>
+                            <div class="carousel-item-right">
+                                <img src="./images/property-image-1.jpg" alt="Bedroom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousal-item-inner grid-container">
+                            <div class="carousel-item-left">
+                                <div class="carousel-item-left-top"><img src="./images/property-image-2.jpg"
+                                        alt="Bedroom">
+                                </div>
+                                <div class="carousel-item-left-bottom"><img src="./images/property-image-2.jpg"
+                                        alt="Bedroom"></div>
+                            </div>
+                            <div class="carousel-item-right">
+                                <img src="./images/property-image-2.jpg" alt="Bedroom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousal-item-inner grid-container">
+                            <div class="carousel-item-left">
+                                <div class="carousel-item-left-top"><img src="./images/property-image-3.jpg"
+                                        alt="Bedroom">
+                                </div>
+                                <div class="carousel-item-left-bottom"><img src="./images/property-image-3.jpg"
+                                        alt="Bedroom"></div>
+                            </div>
+                            <div class="carousel-item-right">
+                                <img src="./images/property-image-3.jpg" alt="Bedroom">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-modal-container" id="imageModal">
+            <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal">
+            <div class="image-modal">
+                <div class="image-modal-header mb-4">
+                    <div class="image-modal-header-inner d-flex justify-content-between">
+                        <div class="image-modal-header-inner-left d-flex">
+                            <h4>6 BHK Independent Building Floor</h4>
+                            <button class="d-flex align-items-center">
+                                <img src="./images/Share.png" width="20px" alt="Share icon">
+                                <p>Share</p>
+                            </button>
+                            <button class="d-flex align-items-center">
+                                <img src="./images/send.png" width="20px" alt="Save icon">
+                                <p>Save</p>
+                            </button>
+                        </div>
+                        <div class="image-modal-header-inner-right d-flex">
+                            <button class="d-flex align-items-center">
+                                <img src="./images/phone-blue.png" width="20px" alt="Phone Icon">
+                                <p>Contact Seller</p>
+                            </button>
+                            <button class="d-flex align-items-center">
+                                <p>Schedule Visit</p>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
+                    <button class="view-brochure">View Brochure</button>
+                </div>
+                <div id="carouselExampleCaptions2" class="carousel slide">
+                    <div class="carousel-progress">
+                        <div class="carousel-progress-bar"></div>
+                    </div>
+                    <div class="carousel-counter">
+                        <span id="currentSlide" class="current-slide">1</span> / <span id="totalSlides"
+                            class="total-slides">3</span>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/property-image-1.jpg" class="d-block w-90" alt="..." id="modalImage">
+                            <p>Kitchen</p>
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..." id="modalImage">
+                            <p>Bedroom</p>
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..." id="modalImage">
+                            <p>Bathroom</p>
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="property-details-div d-flex justify-content-between align-items-start w-100">
+            <div class="property-details-div-left w-80">
+                <div class="categories-container">
+                    <div class="categories-slider d-flex align-items-center">
+                        <p>Overview</p>
+                        <p>About Property</p>
+                        <p>Floor Plan</p>
+                        <p>Explore Nearby</p>
+                        <p>Amenities</p>
+                        <p>Inventory Pool</p>
+                        <p>Brochure</p>
+                        <p>Resources</p>
+                        <p>Compare properties</p>
+                        <p>Q&A</p>
+                    </div>
+                    <button class="nav-button" id="slideRightBtn">
+                        <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon">
+                    </button>
+                </div>
+
+                <div class="property-overview-container my-5">
+                    <div
+                        class="property-overview-header-container d-flex align-items-center justify-content-between my-4">
+                        <h4>ABC Property Overview</h4>
+                        <div class="property-overview-btn-container d-flex">
+                            <button class="d-flex align-items-center">
+                                <img src="./images/Share.png" width="25px" alt="Share Icon">
+                                <p>Share</p>
+                            </button>
+                            <button class=" d-flex align-items-center">
+                                <img src="./images/send.png" width="27px" alt="Share Icon">
+                                <p>Save</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="property-overview-content">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div>
+                                <div class="upper-row">
+                                    <h6>Project Area</h6>
+                                    <p>1.4 Acres</p>
+                                </div>
+                                <div class="lower-row">
+                                    <h6>RERA Numer</h6>
+                                    <p>S7000099<br>
+                                        <span style="color: #EC7100">Check status</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="upper-row">
+                                    <h6>Price</h6>
+                                    <p>2Cr @ 2100 sq.ft</p>
+                                </div>
+                                <div class="lower-row">
+                                    <h6>Configuration</h6>
+                                    <p>6BHK</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="upper-row">
+                                    <h6>Project Size</h6>
+                                    <p>16 Units</p>
+                                </div>
+                                <div class="lower-row">
+                                    <h6>Possession Date</h6>
+                                    <p>Mar, 2028</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="upper-row">
+                                    <h6>Size</h6>
+                                    <p>2100 sq.ft</p>
+                                </div>
+                                <div class="lower-row">
+                                    <h6>Launch Date</h6>
+                                    <p>Jan, 2026</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="upper-row">
+                                    <h6>Address</h6>
+                                    <p>Flats for Sale in<br> Sector 24 Rohin</p>
+                                </div>
+                                <div class="lower-row">
+                                    <h6>Property Age</h6>
+                                    <p>10+ years</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="grey-btn open-brochure-modal-container d-flex align-items-center">
+                                <img src="./images/download.png" width="20px" alt="Download Icon">
+                                <p>Download Brochure</p>
+                            </button>
+                            <button class="blue-btn">
+                                <p style="color: #ffffff">Ask for details</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-property-container  py-3 my-5">
+                    <h4>About Property</h4>
+                    <div class="about-property-content-container my-3">
+                        <div class="about-property-content-inner m-3" id="aboutPropertyContent">
+                            <div class="about-property-content">
+                                <p>ARCUS COURTAYD-II” is an exclusive project by Sheth Infraspace, featuring luxurious
+                                    5BHK
+                                    individual villas. Designed with meticulous attention to detail, these villas boast
+                                    four
+                                    sides of open space, providing ample natural light and ventilation. ARCUS
+                                    COURTAYD-II
+                                    ensures a coveted lifestyle, offering both comfort and convenience in a serene
+                                    environment.
+                                    One of the standout features of this project is the unique concept of a “COURTYARD”
+                                    within each villa, which is open to the sky. This innovative design element creates
+                                    a
+                                    private, tranquil space that brings a touch of nature into the home, perfect for
+                                    relaxation or entertaining guests.</p>
+                            </div>
+                        </div>
+                        <button class="d-flex align-items-center m-auto" id="show-more-property-details">
+                            <p class="mx-1">Show more about project</p>
+                            <img src="./images/down-arrow-blue.png" width="20px" alt="Down arrow icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="property-floor-plan-container  py-3 my-5">
+                    <h4>ABC Property Floor Plan</h4>
+                    <div class="floor-plan-container my-4">
+                        <div class="floor-plan-properties-categories-container d-flex justify-content-start">
+                            <div class="floor-plan-properties-categories active" data-target="1BHK-floor-plan">
+                                <p>1BHK<br>Apartment</p>
+                                <p>1.75Cr</p>
+                            </div>
+                            <div class="floor-plan-properties-categories" data-target="2BHK-floor-plan">
+                                <p>2BHK<br>Apartment</p>
+                                <p>2.3Cr - 2.38Cr </p>
+                            </div>
+                            <div class="floor-plan-properties-categories" data-target="3BHK-floor-plan">
+                                <p>3BHK<br>Apartment</p>
+                                <p>4.52Cr - 4.61Cr </p>
+                            </div>
+                        </div>
+                        <div class="3BHK-floor-plan floor-plan mt-5" id="3BHK-floor-plan">
+                            <div class="square-foot-container d-flex justify-content-start">
+                                <p class="active" data-target="3BHK-897">897 SQ.FT</p>
+                                <p data-target="3BHK-1323">1323 SQ.FT</p>
+                            </div>
+                            <div class="square-foot-container-property active" id="3BHK-897">
+                                <p class="property-price mt-4">₹ 69.0 L</p>
+                                <div class="floor-plan-image-container">
+                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                                </div>
+                                <div class="floor-plan-info d-flex align-items-center justify-content-start">
+                                    <div>
+                                        <p>Carpet Area:</p>
+                                        <p>897 sq.ft</p>
+                                    </div>
+                                    <div>
+                                        <p>Rera IDP-</p>
+                                        <p>BPL-21-3015</p>
+                                    </div>
+                                    <div>
+                                        <p>Possession Status</p>
+                                        <p>Mar, 2026</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="square-foot-container-property" id="3BHK-1323">
+                                <p class="property-price mt-4">₹ 99.0 L</p>
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                                <div class="floor-plan-info d-flex align-items-center justify-content-start">
+                                    <div>
+                                        <p>Carpet Area:</p>
+                                        <p>1323 sq.ft</p>
+                                    </div>
+                                    <div>
+                                        <p>Rera IDP-</p>
+                                        <p>BPL-21-3015</p>
+                                    </div>
+                                    <div>
+                                        <p>Possession Status</p>
+                                        <p>Mar, 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="2BHK-floor-plan floor-plan mt-5" id="2BHK-floor-plan">
+                            <div class="square-foot-container d-flex justify-content-start">
+                                <p class="active">897 SQ.FT</p>
+                            </div>
+                            <p class="property-price mt-4">₹ 59.0 L</p>
+                            <div class="floor-plan-image-container">
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                            </div>
+                            <div class="floor-plan-info d-flex align-items-center justify-content-start">
+                                <div>
+                                    <p>Carpet Area:</p>
+                                    <p>497 sq.ft</p>
+                                </div>
+                                <div>
+                                    <p>Rera IDP-</p>
+                                    <p>BPL-21-3015</p>
+                                </div>
+                                <div>
+                                    <p>Possession Status</p>
+                                    <p>Mar, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="1BHK-floor-plan floor-plan active mt-5" id="1BHK-floor-plan">
+                            <div class="square-foot-container d-flex justify-content-start">
+                                <p class="active">297 SQ.FT</p>
+                            </div>
+                            <p class="property-price mt-4">₹ 29.0 L</p>
+                            <div class="floor-plan-image-container">
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                            </div>
+                            <div class="floor-plan-info d-flex align-items-center justify-content-start">
+                                <div>
+                                    <p>Carpet Area:</p>
+                                    <p>297 sq.ft</p>
+                                </div>
+                                <div>
+                                    <p>Rera IDP-</p>
+                                    <p>BPL-21-3015</p>
+                                </div>
+                                <div>
+                                    <p>Possession Status</p>
+                                    <p>Mar, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explore-nearby-container py-3 my-5">
+                    <h4>Explore Nearby</h4>
+                    <div class="explore-nearby-inner-container my-4">
+                        <div class="explore-nearby-container-slider d-flex" id="locationSlider">
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">School</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">School</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Hospital</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>Hospital</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Hospital</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>Hospital</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Restaurant</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Restaurant</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">School</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">School</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nav-button" id="slideRightLocations">
+                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="property-photos-video-container p-4 my-5">
+                    <h4>Photos and videos</h4>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <div class="image-video-container">
+                            <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
+                                Your browser does not support the video tag.
+                            </video>
+                            <img src="./images/play-button.png" width="50px" class="play-btn" alt="Youtube Play button">
+                        </div>
+                        <div class="image-video-container">
+                            <img src="./images/property-image-1.jpg" class="property-image clickable-image"
+                                alt="Property Image" id="imageVidemodalImageVideososModal">
+                        </div>
+                        <div class="image-video-container">
+                            <img src="./images/property-image-2.jpg" class="property-image clickable-image"
+                                alt="Property Image" id="modalImageVideos">
+                        </div>
+                        <div class="image-video-container">
+                            <img src="./images/property-image-3.jpg" class="property-image clickable-image"
+                                alt="Property Image" id="modalImageVideos">
+                            <p class="assets-numbers">+15</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-modal-container image-video-modal-container" id="imageVideoModal">
+                    <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal">
+                    <div class="image-modal">
+                        <div class="image-modal-header mb-4">
+                            <div class="image-modal-header-inner d-flex justify-content-between">
+                                <div class="d-flex image-modal-header-inner-left">
+                                    <h4>6 BHK Independent Building Floor</h4>
+                                    <button class="d-flex align-items-center">
+                                        <img src="./images/Share.png" width="20px" alt="Share icon">
+                                        <p>Share</p>
+                                    </button>
+                                    <button class="d-flex align-items-center">
+                                        <img src="./images/send.png" width="20px" alt="Save icon">
+                                        <p>Save</p>
+                                    </button>
+                                </div>
+                                <div class="image-modal-header-inner-right d-flex">
+                                    <button class="d-flex align-items-center">
+                                        <img src="./images/phone-blue.png" width="20px" alt="Phone Icon">
+                                        <p>Contact Seller</p>
+                                    </button>
+                                    <button class="d-flex align-items-center">
+                                        <p>Schedule Visit</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
+                            <button class="view-brochure">View Brochure</button>
+                        </div>
+                        <div id="carouselExampleCaptions" class="carousel slide">
+                            <div class="carousel-progress">
+                                <div class="carousel-progress-bar"></div>
+                            </div>
+                            <div class="carousel-counter">
+                                <span id="currentSlide" class="current-slide">1</span> / <span id="totalSlides"
+                                    class="total-slides">3</span>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <video controls src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p>Kitchen</p>
+                                    <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..."
+                                        id="modalImage">
+                                    <p>Bedroom</p>
+                                    <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..."
+                                        id="modalImage">
+                                    <p>Bathroom</p>
+                                    <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="amenities-container py-3 my-5">
+                    <h4>ABC Property Amenities</h4>
+                    <div class="amenities-container-inner my-4">
+                        <div class="amenities-container-inner-slider d-flex justify-content-start p-1"
+                            id="amenitiesSlider">
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Directions car.png" alt="">
+                                    <p>Parking: <span>2 Open</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Chair.png" alt="">
+                                    <p>Furnishing: <span>Semi</span></p>
+                                </div>
+                            </div>
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Pets.png" alt="">
+                                    <p>Pet Friendly: <span>Yes</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Pool.png" alt="">
+                                    <p>Swimming: <span>Yes</span></p>
+                                </div>
+                            </div>
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Power.png" alt="">
+                                    <p>Power Backup: <span>None</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Exercise.png" alt="">
+                                    <p>Gymnasium: <span>Yes</span></p>
+                                </div>
+                            </div>
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Water drop.png" alt="">
+                                    <p>Water Source: <span>24*7</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Sports football.png" alt="">
+                                    <p>Park: <span>Yes</span></p>
+                                </div>
+                            </div>
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Directions car.png" alt="">
+                                    <p>Parking: <span>2 Open</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Chair.png" alt="">
+                                    <p>Furnishing: <span>Semi</span></p>
+                                </div>
+                            </div>
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Pets.png" alt="">
+                                    <p>Pet Friendly: <span>Yes</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Pool.png" alt="">
+                                    <p>Swimming: <span>Yes</span></p>
+                                </div>
+                            </div>
+                            <div style="margin-right: 40px">
+                                <div class="text-center">
+                                    <img src="./images/Power.png" alt="">
+                                    <p>Power Backup: <span>None</span></p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./images/Exercise.png" alt="">
+                                    <p>Gymnasium: <span>Yes</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nav-button" id="slideRightAmenities">
+                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="loan-container my-5">
+                    <div class="loan-container-content d-flex justify-content-between p-5">
+                        <img src="./images/bro.png" width="250px" alt="">
+                        <div class="content">
+                            <h2>Get your dream home<br> with us</h2>
+                            <h3>Apply for easy home loans</h3>
+                            <button>Check for home loan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inventory-container  py-3 my-5">
+                    <h4>Inventory Pool</h4>
+                    <div class="inventory-inner-container my-4">
+                        <div class="inventory-container-slider d-flex">
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">School</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">School</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>ABC School</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Hospital</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>Hospital</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Hospital</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>Hospital</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-right: 15px;">
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Hospital</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>Hospital</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                                <div class="nearby-locations">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <p class="location-name">Hospital</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p>Hospital</p>
+                                        <p>0.5 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brochure-container py-3 my-5">
+                    <h4>ABC Property Brochure</h4>
+                    <div class="brochure-container-inner">
+                        <div class="brochure-container-inner-slider d-flex justify-content-start">
+                            <div class="image-container">
+                                <img src="./images/brochure/1.png" alt="Brochure">
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/2.png" alt="Brochure">
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/3.png" alt="Brochure">
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/4.png" alt="Brochure">
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/4.png" alt="Brochure">
+                            </div>
+                        </div>
+                        <button class="nav-button" id="slideRightBrochures">
+                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon">
+                        </button>
+                        <button class="view-btn open-brochure-modal-container">
+                            View Brochure
+                        </button>
+                    </div>
+                </div>
+                <div class="brochure-modal-container modal-container">
+                    <div class="brochure-modal modals">
+                        <img src="./images/cross.png" width="15px" class="close-icon">
+                        <h4>Please share your details</h4>
+                        <form>
+                            <input type="text" placeholder="Name" name="name" required>
+                            <div class="phone-number-container d-flex align-items-end justify-content-start">
+                                <select name="country-code" id="country-code">
+                                    <option value="+91" selected>+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+81">+81</option>
+                                    <option value="+7">+7</option>
+                                </select>
+                                <input type="number" id="phone-number" name="phone-number"
+                                    placeholder="Enter mobile number" required maxlength="10">
+                                <button id="send-otp-btn" class="otp-btn">Send OTP</button>
+                            </div>
+                            <p class="otp-sent" id="otp-sent-message">We have sent the OTP to .</p>
+                            <div class="otp-container d-flex justify-content-start align-items-start">
+                                <input type="number" name="otp" placeholder="OTP" required>
+                                <p>Did not receive OTP ?<br>Request OTP on call.</p>
+                            </div>
+                            <input type="email" name="email" placeholder="EMAIL ID" required>
+                        </form>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <input type="checkbox" id="checkboxId" name="checkboxName" value="checkboxValue" required>
+                            <label for="checkboxId">By submitting this form, I agree to accept and agree to Realezi’s
+                                T&C</label>
+                        </div>
+                        <button type="submit" class="submit-btn" disabled>Submit</button>
+                    </div>
+                </div>
+
+                <div class="resources-container py-3 my-5">
+                    <h4>Helpful Resources</h4>
+                    <p style="font-size: 0.9rem">Check your affordability, Home loan eligibility & EMI</p>
+                    <div class="resources-container-inner">
+                        <div class="resources-container-inner-slider d-flex justify-content-start">
+                            <div class="single-resource-container">
+                                <img src="./images/resource-1.png" alt="Sticker">
+                                <div class="content">
+                                    <h6>EMI <br><span>Calculator</span></h6>
+                                    <p>EMI Starts at</p>
+                                    <p>Rs 36.54k</p>
+                                    <button>Calculate</button>
+                                </div>
+                            </div>
+                            <div class="single-resource-container">
+                                <img src="./images/resource-2.png" alt="Sticker">
+                                <div class="content">
+                                    <h6>Affordability <br><span>Calculator</span></h6>
+                                    <p>Find the best budget<br> for your home search</p>
+                                    <button>Calculate</button>
+                                </div>
+                            </div>
+                            <div class="single-resource-container">
+                                <img src="./images/resource-3.png" alt="Sticker">
+                                <div class="content">
+                                    <h6>Eligibility <br><span>Calculator</span></h6>
+                                    <p>Find your home<br> loan limit</p>
+                                    <button>Calculate</button>
+                                </div>
+                            </div>
+                            <div class="single-resource-container">
+                                <img src="./images/resource-1.png" alt="Sticker">
+                                <div class="content">
+                                    <h6>EMI <br><span>Calculator</span></h6>
+                                    <p>EMI Starts at</p>
+                                    <p>Rs 36.54k</p>
+                                    <button>Calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nav-button" id="slideRightResources">
+                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="compare-property-container py-3 my-5">
+                    <h4>Compare Properties</h4>
+                    <div class="compare-property-container-inner my-3">
+                        <div class="input-container d-flex align-items-center">
+                            <img src="./images/Search.png" width="23px" alt="Search icon">
+                            <input type="text" placeholder="Search building or project to compare" name="search">
+                        </div>
+                        <div class="compare-properties-slider d-flex">
+                            <!-- <div class="d-flex"> -->
+                            <div class="single-property-info-container">
+                                <h5>Tulip Affordable Floors</h5>
+                                <p class="location">Dwarka Mor, South West Delhi, New Delhi</p>
+                                <div class="smaller-container">
+                                    <h5>1 BHK</h5>
+                                    <p style="font-size: 1.1rem;">400sq.ft</p>
+                                    <div class="image-container">
+                                        <img src="./images/property-image-1.jpg" alt="Property">
+                                    </div>
+                                    <h5>₹18 L</h5>
+                                    <p class="mb-3">₹3.83K/sq.ft</p>
+                                    <p class="blue-text">EMI starts at ₹9.53 K</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>STATUS</h5>
+                                    <p>Ready to move</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>POSSESSION BY</h5>
+                                    <p>NA</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>AMENITIES</h5>
+                                    <div class="d-flex">
+                                        <div class="text-center">
+                                            <img src="./images/water-drop-grey.png" class="icons" alt="Water drop icon">
+                                            <p>24X7 Water Supply</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon">
+                                            <p>Fire Sprinkles</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon">
+                                            <p>Power Backup</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-property-info-container blue">
+                                <h5>Tulip Affordable Floors</h5>
+                                <p class="location">Dwarka Mor, South West Delhi, New Delhi</p>
+                                <div class="smaller-container">
+                                    <h5>1 BHK</h5>
+                                    <p style="font-size: 1.1rem;">400sq.ft</p>
+                                    <div class="image-container">
+                                        <img src="./images/property-image-1.jpg" alt="Property">
+                                    </div>
+                                    <h5>₹18 L</h5>
+                                    <p class="mb-3">₹3.83K/sq.ft</p>
+                                    <p class="blue-text">EMI starts at ₹9.53 K</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>STATUS</h5>
+                                    <p>Ready to move</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>POSSESSION BY</h5>
+                                    <p>NA</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>AMENITIES</h5>
+                                    <div class="d-flex">
+                                        <div class="text-center">
+                                            <img src="./images/water-drop-grey.png" class="icons" alt="Water drop icon">
+                                            <p>24X7 Water Supply</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon">
+                                            <p>Fire Sprinkles</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon">
+                                            <p>Power Backup</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-property-info-container faded-blue">
+                                <h5>Tulip Affordable Floors</h5>
+                                <p class="location">Dwarka Mor, South West Delhi, New Delhi</p>
+                                <div class="smaller-container">
+                                    <h5>1 BHK</h5>
+                                    <p style="font-size: 1.1rem;">400sq.ft</p>
+                                    <div class="image-container">
+                                        <img src="./images/property-image-1.jpg" alt="Property">
+                                    </div>
+                                    <h5>₹18 L</h5>
+                                    <p class="mb-3">₹3.83K/sq.ft</p>
+                                    <p class="blue-text">EMI starts at ₹9.53 K</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>STATUS</h5>
+                                    <p>Ready to move</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>POSSESSION BY</h5>
+                                    <p>NA</p>
+                                </div>
+                                <div class="smaller-container">
+                                    <h5>AMENITIES</h5>
+                                    <div class="d-flex">
+                                        <div class="text-center">
+                                            <img src="./images/water-drop-grey.png" class="icons" alt="Water drop icon">
+                                            <p>24X7 Water Supply</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon">
+                                            <p>Fire Sprinkles</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon">
+                                            <p>Power Backup</p>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="nav-button" id="slideRightProperties">
+                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="developer-information-container py-3 my-5">
+                    <h4>Valley Developer Information</h4>
+                    <div class="developer my-4">
+                        <div class="d-flex align-items-start">
+                            <div class="profile-image">
+                                <img src="./images/user.png" alt="Profile photo">
+                            </div>
+                            <div class="developer-info">
+                                <h4>Swadesh Developers</h4>
+                                <div class="d-flex">
+                                    <div>
+                                        <p>2002</p>
+                                        <p>Established in</p>
+                                    </div>
+                                    <div>
+                                        <p>3</p>
+                                        <p>Total Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="developer-comment expanded">
+                            <p>Swadesh Developers is amongst the leading colonizers of Bhopal today and provides the
+                                best set of infrastructure. They understand your wish and
+                                endeavour to bring an assortment of style, quality and comfort; where every niche of
+                                construction spells the story of luxury. Their art of perfection starts
+                                from civic amenities to lavish facilities and from comfort zones to recreation
+                                areas; and it all comes under your value for money. This essence of
+                                goodness does not end here, their awe inspiring architecture leaves little doubt in
+                                mind of people as every project defines the statement of excellence.
+                                So, it may get crucial for end users to choose eligible out of the best. Swadesh
+                                Developers believes in delivering quality construction and timely
+                                delivered projects to their property investors.</p>
+                        </div>
+                        <p id="read-btn">Read Less</p>
+                    </div>
+                </div>
+
+                <div class="question-answer-container py-3 my-5">
+                    <div class="question-answer-inner-container">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h4>Questions and Answers</h4>
+                                <p>Get answers to your un-answered questions.</p>
+                            </div>
+                            <button>Have any questions? Ask us here</button>
+                        </div>
+                        <div class="question-container">
+                            <button class="tag">For Project</button>
+                            <h4>Q:What is the rera registration number of the project?</h4>
+                            <p><span>A:</span>The project is registered on RERA and RERA ID for the project is
+                                P-BPL-21-3015.</p>
+                            <p class="time">Answered 3 years ago</p>
+                        </div>
+                        <div class="question-container">
+                            <button class="tag">For Project</button>
+                            <h4>Q:Is there generator backup??</h4>
+                            <p><span>A:</span>Yes, power backup is available.</p>
+                            <p class="time">Answered 3 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-container py-3 my-5">
+                    <h4>FAQs</h4>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What are the interesting facts about Bangalore metro?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is the new line of metro in Bangalore?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How many lines does Bangalore metro have?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How does metro work in Bangalore?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What is the full form of metro?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listed-properties-container py-3 my-5">
+                    <h4>Resale Projects in Kolar Road</h4>
+                    <div class="d-flex my-4">
+                        <div class="property-containter">
+                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image">
+                            <h4>6 BHK Independent Building Floor</h4>
+                            <p class="price">Rs.2 Cr</p>
+                            <p class="about">
+                                Very nice property in sec24 rohini near rithala metro station with in 1km and is iskon
+                                temple 200 mtr More About This Property One
+                            </p>
+                            <div class="small-details d-flex justify-content-between">
+                                <p>Builtup Area : 2100 sq. ft</p>
+                                <p>Average Range: Rs. 6.65k/sq.ft</p>
+                            </div>
+                            <div class="btn-container d-flex align-items-center justify-content-between">
+                                <div class="d-flex">
+                                    <img src="./images/Share.png" width="25px" alt="Share icon">
+                                    <img src="./images/send.png" width="25px" alt="Save Icon">
+                                </div>
+                                <div class="d-flex">
+                                    <button>View Phone</button>
+                                    <button class="d-flex align-items-center">
+                                        <img src="./images/phone.png" width="15px" alt="Phone icon">
+                                        <p>Contact Seller</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-containter">
+                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image">
+                            <h4>6 BHK Independent Building Floor</h4>
+                            <p class="price">Rs.2 Cr</p>
+                            <p class="about">
+                                Very nice property in sec24 rohini near rithala metro station with in 1km and is iskon
+                                temple 200 mtr More About This Property One
+                            </p>
+                            <div class="small-details d-flex justify-content-between">
+                                <p>Builtup Area : 2100 sq. ft</p>
+                                <p>Average Range: Rs. 6.65k/sq.ft</p>
+                            </div>
+                            <div class="btn-container d-flex align-items-center justify-content-between">
+                                <div class="d-flex">
+                                    <img src="./images/Share.png" width="25px" alt="Share icon">
+                                    <img src="./images/send.png" width="25px" alt="Save Icon">
+                                </div>
+                                <div class="d-flex">
+                                    <button>View Phone</button>
+                                    <button class="d-flex align-items-center">
+                                        <img src="./images/phone.png" width="15px" alt="Phone icon">
+                                        <p>Contact Seller</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="property-details-div-right w-20">
+                <div class="scheduling-container">
+                    <div class="property-info d-flex justify-content-center">
+                        <div class="text-center py-2">
+                            <h5>Rs.2 Cr</h5>
+                            <p class="mb-0">2100 sq. ft</p>
+                        </div>
+                        <div class="text-center py-2">
+                            <h5>Rs. 3,60,000</h5>
+                            <p class="mb-0">Deposit</p>
+                        </div>
+                    </div>
+                    <button class="blue-btn">Connect with Seller</button>
+                    <div class="break d-flex align-items-center my-4">
+                        <hr>
+                        <p>or</p>
+                        <hr>
+                    </div>
+                    <p class="schedule-container-heading">Pick your visit date & visit</p>
+                    <div class="date-container active">
+                        <div class="date-container-slider d-flex justify-content-start mb-4">
+                            <!-- Dates will be dynamically generated here -->
+                        </div>
+                        <button class="nav-button" id="slideRightDate">
+                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon">
+                        </button>
+                    </div>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <select id="month-select"></select>
+                            <select id="year-select"></select>
+                            <div class="nav-arrows">
+                                <span id="prev-month" class="arrow"><img src="./images/chevron.png" width="10px"
+                                        alt="Left Chvron icon"></span>
+                                <span id="next-month" class="arrow"><img src="./images/chevron.png" width="10px"
+                                        alt="Left Chvron icon" style="transform: rotate(180deg)"></span>
+                            </div>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="calendar-grid" id="calendar-grid">
+                                <!-- Calendar days will be dynamically generated here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-container d-flex align-items-center flex-wrap mt-3">
+                        <p class="time">10:00 am - 1:00 pm</p>
+                        <p class="time">1:00 pm - 4:00 pm</p>
+                        <p class="time">4:00 pm - 7:00 pm</p>
+                    </div>
+                    <button class="blue-btn" id="open-schedule-form-modal-container">Schedule Visit</button>
+                </div>
+
+                <div class="schedule-form-modal-container modal-container">
+                    <div class="schedule-form-modal modals">
+                        <img src="./images/cross.png" width="15px" class="close-icon">
+                        <h4>Please share your details</h4>
+                        <form>
+                            <input type="text" placeholder="Name" name="name" required>
+                            <div class="phone-number-container d-flex align-items-end justify-content-start">
+                                <select name="country-code" id="country-code">
+                                    <option value="+91" selected>+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+81">+81</option>
+                                    <option value="+7">+7</option>
+                                </select>
+                                <input type="number" id="phone-number" name="phone-number"
+                                    placeholder="Enter mobile number" required maxlength="10">
+                                <button class="verify-btn">Verify</button>
+                            </div>
+                            <input type="email" name="email" placeholder="EMAIL ID" required>
+                            <input type="number" name="numberOfPeople" placeholder="Number of people">
+                        </form>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <input type="checkbox" id="checkboxId" name="checkboxName" value="checkboxValue" required>
+                            <label for="checkboxId">I agree to be contacted by Realezi Dedicated Manager</label>
+                        </div>
+                        <button type="submit" class="submit-btn" id="event-scheduled" disabled>Submit</button>
+                    </div>
+                </div>
+
+                <div class="schedule-confirmation-modal-container modal-container">
+                    <div class="schedule-confirmation-modal modals">
+                        <img src="./images/cross.png" width="15px" class="close-icon">
+                        <img src="./images/charm_circle-tick.png" width="150px" class="tick-mark">
+                        <h4>Thanks!</h4>
+                        <p>Our dedicated relationship manager will contact shortly</p>
+                    </div>
+                </div>
+
+                <div class="video-section my-5 py-3">
+                    <div class="video-container">
+                        <div class="video">
+                            <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <img src="./images/youtube.png" class="play-btn">
+                    </div>
+                    <div class="video-container">
+                        <div class="video">
+                            <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <img src="./images/youtube.png" class="play-btn">
+                    </div>
+                </div>
+
+                <div class="featured-property-container my-4">
+                    <div class="featured-property-container-inner">
+                        <h5>Featured Properties</h5>
+                        <div class="d-flex align-items-center justify-content-between my-3">
+                            <div class="property-container">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
+                            </div>
+                            <div class="property-container">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
+                            </div>
+                        </div>
+                        <button class="d-flex align-items-center">
+                            <p>View More</p>
+                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Arrow icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="featured-property-container my-4">
+                    <div class="featured-property-container-inner">
+                        <h5>Featured Properties</h5>
+                        <div class="d-flex align-items-center justify-content-between my-3">
+                            <div class="property-container">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
+                            </div>
+                            <div class="property-container">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
+                            </div>
+                        </div>
+                        <button class="d-flex align-items-center">
+                            <p>View More</p>
+                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Arrow icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="disclamer-container py-5">
+            <p><span>Disclaimer:</span> Realezi only acts as a medium for advertisement / information content.
+                We do not in
+                any way facilitate and cannot be deemed to be facilitating any transaction between seller /
+                developer and the visitors / users of our website. The details displayed on our website are for
+                information purposes only. Information regarding real estate projects (including the property /
+                project detail, listings, floor area, location, price etc.) are either third party content or
+                sourced from public sources. Nothing contained herein shall be deemed to constitute any sort of
+                legal advise, solicitation, marketing, offer of sale, invitation to offer, invitation to acquire
+                etc. by Housing.com. Users of this website are hereby advised to exercise due diligence and to
+                independently validate and verify all information about any property / project before deciding
+                to purchase the same or taking any other action. Information on this website does not guarantee
+                that the developer / project is registered under the Real Estate (Regulation and Development)
+                Act, 2016 or is compliant with the same, and the same should also be verified independently.</p>
+        </div>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="upper-footer">
+                <div class="d-flex align-items-start justify-content-between my-3">
+                    <div>
+                        <h4>Comunity</h4>
+                        <ul>
+                            <li>Builders</li>
+                            <li>Vendors</li>
+                            <li>Customers</li>
+                        </ul>
+                        <button class="align-items-center blue-btn">
+                            <p class="mx-2">Refer & Earn</p>
+                            <img src="./images/fire.png" alt="Fire icon" width="20px">
+                        </button>
+                    </div>
+                    <div>
+                        <h4>Solutions</h4>
+                        <div class="d-flex">
+                            <ul>
+                                <li>Find a right property</li>
+                                <li>Sell your property</li>
+                                <li>Build your home from scratch</li>
+                                <li>Interior Designing & Decor</li>
+                                <li>Solar Panel</li>
+                            </ul>
+                            <ul class="px-5">
+                                <li>Bank Loans</li>
+                                <li>Legal Aid </li>
+                                <li>Porter Services</li>
+                                <li>For Builders & Channel<br>
+                                    Partners</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Company</h4>
+                        <ul>
+                            <li>About us</li>
+                            <li>Blog</li>
+                            <li>Contact support</li>
+                            <li>FAQs</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between pb-4 newsletter">
+                    <p>Subscribe to our newsletter</p>
+                    <button class="align-items-center justify-content-center blue-btn">
+                        <p class="mx-2">We are hiring</p>
+                        <img src="./images/party-popper.png" alt="Party Popper Icon" width="20px">
+                    </button>
+                </div>
+                <div class="d-flex align-items-start justify-content-between pt-5">
+                    <div>
+                        <h5 class="fw-light">About Us</h5>
+                        <p>Join our referral program and earn rewards for every friend<br>
+                            you bring to our design family. Share the joy of transforming <br>
+                            spaces togetherJoin our referral program and earn rewards <br>
+                            for every friend you bring to our design family. </p>
+                    </div>
+                    <div class="m-auto">
+                        <h5 class="fw-light mb-4">EXPERIENCE REALEZI APP ON MOBILE</h5>
+                        <div class="image-container align-items-center justify-content-start">
+                            <img src="./images/app-store.png" alt="" width="120px">
+                            <img src="./images/google-play.png" alt="" width="135px" class="mx-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lower-footer">
+                <div class="lower-upper d-flex align-items-center justify-content-between">
+                    <img src="./images/logo3.png" width="150px">
+                    <ul class="d-flex align-items-center">
+                        <li>Privacy policies </li>
+                        <li>Terms and conditions</li>
+                        <li>Disclaimer</li>
+                    </ul>
+                    <div class="image-container">
+                        <img src="./images/facebook.png" alt="Facebook logo" width="20px">
+                        <img src="./images/linkedin.png" alt="Facebook logo" width="20px">
+                        <img src="./images/instagram.png" alt="Facebook logo" width="20px">
+                        <img src="./images/youtube.png" alt="Facebook logo" width="20px">
+                    </div>
+                </div>
+                <p class="text-center">©2024 Realezi. All rights reserved</p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script defer src="./navbar.js"></script>
+    <script defer src="./categories-slider.js"></script>
+    <script defer src="./about-property.js"></script>
+    <script defer src="./floor-plan.js"></script>
+    <script defer src="./explore-nearby-slider.js"></script>
+    <script defer src="./amenities.js"></script>
+    <script defer src="./brochure-slider.js"></script>
+    <script defer src="./resource-slider.js"></script>
+    <script defer src="./developer-section.js"></script>
+    <script src="./image-modal-container.js"></script>
+    <script src="./brochure-modal-container.js"></script>
+    <script defer src="./schedule-section.js"></script>
+    <script defer src="./disclamer-modal.js"></script>
+    <script defer src="./compare-properties-slider.js"></script>
+</body>
+
+</html>
