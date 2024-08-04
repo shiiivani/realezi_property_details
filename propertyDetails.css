@@ -162,6 +162,7 @@ button.d-flex p {
     height: 100%;
 z-index: 15;
 display: none;
+overflow-y: auto;
 }
 
 .disclamer-modal-container.active {
@@ -647,6 +648,10 @@ margin-right: auto;
 .floor-plan-container .property-price {
     font-size: 0.9rem;
     color: #041A40;
+}
+
+.floor-plan-info {
+    align-items: center;
 }
 
 .floor-plan-info div {
@@ -2320,6 +2325,13 @@ align-items: flex-start;
 }
 
 @media screen and (max-width: 470px) {
+    .floor-plan-info {
+        flex-wrap: wrap;
+    }
+    .floor-plan-info div {
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
     .property-containter {
         width: 97%;
     }
