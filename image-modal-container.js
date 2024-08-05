@@ -82,3 +82,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeModal.addEventListener("click", hideModal);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const categories = document.querySelectorAll(".category");
+  const carousel = document.getElementById("carouselExampleCaptions2");
+  const carouselItems = document.querySelectorAll(
+    ".image-modal-container .carousel-inner .carousel-item"
+  );
+
+  categories.forEach((category) => {
+    category.addEventListener("click", function () {
+      categories.forEach((cat) => cat.classList.remove("active"));
+      category.classList.add("active");
+      const target = this.getAttribute("data-target");
+      let targetIndex = 0;
+
+      carouselItems.forEach((item, index) => {
+        if (item.getAttribute("data-name") === target) {
+          targetIndex = index;
+        }
+      });
+
+      const bsCarousel =
+        bootstrap.Carousel.getInstance(carousel) ||
+        new bootstrap.Carousel(carousel);
+      bsCarousel.to(targetIndex);
+    });
+  });
+});

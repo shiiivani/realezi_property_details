@@ -364,10 +364,32 @@ font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
 }
 
+.image-categories {
+    flex-wrap: wrap
+
+}
+
+.image-categories .category {
+    padding: 4px 25px;
+    margin: 25px 10px 2px 0;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+
+.image-categories .category:hover {
+    cursor: pointer;
+}
+
+.image-categories .category.active {
+    background-color: #fff;
+    color: #000
+}
+
 .image-modal .carousel-item {
     width: 100vw;
     height: 80vh;
-    margin-top: 20px;
+    margin-top: 40px;
     position: relative;
 }
 
@@ -400,7 +422,7 @@ height: auto !important
 
 .carousel-progress {
     position: absolute;
-    top: -10px;
+    top: 10px;
     left: 47%;
     width: 8%;
     height: 5px;
@@ -416,7 +438,7 @@ height: auto !important
 
 .carousel-counter {
     position: absolute;
-    top: -40px;
+    top: -20px;
     left: 50%;
     color: #ffffff;
     font-size: 14px;
@@ -2363,6 +2385,12 @@ align-items: flex-start;
     .brochure-container .view-btn {
         left: 30%;
     }
+    .disclamer-container {
+        padding: 20px;
+    }
+    .disclamer-container p {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 405px) {
@@ -2371,6 +2399,15 @@ align-items: flex-start;
         align-items: flex-start; 
     }
     .property-overview-content .d-flex:last-child button{
+        margin-bottom: 15px;
+    }
+    .image-modal-header-inner-right {
+        flex-direction: column;
+    }
+    .image-modal-header-inner button {
+        margin-left: 0;
+    }
+    .image-modal-header-inner-right button {
         margin-bottom: 15px;
     }
     .image-video-container {
