@@ -127,7 +127,11 @@
                         <p>Report</p>
                     </button>
                     <img src="./images/Share.png" width="30px" alt="Share icon" class="share-icon">
-                    <img src="./images/send.png" width="30px" alt="Send icon">
+                    <div class="arrow-pair">
+                        <img src="./images/send.png" width="40px" alt="Send icon" class="realezi-arrow arrow">
+                        <img src="./images/realezi-filled-arrow.png" width="40px" alt="Realazi arrow"
+                            class="filled-arrow arrow  hidden">
+                    </div>
                 </div>
                 <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
             </div>
@@ -151,49 +155,61 @@
             </div>
         </div>
 
-        <div class="property-images-div mb-5">
+        <div class="property-images-div mb-2">
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active w-100">
                         <div class="carousal-item-inner grid-container">
-                            <div class="carousel-item-left">
-                                <div class="carousel-item-left-top"><img src="./images/property-image-1.jpg"
-                                        alt="Bedroom">
-                                </div>
-                                <div class="carousel-item-left-bottom"><img src="./images/property-image-1.jpg"
-                                        alt="Bedroom"></div>
+                            <div class="first-item image-grid"><img src="./images/property-image-1.jpg"
+                                    alt="Main Image"></div>
+                            <div class="second-third-item">
+                                <div class="second-item image-grid"><img src="./images/property-image-1.jpg"
+                                        alt="Small Image 1"></div>
+                                <div class="thrid-item image-grid"><img src="./images/property-image-1.jpg"
+                                        alt="Small Image 1"></div>
                             </div>
-                            <div class="carousel-item-right">
-                                <img src="./images/property-image-1.jpg" alt="Bedroom">
-                            </div>
+                            <div class="fourth-item image-grid"><img src="./images/property-image-1.jpg"
+                                    alt="Small Image 1"></div>
+                            <div class="fifth-item image-grid"><img src="./images/property-image-1.jpg"
+                                    alt="Small Image 1"></div>
+                            <div class="sixth-item image-grid"><img src="./images/property-image-1.jpg"
+                                    alt="Small Image 1"></div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousal-item-inner grid-container">
-                            <div class="carousel-item-left">
-                                <div class="carousel-item-left-top"><img src="./images/property-image-2.jpg"
-                                        alt="Bedroom">
-                                </div>
-                                <div class="carousel-item-left-bottom"><img src="./images/property-image-2.jpg"
-                                        alt="Bedroom"></div>
+                            <div class="first-item image-grid"><img src="./images/property-image-2.jpg"
+                                    alt="Main Image"></div>
+                            <div class="second-third-item">
+                                <div class="second-item image-grid"><img src="./images/property-image-2.jpg"
+                                        alt="Small Image 1"></div>
+                                <div class="thrid-item image-grid"><img src="./images/property-image-2.jpg"
+                                        alt="Small Image 1"></div>
                             </div>
-                            <div class="carousel-item-right">
-                                <img src="./images/property-image-2.jpg" alt="Bedroom">
-                            </div>
+                            <div class="fourth-item image-grid"><img src="./images/property-image-2.jpg"
+                                    alt="Small Image 1"></div>
+                            <div class="fifth-item image-grid"><img src="./images/property-image-2.jpg"
+                                    alt="Small Image 1"></div>
+                            <div class="sixth-item image-grid"><img src="./images/property-image-2.jpg"
+                                    alt="Small Image 1"></div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousal-item-inner grid-container">
-                            <div class="carousel-item-left">
-                                <div class="carousel-item-left-top"><img src="./images/property-image-3.jpg"
-                                        alt="Bedroom">
-                                </div>
-                                <div class="carousel-item-left-bottom"><img src="./images/property-image-3.jpg"
-                                        alt="Bedroom"></div>
+                            <div class="first-item image-grid"><img src="./images/property-image-3.jpg"
+                                    alt="Main Image"></div>
+                            <div class="second-third-item">
+                                <div class="second-item image-grid"><img src="./images/property-image-3.jpg"
+                                        alt="Small Image 1"></div>
+                                <div class="thrid-item image-grid"><img src="./images/property-image-3.jpg"
+                                        alt="Small Image 1"></div>
                             </div>
-                            <div class="carousel-item-right">
-                                <img src="./images/property-image-3.jpg" alt="Bedroom">
-                            </div>
+                            <div class="fourth-item image-grid"><img src="./images/property-image-3.jpg"
+                                    alt="Small Image 1"></div>
+                            <div class="fifth-item image-grid"><img src="./images/property-image-3.jpg"
+                                    alt="Small Image 1"></div>
+                            <div class="sixth-item image-grid"><img src="./images/property-image-3.jpg"
+                                    alt="Small Image 1"></div>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -210,6 +226,28 @@
             </div>
         </div>
 
+        <div class="categories-container mb-3">
+            <button class="nav-prev-button hidden" id="slideLeftBtn">
+                <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
+                    alt="Right Aroow icon">
+            </button>
+            <div class="categories-slider d-flex align-items-center justify-content-between">
+                <p class="category" data-target="overview">Overview</p>
+                <p class="category" data-target="about-property">About Property</p>
+                <p class="category" data-target="floor-plan">Floor Plan</p>
+                <p class="category" data-target="explore-nearby">Explore Nearby</p>
+                <p class="category" data-target="amenities">Amenities</p>
+                <p class="category" data-target="inventory-pool">Inventory Pool</p>
+                <p class="category" data-target="brochure">Brochure</p>
+                <p class="category" data-target="resources">Resources</p>
+                <p class="category" data-target="compare-properties">Compare properties</p>
+                <p class="category" data-target="qa">Q&A</p>
+            </div>
+            <button class="nav-button" id="slideRightBtn">
+                <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon">
+            </button>
+        </div>
+
         <div class="image-modal-container" id="imageModal">
             <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal">
             <div class="image-modal">
@@ -222,7 +260,12 @@
                                 <p>Share</p>
                             </button>
                             <button class="d-flex align-items-center">
-                                <img src="./images/send.png" width="20px" alt="Save icon">
+                                <div class="arrow-pair">
+                                    <img src="./images/send.png" width="30px" alt="Send icon"
+                                        class="realezi-arrow arrow">
+                                    <img src="./images/realezi-filled-arrow.png" width="28px" alt="Realazi arrow"
+                                        class="filled-arrow arrow  hidden">
+                                </div>
                                 <p>Save</p>
                             </button>
                         </div>
@@ -283,27 +326,9 @@
             </div>
         </div>
 
-        <div class="property-details-div d-flex justify-content-between align-items-start w-100">
-            <div class="property-details-div-left w-80">
-                <div class="categories-container">
-                    <div class="categories-slider d-flex align-items-center">
-                        <p>Overview</p>
-                        <p>About Property</p>
-                        <p>Floor Plan</p>
-                        <p>Explore Nearby</p>
-                        <p>Amenities</p>
-                        <p>Inventory Pool</p>
-                        <p>Brochure</p>
-                        <p>Resources</p>
-                        <p>Compare properties</p>
-                        <p>Q&A</p>
-                    </div>
-                    <button class="nav-button" id="slideRightBtn">
-                        <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon">
-                    </button>
-                </div>
-
-                <div class="property-overview-container my-5">
+        <div class="property-details-div d-flex justify-content-between align-items-start">
+            <div class="property-details-div-left">
+                <div class="property-overview-container section mb-5" id="overview">
                     <div class="property-overview-header-container d-flex justify-content-between my-4">
                         <h4>ABC Property Overview</h4>
                         <div class="property-overview-btn-container d-flex">
@@ -312,7 +337,12 @@
                                 <p>Share</p>
                             </button>
                             <button class=" d-flex align-items-center">
-                                <img src="./images/send.png" width="27px" alt="Share Icon">
+                                <div class="arrow-pair">
+                                    <img src="./images/send.png" width="35px" alt="Send icon"
+                                        class="realezi-arrow arrow">
+                                    <img src="./images/realezi-filled-arrow.png" width="32px" alt="Realazi arrow"
+                                        class="filled-arrow arrow  hidden">
+                                </div>
                                 <p>Save</p>
                             </button>
                         </div>
@@ -384,7 +414,7 @@
                     </div>
                 </div>
 
-                <div class="about-property-container  py-3 my-5">
+                <div class="about-property-container section py-3 my-5" id="about-property">
                     <h4>About Property</h4>
                     <div class="about-property-content-container my-3">
                         <div class="about-property-content-inner m-3" id="aboutPropertyContent">
@@ -411,7 +441,7 @@
                     </div>
                 </div>
 
-                <div class="property-floor-plan-container  py-3 my-5">
+                <div class="property-floor-plan-container section py-3 my-5" id="floor-plan">
                     <h4>ABC Property Floor Plan</h4>
                     <div class="floor-plan-container my-4">
                         <div class="floor-plan-properties-categories-container d-flex justify-content-start">
@@ -523,9 +553,13 @@
                     </div>
                 </div>
 
-                <div class="explore-nearby-container py-3 my-5">
+                <div class="explore-nearby-container section py-3 my-5" id="explore-nearby">
                     <h4>Explore Nearby</h4>
                     <div class="explore-nearby-inner-container my-4">
+                        <button class="nav-prev-button hidden" id="slideLeftLocations">
+                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg);"
+                                alt="Left Arrow icon">
+                        </button>
                         <div class="explore-nearby-container-slider d-flex" id="locationSlider">
                             <div style="margin-right: 15px;">
                                 <div class="nearby-locations">
@@ -622,7 +656,7 @@
                     </div>
                 </div>
 
-                <div class="property-photos-video-container p-4 my-5">
+                <div class="property-photos-video-container section p-4 my-5">
                     <h4>Photos and videos</h4>
                     <hr>
                     <div class="d-flex justify-content-between">
@@ -647,6 +681,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="image-modal-container image-video-modal-container" id="imageVideoModal">
                     <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal">
                     <div class="image-modal">
@@ -659,7 +694,12 @@
                                         <p>Share</p>
                                     </button>
                                     <button class="d-flex align-items-center">
-                                        <img src="./images/send.png" width="20px" alt="Save icon">
+                                        <div class="arrow-pair">
+                                            <img src="./images/send.png" width="30px" alt="Send icon"
+                                                class="realezi-arrow arrow">
+                                            <img src="./images/realezi-filled-arrow.png" width="28px"
+                                                alt="Realazi arrow" class="filled-arrow arrow  hidden">
+                                        </div>
                                         <p>Save</p>
                                     </button>
                                 </div>
@@ -719,9 +759,13 @@
                     </div>
                 </div>
 
-                <div class="amenities-container py-3 my-5">
+                <div class="amenities-container py-3 my-5 section" id="amenities">
                     <h4>ABC Property Amenities</h4>
                     <div class="amenities-container-inner my-4">
+                        <button class="nav-prev-button hidden" id="slideLeftAmenities">
+                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon">
+                        </button>
                         <div class="amenities-container-inner-slider d-flex justify-content-start p-1"
                             id="amenitiesSlider">
                             <div style="margin-right: 40px">
@@ -812,9 +856,13 @@
                     </div>
                 </div>
 
-                <div class="inventory-container  py-3 my-5">
+                <div class="inventory-container section py-3 my-5" id="inventory-pool">
                     <h4>Inventory Pool</h4>
                     <div class="inventory-inner-container my-4">
+                        <button class="nav-prev-button hidden" id="slideLeftInventory">
+                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg);"
+                                alt="Left Arrow icon">
+                        </button>
                         <div class="inventory-container-slider d-flex">
                             <div style="margin-right: 15px;">
                                 <div class="nearby-locations">
@@ -883,12 +931,19 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="nav-button" id="slideRightInventory">
+                            <img src="./images/right-arrow.png" width="15px" alt="Left Arrow icon">
+                        </button>
                     </div>
                 </div>
 
-                <div class="brochure-container py-3 my-5">
+                <div class="brochure-container section py-3 my-5" id="brochure">
                     <h4>ABC Property Brochure</h4>
                     <div class="brochure-container-inner">
+                        <button class="nav-prev-button hidden" id="slideLeftBrochures">
+                            <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon">
+                        </button>
                         <div class="brochure-container-inner-slider d-flex justify-content-start">
                             <div class="image-container">
                                 <img src="./images/brochure/1.png" alt="Brochure">
@@ -948,10 +1003,14 @@
                     </div>
                 </div>
 
-                <div class="resources-container py-3 my-5">
+                <div class="resources-container section py-3 my-5" id="resources">
                     <h4>Helpful Resources</h4>
                     <p style="font-size: 0.9rem">Check your affordability, Home loan eligibility & EMI</p>
                     <div class="resources-container-inner">
+                        <button class="nav-prev-button hidden" id="slideLeftResources">
+                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon">
+                        </button>
                         <div class="resources-container-inner-slider d-flex justify-content-start">
                             <div class="single-resource-container">
                                 <img src="./images/resource-1.png" alt="Sticker">
@@ -994,9 +1053,13 @@
                     </div>
                 </div>
 
-                <div class="compare-property-container py-3 my-5">
+                <div class="compare-property-container section py-3 my-5" id="compare-properties">
                     <h4>Compare Properties</h4>
                     <div class="compare-property-container-inner my-3">
+                        <button class="nav-prev-button hidden" id="slideLeftProperties">
+                            <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon">
+                        </button>
                         <div class="input-container d-flex align-items-center">
                             <img src="./images/Search.png" width="23px" alt="Search icon">
                             <input type="text" placeholder="Search building or project to compare" name="search">
@@ -1128,7 +1191,7 @@
                     </div>
                 </div>
 
-                <div class="developer-information-container py-3 my-5">
+                <div class="developer-information-container section py-3 my-5" id="qa">
                     <h4>Valley Developer Information</h4>
                     <div class="developer my-4">
                         <div class="d-flex align-items-start">
@@ -1310,7 +1373,12 @@
                             <div class="btn-container d-flex align-items-center justify-content-between">
                                 <div class="d-flex">
                                     <img src="./images/Share.png" width="25px" alt="Share icon">
-                                    <img src="./images/send.png" width="25px" alt="Save Icon">
+                                    <div class="arrow-pair">
+                                        <img src="./images/send.png" width="33px" alt="Send icon"
+                                            class="realezi-arrow arrow">
+                                        <img src="./images/realezi-filled-arrow.png" width="30px" alt="Realazi arrow"
+                                            class="filled-arrow arrow  hidden">
+                                    </div>
                                 </div>
                                 <div class="d-flex">
                                     <button>View Phone</button>
@@ -1336,7 +1404,12 @@
                             <div class="btn-container d-flex align-items-center justify-content-between">
                                 <div class="d-flex">
                                     <img src="./images/Share.png" width="25px" alt="Share icon">
-                                    <img src="./images/send.png" width="25px" alt="Save Icon">
+                                    <div class="arrow-pair">
+                                        <img src="./images/send.png" width="33px" alt="Send icon"
+                                            class="realezi-arrow arrow">
+                                        <img src="./images/realezi-filled-arrow.png" width="30px" alt="Realazi arrow"
+                                            class="filled-arrow arrow  hidden">
+                                    </div>
                                 </div>
                                 <div class="d-flex">
                                     <button>View Phone</button>
@@ -1351,7 +1424,7 @@
                 </div>
 
             </div>
-            <div class="property-details-div-right w-20">
+            <div class="property-details-div-right">
                 <div class="scheduling-container">
                     <div class="property-info d-flex justify-content-center">
                         <div class="text-center py-2">
@@ -1363,7 +1436,7 @@
                             <p class="mb-0">Deposit</p>
                         </div>
                     </div>
-                    <button class="blue-btn">Connect with Seller</button>
+                    <button class="blue-btn" id="open-schedule-form-modal-container">Connect with Seller</button>
                     <div class="break d-flex align-items-center my-4">
                         <hr>
                         <p>or</p>
@@ -1371,6 +1444,10 @@
                     </div>
                     <p class="schedule-container-heading">Pick your visit date & visit</p>
                     <div class="date-container active">
+                        <button class="nav-prev-button hidden" id="slideLeftDate">
+                            <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
+                                alt="Right Aroow icon">
+                        </button>
                         <div class="date-container-slider d-flex justify-content-start mb-4">
                             <!-- Dates will be dynamically generated here -->
                         </div>
@@ -1611,6 +1688,27 @@
 
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const arrowPairs = document.querySelectorAll('.arrow-pair');
+
+            arrowPairs.forEach(function (pair) {
+                const realeziArrow = pair.querySelector('.realezi-arrow');
+                const filledArrow = pair.querySelector('.filled-arrow');
+
+                realeziArrow.addEventListener('click', function () {
+                    realeziArrow.classList.add('hidden');
+                    filledArrow.classList.remove('hidden');
+                });
+
+                filledArrow.addEventListener('click', function () {
+                    filledArrow.classList.add('hidden');
+                    realeziArrow.classList.remove('hidden');
+                });
+            });
+        });
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -1628,6 +1726,7 @@
     <script defer src="./schedule-section.js"></script>
     <script defer src="./disclamer-modal.js"></script>
     <script defer src="./compare-properties-slider.js"></script>
+    <script defer src="./inventorySlider.js"></script>
 </body>
 
 </html>

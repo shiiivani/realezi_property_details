@@ -1,3 +1,37 @@
+// Right Side Section Sticky
+document.addEventListener("scroll", function () {
+  if (window.innerWidth > 1200) {
+    const container = document.querySelector(".property-details-div-right");
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+    const categoriesHeight = document.querySelector(
+      ".categories-container"
+    ).offsetHeight;
+    const footer = document.querySelector("footer");
+
+    const stickyOffset =
+      container.offsetTop - (navbarHeight + categoriesHeight);
+    const containerHeight = container.offsetHeight;
+    const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+
+    // Check if the container should be fixed
+    if (window.scrollY >= 665 && window.scrollY + containerHeight < footerTop) {
+      container.classList.add("fixed");
+      container.classList.remove("absolute");
+      container.style.top = `${navbarHeight + categoriesHeight}px`;
+    } else if (window.scrollY + containerHeight >= footerTop) {
+      // When the container hits the footer
+      container.classList.remove("fixed");
+      container.classList.add("absolute");
+      container.style.top = "initial";
+      // container.style.bottom = `${footerTop - containerHeight}px`;
+    } else {
+      container.classList.remove("fixed");
+      container.classList.remove("absolute");
+      container.style.top = "initial";
+    }
+  }
+});
+
 // Generating current days and dates
 document.addEventListener("DOMContentLoaded", function () {
   const dateContainerSlider = document.querySelector(".date-container-slider");
@@ -56,10 +90,19 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".date-container-slider");
   const slideRightBtn = document.getElementById("slideRightDate");
+  const slideLeftBtn = document.getElementById("slideLeftDate");
 
   slideRightBtn.addEventListener("click", function () {
+    slideLeftBtn.classList.remove("hidden");
     slider.scrollBy({
       left: 100,
+      behavior: "smooth",
+    });
+  });
+
+  slideLeftBtn.addEventListener("click", function () {
+    slider.scrollBy({
+      left: -150,
       behavior: "smooth",
     });
   });
@@ -202,38 +245,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Opening Schedule Form Modal
-document.addEventListener("DOMContentLoaded", function () {
-  const modalButton = document.getElementById(
-    "open-schedule-form-modal-container"
-  );
-  const modal = document.querySelector(".schedule-form-modal-container");
-  const closeIcon = document.querySelector(
-    ".schedule-form-modal-container .close-icon"
-  );
-  function showModal() {
-    modal.style.display = "flex";
-    modal.offsetHeight;
-    modal.classList.add("show");
-    modal.classList.remove("hide");
-  }
+// document.addEventListener("DOMContentLoaded", function () {
+// Get both modal buttons
+const modalButtons = document.querySelectorAll(
+  "#open-schedule-form-modal-container, #another-button-id"
+);
 
-  function hideModal() {
-    modal.classList.add("hide");
-    modal.classList.remove("show");
+const modal = document.querySelector(".schedule-form-modal-container");
+const closeIcon = document.querySelector(
+  ".schedule-form-modal-container .close-icon"
+);
 
-    setTimeout(() => {
-      modal.style.display = "none";
-    }, 500);
-  }
+function showModal() {
+  modal.style.display = "flex";
+  modal.offsetHeight;
+  modal.classList.add("show");
+  modal.classList.remove("hide");
+}
 
-  modalButton.addEventListener("click", function () {
+function hideModal() {
+  modal.classList.add("hide");
+  modal.classList.remove("show");
+
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 500);
+}
+
+// Add event listener to each button to show the modal
+modalButtons.forEach((button) => {
+  button.addEventListener("click", function () {
     showModal();
   });
+});
 
-  // Event listener for closing the modal
-  closeIcon.addEventListener("click", function () {
-    hideModal();
-  });
+// Event listener for closing the modal
+closeIcon.addEventListener("click", function () {
+  hideModal();
 });
 
 // Schedule confirmation Modal

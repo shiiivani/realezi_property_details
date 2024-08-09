@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".amenities-container-inner-slider");
-  const slideRightBtn = document.getElementById("slideRightAmenities");
-  const slideLeftBtn = document.getElementById("slideLeftAmenities");
+  const slider = document.querySelector(".inventory-container-slider");
+  const slideRightBtn = document.getElementById("slideRightInventory");
+  const slideLeftBtn = document.getElementById("slideLeftInventory");
 
   slideRightBtn.addEventListener("click", function () {
     slideLeftBtn.classList.remove("hidden");
