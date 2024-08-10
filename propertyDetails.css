@@ -1225,7 +1225,7 @@ margin: 13px 0;
     display: flex !important;
     transition: opacity 0.5s ease-out;
     opacity: 1;
-    z-index: 300;
+    z-index: 900;
 }
 
 .brochure-modal-container.hide, .schedule-form-modal-container.hide, .schedule-confirmation-modal.hide {
