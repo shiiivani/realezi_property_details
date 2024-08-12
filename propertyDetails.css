@@ -150,6 +150,25 @@ button.d-flex p {
     width: max-content;
 }
 
+.navbar .container {
+    position: relative
+}
+
+.navbar-collapse{
+    position: relative;
+width: 100vw;
+z-index: 3;
+top: 0;
+left: 0;
+background-color: #0a2851;
+transition: transform 0.5s ease;
+transform: translateX(100%);
+}
+
+.navbar-collapse.collapse.show {
+    transform: translateX(0);
+}
+
 /* Disclamer Modal */
 
 .disclamer-modal-container {
@@ -1313,7 +1332,7 @@ background-color: #F7F9FF;
     margin-left: 10px;
 }
 
-.modal-container button[type="submit"] {
+/* .modal-container button[type="submit"] {
     width: 100%;
     text-align: center;
     margin-top: 15px;
@@ -1326,7 +1345,38 @@ background-color: #F7F9FF;
 
 .modal-container button[type="submit"]:hover {
     opacity: 0.8;
+} */
+
+.modal-container button[type="submit"] {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    background-color: #100F3F;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
 }
+
+.modal-container button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: -1060%;
+    left: -150%;
+     width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+
+.modal-container button[type="submit"]:hover::before {
+    transform: rotate(45deg) translate(200%, 200%);
+}
+
 
 
 
