@@ -19,3 +19,9 @@ document.querySelectorAll(".dropdown-property-type").forEach((item) => {
     }
   });
 });
+
+//handle navbar hamburger click
+const navbarHamburger = document.getElementById("hamBtn");
+navbarHamburger.addEventListener("click", () => {
+  document.querySelector(".navbar-nav").classList.toggle("navbar-is-active");
+});
