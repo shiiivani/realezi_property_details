@@ -42,9 +42,10 @@ button.d-flex p {
     background-color: #0a2851;
     color: white;
     padding: 0.5rem 1rem;
-    position: sticky !important;
+    position: fixed !important;
     top: 0;
     z-index: 200;
+    width: 100%;
 }
 
 .navbar-nav{
@@ -325,8 +326,12 @@ margin-left: 10px;
     height: 2.5rem !important;
 }
 
+.carousel-control-next {
+    right: 15px !important;
+}
+
 .carousel-control-prev {
-    left: 10px !important;
+    left: 2px !important;
 }
 
 .carousel-control-prev-icon {
@@ -487,6 +492,12 @@ height: auto !important
     font-size: 14px;
 }
 
+/* Main */
+
+main.container {
+    margin-top: 90px
+}
+
 /* Second Nav */
 
 .categories-container {
@@ -500,7 +511,7 @@ height: auto !important
 }
 
 .categories-container.fixed {
-    position: sticky;
+    position: fixed;
     top: 49px;
     z-index: 200;
 }
@@ -565,6 +576,7 @@ height: auto !important
     .categories-container .nav-button {
         display: none;
     }
+   
 }
 
 
@@ -649,6 +661,7 @@ border-radius: 8px;
     background-color: #ffffff;
     border-radius: 20px;
     color: #041A40;
+    flex-wrap: nowrap !important;
 }
 
 /* About Property Section */
@@ -2011,7 +2024,7 @@ justify-content: center;
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
+    gap: 0;
 }
 
 .calendar-grid div {
@@ -2265,6 +2278,9 @@ text-align: left;
 }
 
 @media screen and (max-width: 1200px) {
+    .categories-container {
+        width: 90%;
+    }
     .featured-property-container-inner .property-image {
         height: 90px;
     }
@@ -2325,7 +2341,16 @@ text-align: left;
     }
 }
 
+@media screen and (max-width: 945px) {
+    main.container {
+        margin-top: 110px;
+    }
+}
+
 @media screen and (max-width: 990px) {
+    .categories-container {
+        width: 85%;
+    }
     .categories-container.fixed {
         top: 83px;
     }
@@ -2383,9 +2408,15 @@ align-items: flex-start;
 
 
 @media screen and (max-width: 770px) {
+    .categories-container {
+        width: 80%;
+    }
     .modal-container .modals {
         padding: 30px;
     }
+        main.container {
+            margin-top: 180px;
+        }
       .footer .upper-footer .d-flex:first-child{
         flex-wrap: wrap;
             }
@@ -2561,6 +2592,9 @@ align-items: flex-start;
 }
 
 @media screen and (max-width: 576px) {
+    .categories-container {
+        width: 95%;
+    }
     #nav-search-box-div {
         padding-left: 5px !important;
     }
@@ -2578,6 +2612,9 @@ align-items: flex-start;
         height: 140px;
         margin-bottom: 15px;
         margin-right: 5px;
+    }
+    .image-video-container .play-btn {
+        width: 50px;
     }
 }
 
@@ -2653,9 +2690,17 @@ align-items: flex-start;
 }
 
 @media screen and (max-width: 450px) {
+    .property-overview-content .d-flex:last-child {
+        flex-direction: column ;
+        align-items: flex-start; 
+    }
+
+    .property-overview-content .grey-btn{
+        margin-bottom: 15px;
+    }
 
     .floor-plan-image-container {
-        width: 300px;
+        width: 250px;
     }
 
 }
@@ -2673,16 +2718,27 @@ align-items: flex-start;
     .disclamer-container p {
         font-size: 0.8rem;
     }
+    .listed-properties-container .btn-container {
+        flex-direction: column;
+    }
+    .listed-properties-container .btn-container button {
+        margin-top: 15px;
+    }
+    .property-details-div-right .scheduling-container {
+        width: 100%;
+            }
 }
 
 @media screen and (max-width: 405px) {
-    .property-overview-content .d-flex:last-child {
-        flex-direction: column ;
-        align-items: flex-start; 
+    .floor-plan-properties-categories-container {
+        flex-wrap: wrap;
     }
-    .property-overview-content .d-flex:last-child button{
+
+    .floor-plan-properties-categories {
         margin-bottom: 15px;
+        width: 110px;
     }
+  
     .image-modal-header-inner-right {
         flex-direction: column;
     }
@@ -2695,6 +2751,10 @@ align-items: flex-start;
     .image-video-container {
         width: calc(100%/1);
     }
+    .image-video-container .play-btn {
+        top: 35%;
+        left: 38%;
+    }
 }
 
 @media screen and (max-width: 370px) {
@@ -2702,9 +2762,7 @@ align-items: flex-start;
         padding-right: 0.5rem !important;
     }
 
-    .property-details-div-right .scheduling-container {
-width: 95%;
-    }
+
 
 }
 
