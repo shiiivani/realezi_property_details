@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Event listener for closing the modal
   closeIcon.addEventListener("click", function () {
     hideModal();
   });
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
       otpSentMessage.classList.add("active");
       phoneNumberCont.classList.add("sent");
 
-      // Remove margin-bottom from phone number input
       phoneNumberInput.style.marginBottom = "0";
     } else {
       alert("Please enter a valid phone number.");
@@ -61,17 +59,66 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Checking validity of forms
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".brochure-modal form");
-  const submitButton = document.querySelector(".submit-btn");
+  const forms = document.querySelectorAll(".modals form");
 
-  form.addEventListener("input", function () {
-    const isValid = form.checkValidity();
-    submitButton.disabled = !isValid;
-    if (isValid) {
-      submitButton.classList.add("active");
-    } else {
-      submitButton.classList.remove("active");
-    }
+  forms.forEach(function (form) {
+    const submitButton = form.querySelector(".submit-btn");
+    const checkBox = document.querySelector(".modals #checkboxId");
+
+    form.addEventListener("input", function () {
+      const isValid = form.checkValidity();
+
+      if (isValid && checkBox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.add("active");
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.remove("active");
+      }
+    });
+  });
+});
+
+// Confirmation Modal Popup and form reset
+document.addEventListener("DOMContentLoaded", function () {
+  const submitButton = document.querySelectorAll(".submit-btn");
+  const modals = document.querySelectorAll(".modals");
+  const confirmationPopupModals = document.querySelectorAll(
+    ".confirmation-popup-modal"
+  );
+  const closeIcons = document.querySelectorAll(".modal-container .close-icon");
+
+  submitButton.forEach((button, index) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      modals[index].style.display = "none";
+      const form = modals[index].querySelector("form");
+      if (form) form.reset();
+
+      const confirmationModal = confirmationPopupModals[index];
+      confirmationModal.style.display = "block";
+
+      const video = confirmationModal.querySelector("video");
+      video.play();
+
+      video.onended = function () {
+        video.classList.add("shrink");
+
+        confirmationModal.classList.add("show");
+      };
+    });
+  });
+
+  closeIcons.forEach((closeIcon, index) => {
+    closeIcon.addEventListener("click", function () {
+      // Hide the confirmation modal
+      confirmationPopupModals[index].style.display = "none";
+
+      // Show the original modals container
+      modals[index].style.display = "block";
+    });
   });
 });

@@ -6,19 +6,22 @@ document.addEventListener("scroll", function () {
     const categoriesHeight = document.querySelector(
       ".categories-container"
     ).offsetHeight;
-    const footer = document.querySelector("footer");
+    const disclamer = document.querySelector(".disclamer-container.pt-3");
 
     const stickyOffset =
       container.offsetTop - (navbarHeight + categoriesHeight);
     const containerHeight = container.offsetHeight;
-    const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+    const disclamerTop = disclamer.getBoundingClientRect().top + window.scrollY;
 
     // Check if the container should be fixed
-    if (window.scrollY >= 665 && window.scrollY + containerHeight < footerTop) {
+    if (
+      window.scrollY >= 665 &&
+      window.scrollY + containerHeight < disclamerTop
+    ) {
       container.classList.add("fixed");
       container.classList.remove("absolute");
-      container.style.top = `${navbarHeight + categoriesHeight}px`;
-    } else if (window.scrollY + containerHeight >= footerTop) {
+      container.style.top = `${navbarHeight + categoriesHeight + 10}px`;
+    } else if (window.scrollY + containerHeight >= disclamerTop) {
       // When the container hits the footer
       container.classList.remove("fixed");
       container.classList.add("absolute");
@@ -221,7 +224,6 @@ document.addEventListener("DOMContentLoaded", function () {
     generateCalendar(currentMonth, currentYear);
   });
 
-  // Initialize calendar
   populateDropdowns();
   generateCalendar(currentMonth, currentYear);
 });
@@ -244,9 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Opening Schedule Form Modal
-// document.addEventListener("DOMContentLoaded", function () {
-// Get both modal buttons
 const modalButtons = document.querySelectorAll(
   "#open-schedule-form-modal-container, #another-button-id"
 );

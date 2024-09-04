@@ -19,28 +19,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Fixing Categories container
 document.addEventListener("scroll", function () {
   const container = document.querySelector(".categories-container");
   const navbarHeight = document.querySelector(".navbar").offsetHeight;
   const stickyOffset = container.offsetTop - navbarHeight;
+  const propertyDetailsCont = document.querySelector(".property-details-div");
 
   if (window.scrollY >= 656) {
-    console.log(window.scrollY);
     container.classList.add("fixed");
+    propertyDetailsCont.style.marginTop = "90px";
   } else {
     container.classList.remove("fixed");
+    propertyDetailsCont.style.marginTop = "30px";
   }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   const categories = document.querySelectorAll(".category");
 
-  // Function to remove active class from all categories
   function removeActiveClass() {
     categories.forEach((category) => category.classList.remove("active"));
   }
 
-  // Function to add active class to the current category
   function addActiveClass(targetId) {
     removeActiveClass();
     const activeCategory = document.querySelector(
@@ -59,10 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.5 } // Adjust threshold as needed
+    { threshold: 0.5 }
   );
 
-  // Observe each section
   document.querySelectorAll(".section").forEach((section) => {
     observer.observe(section);
   });
