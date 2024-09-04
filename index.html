@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/propertyDetails.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/propertyDetails.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <title>Realezi</title>
 </head>
 
@@ -28,35 +28,40 @@
     <!-- Navbar -->
     <nav class="navbar p-0">
         <div class="container">
-            <div id="left-nav-items" class="d-flex align-items-center ">
-                <div class="navbar-brand px-4 br-light ">
+            <div id="left-nav-items" class="d-flex align-items-center">
+                <div class="navbar-brand px-4 br-light">
                     <a href="#">
-                        <img src="./images/logo.png" alt="" width="100" class="d-inline-block align-text-top">
+                        <img src="./images/logo.png" alt="" width="100" class="d-inline-block align-text-top" />
                     </a>
                 </div>
 
                 <div id="location-dropdown" class="dropdown pe-4 br-light d-flex justify-content-lg-start"
-                    style="min-height: 49px;">
-                    <button class="btn btn-outline-light " type="button" id="locationDropdownBtn"
+                    style="min-height: 49px">
+                    <button class="btn btn-outline-light" type="button" id="locationDropdownBtn"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <span id="location-selection">
-                            Location
-                        </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        <span id="location-selection"> Location </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-chevron-down" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
                         </svg>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="locationDropdown">
-                        <li><a class="dropdown-item dropdown-location" href="#">Location 1</a></li>
-                        <li><a class="dropdown-item dropdown-location" href="#">Location 2</a></li>
-                        <li><a class="dropdown-item dropdown-location" href="#">Location 3</a></li>
+                        <li>
+                            <a class="dropdown-item dropdown-location" href="#">Location 1</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item dropdown-location" href="#">Location 2</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item dropdown-location" href="#">Location 3</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- Search Box -->
-                <div id="nav-search-box-div" style="min-height: 49px;" class="px-4 br-light d-flex align-items-center ">
-                    <div class="input-group bg-white rounded-2 flex-nowrap" style="height: fit-content;">
-                        <div class="d-flex align-items-center px-2 bg-transparent ">
+                <div id="nav-search-box-div" style="min-height: 49px" class="px-4 br-light d-flex align-items-center">
+                    <div class="input-group bg-white rounded-2 flex-nowrap" style="height: fit-content">
+                        <div class="d-flex align-items-center px-2 bg-transparent">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g id="Search" clip-path="url(#clip0_1_282)">
@@ -72,7 +77,7 @@
                             </svg>
                         </div>
 
-                        <input id="nav-search" type="text" class="form-control border-0 "
+                        <input id="nav-search" type="text" class="form-control border-0"
                             placeholder="Search locality, landmark, building or project" aria-label="Search"
                             aria-describedby="button-addon2" />
                     </div>
@@ -80,7 +85,9 @@
             </div>
             <div id="right-nav-items" class="d-flex gap-4">
                 <div id="list-property">
-                    <button class="btn btn-list-property py-1 px-2">Post Your Property</button>
+                    <button class="btn btn-list-property py-1 px-2">
+                        Post Your Property
+                    </button>
                 </div>
                 <!--<button id="hamBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarHam" aria-controls="navbarHam" aria-expanded="false"
@@ -112,7 +119,7 @@
                 <div class="d-flex">
                     <button>Managed by Realezi</button>
                     <button class="d-flex align-items-center">
-                        <img src="./images/star.png" width="20px" alt="Star icon">
+                        <img src="./images/star.png" width="20px" alt="Star icon" />
                         <p>4.2</p>
                     </button>
                 </div>
@@ -132,11 +139,11 @@
                         </svg>
                         <p>Report</p>
                     </button>
-                    <img src="./images/Share.png" width="30px" alt="Share icon" class="share-icon">
+                    <img src="./images/Share.png" width="30px" alt="Share icon" class="share-icon" />
                     <div class="arrow-pair">
-                        <img src="./images/send.png" width="28px" alt="Send icon" class="realezi-arrow arrow">
+                        <img src="./images/send.png" width="28px" alt="Send icon" class="realezi-arrow arrow" />
                         <img src="./images/realezi-filled-arrow.png" width="28px" alt="Realazi arrow"
-                            class="filled-arrow arrow  hidden">
+                            class="filled-arrow arrow hidden" />
                     </div>
                 </div>
                 <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
@@ -145,18 +152,26 @@
 
         <div class="disclamer-modal-container active">
             <div class="disclamer-container">
-                <p>Realezi only acts as a medium for advertisement / information content. We do not in any way
-                    facilitate and cannot be deemed to be facilitating any transaction between seller / developer and
-                    the visitors / users of our website. The details displayed on our website are for information
-                    purposes only. Information regarding real estate projects (including the property / project detail,
-                    listings, floor area, location, price etc.) are either third party content or sourced from public
-                    sources. Nothing contained herein shall be deemed to constitute any sort of legal advise,
-                    solicitation, marketing, offer of sale, invitation to offer, invitation to acquire etc. by
-                    Housing.com. Users of this website are hereby advised to exercise due diligence and to independently
-                    validate and verify all information about any property / project before deciding to purchase the
-                    same or taking any other action. Information on this website does not guarantee that the developer /
-                    project is registered under the Real Estate (Regulation and Development) Act, 2016 or is compliant
-                    with the same, and the same should also be verified independently.</p>
+                <p>
+                    Realezi only acts as a medium for advertisement / information
+                    content. We do not in any way facilitate and cannot be deemed to be
+                    facilitating any transaction between seller / developer and the
+                    visitors / users of our website. The details displayed on our
+                    website are for information purposes only. Information regarding
+                    real estate projects (including the property / project detail,
+                    listings, floor area, location, price etc.) are either third party
+                    content or sourced from public sources. Nothing contained herein
+                    shall be deemed to constitute any sort of legal advise,
+                    solicitation, marketing, offer of sale, invitation to offer,
+                    invitation to acquire etc. by Housing.com. Users of this website are
+                    hereby advised to exercise due diligence and to independently
+                    validate and verify all information about any property / project
+                    before deciding to purchase the same or taking any other action.
+                    Information on this website does not guarantee that the developer /
+                    project is registered under the Real Estate (Regulation and
+                    Development) Act, 2016 or is compliant with the same, and the same
+                    should also be verified independently.
+                </p>
                 <button class="blue-btn" id="close-disclamer">Got it!</button>
             </div>
         </div>
@@ -166,56 +181,74 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active w-100">
                         <div class="carousal-item-inner grid-container">
-                            <div class="first-item image-grid"><img src="./images/property-image-1.jpg"
-                                    alt="Main Image"></div>
-                            <div class="second-third-item">
-                                <div class="second-item image-grid"><img src="./images/property-image-1.jpg"
-                                        alt="Small Image 1"></div>
-                                <div class="thrid-item image-grid"><img src="./images/property-image-1.jpg"
-                                        alt="Small Image 1"></div>
+                            <div class="first-item image-grid">
+                                <img src="./images/property-image-1.jpg" alt="Main Image" />
                             </div>
-                            <div class="fourth-item image-grid"><img src="./images/property-image-1.jpg"
-                                    alt="Small Image 1"></div>
-                            <div class="fifth-item image-grid"><img src="./images/property-image-1.jpg"
-                                    alt="Small Image 1"></div>
-                            <div class="sixth-item image-grid"><img src="./images/property-image-1.jpg"
-                                    alt="Small Image 1"></div>
+                            <div class="second-third-item">
+                                <div class="second-item image-grid">
+                                    <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                                </div>
+                                <div class="thrid-item image-grid">
+                                    <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                                </div>
+                            </div>
+                            <div class="fourth-item image-grid">
+                                <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                            </div>
+                            <div class="fifth-item image-grid">
+                                <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                            </div>
+                            <div class="sixth-item image-grid">
+                                <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousal-item-inner grid-container">
-                            <div class="first-item image-grid"><img src="./images/property-image-2.jpg"
-                                    alt="Main Image"></div>
-                            <div class="second-third-item">
-                                <div class="second-item image-grid"><img src="./images/property-image-2.jpg"
-                                        alt="Small Image 1"></div>
-                                <div class="thrid-item image-grid"><img src="./images/property-image-2.jpg"
-                                        alt="Small Image 1"></div>
+                            <div class="first-item image-grid">
+                                <img src="./images/property-image-2.jpg" alt="Main Image" />
                             </div>
-                            <div class="fourth-item image-grid"><img src="./images/property-image-2.jpg"
-                                    alt="Small Image 1"></div>
-                            <div class="fifth-item image-grid"><img src="./images/property-image-2.jpg"
-                                    alt="Small Image 1"></div>
-                            <div class="sixth-item image-grid"><img src="./images/property-image-2.jpg"
-                                    alt="Small Image 1"></div>
+                            <div class="second-third-item">
+                                <div class="second-item image-grid">
+                                    <img src="./images/property-image-2.jpg" alt="Small Image 1" />
+                                </div>
+                                <div class="thrid-item image-grid">
+                                    <img src="./images/property-image-2.jpg" alt="Small Image 1" />
+                                </div>
+                            </div>
+                            <div class="fourth-item image-grid">
+                                <img src="./images/property-image-2.jpg" alt="Small Image 1" />
+                            </div>
+                            <div class="fifth-item image-grid">
+                                <img src="./images/property-image-2.jpg" alt="Small Image 1" />
+                            </div>
+                            <div class="sixth-item image-grid">
+                                <img src="./images/property-image-2.jpg" alt="Small Image 1" />
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousal-item-inner grid-container">
-                            <div class="first-item image-grid"><img src="./images/property-image-3.jpg"
-                                    alt="Main Image"></div>
-                            <div class="second-third-item">
-                                <div class="second-item image-grid"><img src="./images/property-image-3.jpg"
-                                        alt="Small Image 1"></div>
-                                <div class="thrid-item image-grid"><img src="./images/property-image-3.jpg"
-                                        alt="Small Image 1"></div>
+                            <div class="first-item image-grid">
+                                <img src="./images/property-image-3.jpg" alt="Main Image" />
                             </div>
-                            <div class="fourth-item image-grid"><img src="./images/property-image-3.jpg"
-                                    alt="Small Image 1"></div>
-                            <div class="fifth-item image-grid"><img src="./images/property-image-3.jpg"
-                                    alt="Small Image 1"></div>
-                            <div class="sixth-item image-grid"><img src="./images/property-image-3.jpg"
-                                    alt="Small Image 1"></div>
+                            <div class="second-third-item">
+                                <div class="second-item image-grid">
+                                    <img src="./images/property-image-3.jpg" alt="Small Image 1" />
+                                </div>
+                                <div class="thrid-item image-grid">
+                                    <img src="./images/property-image-3.jpg" alt="Small Image 1" />
+                                </div>
+                            </div>
+                            <div class="fourth-item image-grid">
+                                <img src="./images/property-image-3.jpg" alt="Small Image 1" />
+                            </div>
+                            <div class="fifth-item image-grid">
+                                <img src="./images/property-image-3.jpg" alt="Small Image 1" />
+                            </div>
+                            <div class="sixth-item image-grid">
+                                <img src="./images/property-image-3.jpg" alt="Small Image 1" />
+                            </div>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -235,7 +268,7 @@
         <div class="categories-container mb-3">
             <button class="nav-prev-button hidden" id="slideLeftBtn">
                 <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
-                    alt="Right Aroow icon">
+                    alt="Right Aroow icon" />
             </button>
             <div class="categories-slider d-flex align-items-center justify-content-between">
                 <p class="category" data-target="overview">Overview</p>
@@ -246,38 +279,40 @@
                 <p class="category" data-target="inventory-pool">Inventory Pool</p>
                 <p class="category" data-target="brochure">Brochure</p>
                 <p class="category" data-target="resources">Resources</p>
-                <p class="category" data-target="compare-properties">Compare properties</p>
+                <p class="category" data-target="compare-properties">
+                    Compare properties
+                </p>
                 <p class="category" data-target="qa">Q&A</p>
             </div>
             <button class="nav-button" id="slideRightBtn">
-                <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon">
+                <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon" />
             </button>
         </div>
 
         <div class="image-modal-container" id="imageModal">
-            <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal">
+            <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal" />
             <div class="image-modal">
                 <div class="image-modal-header mb-4">
                     <div class="image-modal-header-inner d-flex justify-content-between">
                         <div class="image-modal-header-inner-left d-flex">
                             <h4>6 BHK Independent Building Floor</h4>
                             <button class="d-flex align-items-center">
-                                <img src="./images/Share.png" width="20px" alt="Share icon">
+                                <img src="./images/Share.png" width="20px" alt="Share icon" />
                                 <p>Share</p>
                             </button>
                             <button class="d-flex align-items-center">
                                 <div class="arrow-pair">
                                     <img src="./images/send.png" width="20px" alt="Send icon"
-                                        class="realezi-arrow arrow">
+                                        class="realezi-arrow arrow" />
                                     <img src="./images/realezi-filled-arrow.png" width="20px" alt="Realazi arrow"
-                                        class="filled-arrow arrow  hidden">
+                                        class="filled-arrow arrow hidden" />
                                 </div>
                                 <p>Save</p>
                             </button>
                         </div>
                         <div class="image-modal-header-inner-right d-flex">
                             <button class="d-flex align-items-center" id="another-button-id">
-                                <img src="./images/phone-blue.png" width="20px" alt="Phone Icon">
+                                <img src="./images/phone-blue.png" width="20px" alt="Phone Icon" />
                                 <p>Contact Seller</p>
                             </button>
                             <button class="d-flex align-items-center" id="another-button-id">
@@ -286,7 +321,9 @@
                         </div>
                     </div>
                     <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
-                    <button class="view-brochure open-brochure-modal-container">View Brochure</button>
+                    <button class="view-brochure open-brochure-modal-container">
+                        View Brochure
+                    </button>
                     <div class="image-categories d-flex align-items-center">
                         <p class="category" data-target="Kitchen">Kitchen</p>
                         <p class="category" data-target="Bedroom">Bedroom</p>
@@ -298,24 +335,24 @@
                         <div class="carousel-progress-bar"></div>
                     </div>
                     <div class="carousel-counter">
-                        <span id="currentSlide" class="current-slide">1</span> / <span id="totalSlides"
-                            class="total-slides">3</span>
+                        <span id="currentSlide" class="current-slide">1</span> /
+                        <span id="totalSlides" class="total-slides">3</span>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-name="Kitchen">
-                            <img src="./images/property-image-1.jpg" class="d-block w-90" alt="..." id="modalImage">
+                            <img src="./images/property-image-1.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Kitchen</p>
-                            <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
                         <div class="carousel-item" data-name="Bedroom">
-                            <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..." id="modalImage">
+                            <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Bedroom</p>
-                            <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
                         <div class="carousel-item" data-name="Bathroom">
-                            <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..." id="modalImage">
+                            <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Bathroom</p>
-                            <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
@@ -339,15 +376,15 @@
                         <h4>ABC Property Overview</h4>
                         <div class="property-overview-btn-container d-flex">
                             <button class="d-flex align-items-center">
-                                <img src="./images/Share.png" width="25px" alt="Share Icon">
+                                <img src="./images/Share.png" width="25px" alt="Share Icon" />
                                 <p>Share</p>
                             </button>
-                            <button class=" d-flex align-items-center">
+                            <button class="d-flex align-items-center">
                                 <div class="arrow-pair">
                                     <img src="./images/send.png" width="27px" alt="Send icon"
-                                        class="realezi-arrow arrow">
+                                        class="realezi-arrow arrow" />
                                     <img src="./images/realezi-filled-arrow.png" width="27px" alt="Realazi arrow"
-                                        class="filled-arrow arrow  hidden">
+                                        class="filled-arrow arrow hidden" />
                                 </div>
                                 <p>Save</p>
                             </button>
@@ -362,8 +399,9 @@
                                 </div>
                                 <div class="lower-row">
                                     <h6>RERA Numer</h6>
-                                    <p>S7000099<br>
-                                        <span style="color: #EC7100">Check status</span>
+                                    <p>
+                                        S7000099<br />
+                                        <span style="color: #ec7100">Check status</span>
                                     </p>
                                 </div>
                             </div>
@@ -400,7 +438,10 @@
                             <div>
                                 <div class="upper-row">
                                     <h6>Address</h6>
-                                    <p>Flats for Sale in<br> Sector 24 Rohin</p>
+                                    <p>
+                                        Flats for Sale in<br />
+                                        Sector 24 Rohin
+                                    </p>
                                 </div>
                                 <div class="lower-row">
                                     <h6>Property Age</h6>
@@ -437,24 +478,24 @@
                     <div class="about-property-content-container my-3">
                         <div class="about-property-content-inner m-3" id="aboutPropertyContent">
                             <div class="about-property-content">
-                                <p>ARCUS COURTAYD-II” is an exclusive project by Sheth Infraspace, featuring luxurious
-                                    5BHK
-                                    individual villas. Designed with meticulous attention to detail, these villas boast
-                                    four
-                                    sides of open space, providing ample natural light and ventilation. ARCUS
-                                    COURTAYD-II
-                                    ensures a coveted lifestyle, offering both comfort and convenience in a serene
-                                    environment.
-                                    One of the standout features of this project is the unique concept of a “COURTYARD”
-                                    within each villa, which is open to the sky. This innovative design element creates
-                                    a
-                                    private, tranquil space that brings a touch of nature into the home, perfect for
-                                    relaxation or entertaining guests.</p>
+                                <p>
+                                    ARCUS COURTAYD-II” is an exclusive project by Sheth
+                                    Infraspace, featuring luxurious 5BHK individual villas.
+                                    Designed with meticulous attention to detail, these villas
+                                    boast four sides of open space, providing ample natural
+                                    light and ventilation. ARCUS COURTAYD-II ensures a coveted
+                                    lifestyle, offering both comfort and convenience in a serene
+                                    environment. One of the standout features of this project is
+                                    the unique concept of a “COURTYARD” within each villa, which
+                                    is open to the sky. This innovative design element creates a
+                                    private, tranquil space that brings a touch of nature into
+                                    the home, perfect for relaxation or entertaining guests.
+                                </p>
                             </div>
                         </div>
                         <button class="d-flex align-items-center m-auto" id="show-more-property-details">
                             <p class="mx-1">Show more about project</p>
-                            <img src="./images/down-arrow-blue.png" width="20px" alt="Down arrow icon">
+                            <img src="./images/down-arrow-blue.png" width="20px" alt="Down arrow icon" />
                         </button>
                     </div>
                 </div>
@@ -464,16 +505,16 @@
                     <div class="floor-plan-container my-4">
                         <div class="floor-plan-properties-categories-container d-flex justify-content-start">
                             <div class="floor-plan-properties-categories active" data-target="1BHK-floor-plan">
-                                <p>1BHK<br>Apartment</p>
+                                <p>1BHK<br />Apartment</p>
                                 <p>1.75Cr</p>
                             </div>
                             <div class="floor-plan-properties-categories" data-target="2BHK-floor-plan">
-                                <p>2BHK<br>Apartment</p>
-                                <p>2.3Cr - 2.38Cr </p>
+                                <p>2BHK<br />Apartment</p>
+                                <p>2.3Cr - 2.38Cr</p>
                             </div>
                             <div class="floor-plan-properties-categories" data-target="3BHK-floor-plan">
-                                <p>3BHK<br>Apartment</p>
-                                <p>4.52Cr - 4.61Cr </p>
+                                <p>3BHK<br />Apartment</p>
+                                <p>4.52Cr - 4.61Cr</p>
                             </div>
                         </div>
                         <div class="3BHK-floor-plan floor-plan mt-5" id="3BHK-floor-plan">
@@ -484,7 +525,7 @@
                             <div class="square-foot-container-property active" id="3BHK-897">
                                 <p class="property-price mt-4">₹ 69.0 L</p>
                                 <div class="floor-plan-image-container">
-                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                                 </div>
                                 <div class="floor-plan-info d-flex justify-content-start">
                                     <div>
@@ -504,7 +545,7 @@
                             <div class="square-foot-container-property" id="3BHK-1323">
                                 <p class="property-price mt-4">₹ 99.0 L</p>
                                 <div class="floor-plan-image-container">
-                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                                 </div>
                                 <div class="floor-plan-info d-flex justify-content-start">
                                     <div>
@@ -528,7 +569,7 @@
                             </div>
                             <p class="property-price mt-4">₹ 59.0 L</p>
                             <div class="floor-plan-image-container">
-                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                             </div>
                             <div class="floor-plan-info d-flex justify-content-start">
                                 <div>
@@ -551,7 +592,7 @@
                             </div>
                             <p class="property-price mt-4">₹ 29.0 L</p>
                             <div class="floor-plan-image-container">
-                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan">
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                             </div>
                             <div class="floor-plan-info d-flex justify-content-start">
                                 <div>
@@ -575,14 +616,15 @@
                     <h4>Explore Nearby</h4>
                     <div class="explore-nearby-inner-container my-4">
                         <button class="nav-prev-button hidden" id="slideLeftLocations">
-                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg);"
-                                alt="Left Arrow icon">
+                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon" />
                         </button>
                         <div class="explore-nearby-container-slider d-flex" id="locationSlider">
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/scholarship-cap.png" width="15px"
+                                            alt="Scholarship Cap Icon" />
                                         <p class="location-name">School</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -592,7 +634,8 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/scholarship-cap.png" width="15px"
+                                            alt="Scholarship Cap Icon" />
                                         <p class="location-name">School</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -601,10 +644,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Hospital</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -614,7 +657,7 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Hospital</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -623,10 +666,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Restaurant</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -636,7 +679,7 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Restaurant</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -645,10 +688,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/scholarship-cap.png" width="15px"
+                                            alt="Scholarship Cap Icon" />
                                         <p class="location-name">School</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -658,7 +702,8 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/scholarship-cap.png" width="15px"
+                                            alt="Scholarship Cap Icon" />
                                         <p class="location-name">School</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -669,61 +714,62 @@
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightLocations">
-                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
 
                 <div class="property-photos-video-container section p-4 my-5">
                     <h4>Photos and videos</h4>
-                    <hr>
+                    <hr />
                     <div class="d-flex justify-content-between">
                         <div class="image-video-container">
                             <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
                                 Your browser does not support the video tag.
                             </video>
-                            <img src="./images/play-button.png" width="50px" class="play-btn" alt="Youtube Play button">
+                            <img src="./images/play-button.png" width="50px" class="play-btn"
+                                alt="Youtube Play button" />
                         </div>
                         <div class="image-video-container">
                             <img src="./images/property-image-1.jpg" class="property-image clickable-image"
-                                alt="Property Image" id="imageVidemodalImageVideososModal">
+                                alt="Property Image" id="imageVidemodalImageVideososModal" />
                         </div>
                         <div class="image-video-container">
                             <img src="./images/property-image-2.jpg" class="property-image clickable-image"
-                                alt="Property Image" id="modalImageVideos">
+                                alt="Property Image" id="modalImageVideos" />
                         </div>
                         <div class="image-video-container">
                             <img src="./images/property-image-3.jpg" class="property-image clickable-image"
-                                alt="Property Image" id="modalImageVideos">
+                                alt="Property Image" id="modalImageVideos" />
                             <p class="assets-numbers">+15</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-modal-container image-video-modal-container" id="imageVideoModal">
-                    <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal">
+                    <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal" />
                     <div class="image-modal">
                         <div class="image-modal-header mb-4">
                             <div class="image-modal-header-inner d-flex justify-content-between">
                                 <div class="d-flex image-modal-header-inner-left">
                                     <h4>6 BHK Independent Building Floor</h4>
                                     <button class="d-flex align-items-center">
-                                        <img src="./images/Share.png" width="20px" alt="Share icon">
+                                        <img src="./images/Share.png" width="20px" alt="Share icon" />
                                         <p>Share</p>
                                     </button>
                                     <button class="d-flex align-items-center">
                                         <div class="arrow-pair">
                                             <img src="./images/send.png" width="30px" alt="Send icon"
-                                                class="realezi-arrow arrow">
+                                                class="realezi-arrow arrow" />
                                             <img src="./images/realezi-filled-arrow.png" width="28px"
-                                                alt="Realazi arrow" class="filled-arrow arrow  hidden">
+                                                alt="Realazi arrow" class="filled-arrow arrow hidden" />
                                         </div>
                                         <p>Save</p>
                                     </button>
                                 </div>
                                 <div class="image-modal-header-inner-right d-flex">
                                     <button class="d-flex align-items-center">
-                                        <img src="./images/phone-blue.png" width="20px" alt="Phone Icon">
+                                        <img src="./images/phone-blue.png" width="20px" alt="Phone Icon" />
                                         <p>Contact Seller</p>
                                     </button>
                                     <button class="d-flex align-items-center">
@@ -739,8 +785,8 @@
                                 <div class="carousel-progress-bar"></div>
                             </div>
                             <div class="carousel-counter">
-                                <span id="currentSlide" class="current-slide">1</span> / <span id="totalSlides"
-                                    class="total-slides">3</span>
+                                <span id="currentSlide" class="current-slide">1</span> /
+                                <span id="totalSlides" class="total-slides">3</span>
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -748,19 +794,19 @@
                                         Your browser does not support the video tag.
                                     </video>
                                     <p>Kitchen</p>
-                                    <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                                    <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                                 </div>
                                 <div class="carousel-item">
                                     <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..."
-                                        id="modalImage">
+                                        id="modalImage" />
                                     <p>Bedroom</p>
-                                    <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                                    <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                                 </div>
                                 <div class="carousel-item">
                                     <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..."
-                                        id="modalImage">
+                                        id="modalImage" />
                                     <p>Bathroom</p>
-                                    <img class="info" src="./images/error.png" width="20px" alt="Icon">
+                                    <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
@@ -782,90 +828,90 @@
                     <div class="amenities-container-inner my-4">
                         <button class="nav-prev-button hidden" id="slideLeftAmenities">
                             <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
-                                alt="Left Arrow icon">
+                                alt="Left Arrow icon" />
                         </button>
                         <div class="amenities-container-inner-slider d-flex justify-content-start p-1"
                             id="amenitiesSlider">
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Directions car.png" alt="">
+                                    <img src="./images/Directions car.png" alt="" />
                                     <p>Parking: <span>2 Open</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Chair.png" alt="">
+                                    <img src="./images/Chair.png" alt="" />
                                     <p>Furnishing: <span>Semi</span></p>
                                 </div>
                             </div>
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Pets.png" alt="">
+                                    <img src="./images/Pets.png" alt="" />
                                     <p>Pet Friendly: <span>Yes</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Pool.png" alt="">
+                                    <img src="./images/Pool.png" alt="" />
                                     <p>Swimming: <span>Yes</span></p>
                                 </div>
                             </div>
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Power.png" alt="">
+                                    <img src="./images/Power.png" alt="" />
                                     <p>Power Backup: <span>None</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Exercise.png" alt="">
+                                    <img src="./images/Exercise.png" alt="" />
                                     <p>Gymnasium: <span>Yes</span></p>
                                 </div>
                             </div>
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Water drop.png" alt="">
+                                    <img src="./images/Water drop.png" alt="" />
                                     <p>Water Source: <span>24*7</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Sports football.png" alt="">
+                                    <img src="./images/Sports football.png" alt="" />
                                     <p>Park: <span>Yes</span></p>
                                 </div>
                             </div>
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Directions car.png" alt="">
+                                    <img src="./images/Directions car.png" alt="" />
                                     <p>Parking: <span>2 Open</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Chair.png" alt="">
+                                    <img src="./images/Chair.png" alt="" />
                                     <p>Furnishing: <span>Semi</span></p>
                                 </div>
                             </div>
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Pets.png" alt="">
+                                    <img src="./images/Pets.png" alt="" />
                                     <p>Pet Friendly: <span>Yes</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Pool.png" alt="">
+                                    <img src="./images/Pool.png" alt="" />
                                     <p>Swimming: <span>Yes</span></p>
                                 </div>
                             </div>
                             <div style="margin-right: 40px">
                                 <div class="text-center">
-                                    <img src="./images/Power.png" alt="">
+                                    <img src="./images/Power.png" alt="" />
                                     <p>Power Backup: <span>None</span></p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="./images/Exercise.png" alt="">
+                                    <img src="./images/Exercise.png" alt="" />
                                     <p>Gymnasium: <span>Yes</span></p>
                                 </div>
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightAmenities">
-                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
 
                 <div class="loan-container my-2">
                     <div class="loan-container-content d-flex justify-content-evenly">
-                        <img src="./images/bro.png" width="130px" alt="">
+                        <img src="./images/bro.png" width="130px" alt="" />
                         <div class="content">
                             <h2>Get your dream home with us</h2>
                             <h3>Apply for easy home loans</h3>
@@ -878,14 +924,15 @@
                     <h4>Inventory Pool</h4>
                     <div class="inventory-inner-container my-4">
                         <button class="nav-prev-button hidden" id="slideLeftInventory">
-                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg);"
-                                alt="Left Arrow icon">
+                            <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon" />
                         </button>
                         <div class="inventory-container-slider d-flex">
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/scholarship-cap.png" width="15px"
+                                            alt="Scholarship Cap Icon" />
                                         <p class="location-name">School</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -895,7 +942,8 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/scholarship-cap.png" width="15px"
+                                            alt="Scholarship Cap Icon" />
                                         <p class="location-name">School</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -904,10 +952,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Hospital</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -917,7 +965,7 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Hospital</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -926,10 +974,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px;">
+                            <div style="margin-right: 15px">
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Hospital</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -939,7 +987,7 @@
                                 </div>
                                 <div class="nearby-locations">
                                     <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon">
+                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
                                         <p class="location-name">Hospital</p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -950,7 +998,7 @@
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightInventory">
-                            <img src="./images/right-arrow.png" width="15px" alt="Left Arrow icon">
+                            <img src="./images/right-arrow.png" width="15px" alt="Left Arrow icon" />
                         </button>
                     </div>
                 </div>
@@ -960,27 +1008,27 @@
                     <div class="brochure-container-inner">
                         <button class="nav-prev-button hidden" id="slideLeftBrochures">
                             <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
-                                alt="Left Arrow icon">
+                                alt="Left Arrow icon" />
                         </button>
                         <div class="brochure-container-inner-slider d-flex justify-content-start">
                             <div class="image-container">
-                                <img src="./images/brochure/1.png" alt="Brochure">
+                                <img src="./images/brochure/1.png" alt="Brochure" />
                             </div>
                             <div class="image-container">
-                                <img src="./images/brochure/2.png" alt="Brochure">
+                                <img src="./images/brochure/2.png" alt="Brochure" />
                             </div>
                             <div class="image-container">
-                                <img src="./images/brochure/3.png" alt="Brochure">
+                                <img src="./images/brochure/3.png" alt="Brochure" />
                             </div>
                             <div class="image-container">
-                                <img src="./images/brochure/4.png" alt="Brochure">
+                                <img src="./images/brochure/4.png" alt="Brochure" />
                             </div>
                             <div class="image-container">
-                                <img src="./images/brochure/4.png" alt="Brochure">
+                                <img src="./images/brochure/4.png" alt="Brochure" />
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightBrochures">
-                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
                         </button>
                         <button class="view-btn open-brochure-modal-container">
                             View Brochure
@@ -988,12 +1036,12 @@
                     </div>
                 </div>
                 <div class="brochure-modal-container modal-container">
-                    <img src="./images/cross.png" width="15px" class="close-icon">
+                    <img src="./images/cross.png" width="15px" class="close-icon" />
                     <div class="brochure-modal modals">
                         <h4>Please share your details</h4>
                         <form>
                             <div class="input-group">
-                                <input type="text" name="name" autocomplete="off" class="input" required>
+                                <input type="text" name="name" autocomplete="off" class="input" required />
                                 <label class="user-label">Name</label>
                             </div>
                             <div class="phone-number-container d-flex align-items-center justify-content-start">
@@ -1006,30 +1054,33 @@
                                 </select>
                                 <div class="input-group">
                                     <input type="number" id="phone-number" name="phone-number" autocomplete="off"
-                                        class="input" maxlength="10" required>
+                                        class="input" maxlength="10" required />
                                     <label class="user-label">Enter mobile number</label>
                                 </div>
                                 <button id="send-otp-btn" class="otp-btn">Send OTP</button>
                             </div>
-                            <p class="otp-sent" id="otp-sent-message">We have sent the OTP to .</p>
+                            <p class="otp-sent" id="otp-sent-message">
+                                We have sent the OTP to .
+                            </p>
                             <div class="otp-container d-flex justify-content-start align-items-start">
                                 <div class="input-group">
-                                    <input type="number" name="otp" autocomplete="off" class="input" required>
+                                    <input type="number" name="otp" autocomplete="off" class="input" required />
                                     <label class="user-label">OTP</label>
                                 </div>
-                                <p>Did not receive OTP ?<br>Request OTP on call.</p>
+                                <p>Did not receive OTP ?<br />Request OTP on call.</p>
                             </div>
                             <div class="input-group">
-                                <input type="email" name="email" autocomplete="off" class="input" required>
+                                <input type="email" name="email" autocomplete="off" class="input" required />
                                 <label class="user-label">Email ID</label>
                             </div>
                             <div class="no-transform d-flex align-items-center justify-content-start">
-                                <input type="checkbox" id="checkboxId" name="checkboxName" required>
+                                <input type="checkbox" id="checkboxId" name="checkboxName" required />
                                 <label>By submitting this form, I agree to accept and agree to
-                                    Realezi’s
-                                    T&C</label>
+                                    Realezi’s T&C</label>
                             </div>
-                            <button type="submit" class="submit-btn" disabled>Submit</button>
+                            <button type="submit" class="submit-btn" disabled>
+                                Submit
+                            </button>
                         </form>
                     </div>
                     <div class="confirmation-popup-modal">
@@ -1043,42 +1094,50 @@
 
                 <div class="resources-container section py-3 my-5" id="resources">
                     <h4>Helpful Resources</h4>
-                    <p style="font-size: 0.9rem">Check your affordability, Home loan eligibility & EMI</p>
+                    <p style="font-size: 0.9rem">
+                        Check your affordability, Home loan eligibility & EMI
+                    </p>
                     <div class="resources-container-inner">
                         <button class="nav-prev-button hidden" id="slideLeftResources">
                             <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
-                                alt="Left Arrow icon">
+                                alt="Left Arrow icon" />
                         </button>
                         <div class="resources-container-inner-slider d-flex justify-content-start">
                             <div class="single-resource-container">
-                                <img src="./images/resource-1.png" alt="Sticker">
+                                <img src="./images/resource-1.png" alt="Sticker" />
                                 <div class="content">
-                                    <h6>EMI <br><span>Calculator</span></h6>
+                                    <h6>EMI <br /><span>Calculator</span></h6>
                                     <p>EMI Starts at</p>
                                     <p>Rs 36.54k</p>
                                     <button>Calculate</button>
                                 </div>
                             </div>
                             <div class="single-resource-container">
-                                <img src="./images/resource-2.png" alt="Sticker">
+                                <img src="./images/resource-2.png" alt="Sticker" />
                                 <div class="content">
-                                    <h6>Affordability <br><span>Calculator</span></h6>
-                                    <p>Find the best budget<br> for your home search</p>
+                                    <h6>Affordability <br /><span>Calculator</span></h6>
+                                    <p>
+                                        Find the best budget<br />
+                                        for your home search
+                                    </p>
                                     <button>Calculate</button>
                                 </div>
                             </div>
                             <div class="single-resource-container">
-                                <img src="./images/resource-3.png" alt="Sticker">
+                                <img src="./images/resource-3.png" alt="Sticker" />
                                 <div class="content">
-                                    <h6>Eligibility <br><span>Calculator</span></h6>
-                                    <p>Find your home<br> loan limit</p>
+                                    <h6>Eligibility <br /><span>Calculator</span></h6>
+                                    <p>
+                                        Find your home<br />
+                                        loan limit
+                                    </p>
                                     <button>Calculate</button>
                                 </div>
                             </div>
                             <div class="single-resource-container">
-                                <img src="./images/resource-1.png" alt="Sticker">
+                                <img src="./images/resource-1.png" alt="Sticker" />
                                 <div class="content">
-                                    <h6>EMI <br><span>Calculator</span></h6>
+                                    <h6>EMI <br /><span>Calculator</span></h6>
                                     <p>EMI Starts at</p>
                                     <p>Rs 36.54k</p>
                                     <button>Calculate</button>
@@ -1086,7 +1145,7 @@
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightResources">
-                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
@@ -1096,22 +1155,24 @@
                     <div class="compare-property-container-inner my-3">
                         <button class="nav-prev-button hidden" id="slideLeftProperties">
                             <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
-                                alt="Left Arrow icon">
+                                alt="Left Arrow icon" />
                         </button>
                         <div class="input-container d-flex align-items-center">
-                            <img src="./images/Search.png" width="23px" alt="Search icon">
-                            <input type="text" placeholder="Search building or project to compare" name="search">
+                            <img src="./images/Search.png" width="23px" alt="Search icon" />
+                            <input type="text" placeholder="Search building or project to compare" name="search" />
                         </div>
                         <div class="compare-properties-slider d-flex">
                             <!-- <div class="d-flex"> -->
                             <div class="single-property-info-container">
                                 <h5>Tulip Affordable Floors</h5>
-                                <p class="location">Dwarka Mor, South West Delhi, New Delhi</p>
+                                <p class="location">
+                                    Dwarka Mor, South West Delhi, New Delhi
+                                </p>
                                 <div class="smaller-container">
                                     <h5>1 BHK</h5>
-                                    <p style="font-size: 1.1rem;">400sq.ft</p>
+                                    <p style="font-size: 1.1rem">400sq.ft</p>
                                     <div class="image-container">
-                                        <img src="./images/property-image-1.jpg" alt="Property">
+                                        <img src="./images/property-image-1.jpg" alt="Property" />
                                     </div>
                                     <h5>₹18 L</h5>
                                     <p class="mb-3">₹3.83K/sq.ft</p>
@@ -1129,15 +1190,16 @@
                                     <h5>AMENITIES</h5>
                                     <div class="d-flex">
                                         <div class="text-center">
-                                            <img src="./images/water-drop-grey.png" class="icons" alt="Water drop icon">
+                                            <img src="./images/water-drop-grey.png" class="icons"
+                                                alt="Water drop icon" />
                                             <p>24X7 Water Supply</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon">
+                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon" />
                                             <p>Fire Sprinkles</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon">
+                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon" />
                                             <p>Power Backup</p>
                                         </div>
                                     </div>
@@ -1145,12 +1207,14 @@
                             </div>
                             <div class="single-property-info-container blue">
                                 <h5>Tulip Affordable Floors</h5>
-                                <p class="location">Dwarka Mor, South West Delhi, New Delhi</p>
+                                <p class="location">
+                                    Dwarka Mor, South West Delhi, New Delhi
+                                </p>
                                 <div class="smaller-container">
                                     <h5>1 BHK</h5>
-                                    <p style="font-size: 1.1rem;">400sq.ft</p>
+                                    <p style="font-size: 1.1rem">400sq.ft</p>
                                     <div class="image-container">
-                                        <img src="./images/property-image-1.jpg" alt="Property">
+                                        <img src="./images/property-image-1.jpg" alt="Property" />
                                     </div>
                                     <h5>₹18 L</h5>
                                     <p class="mb-3">₹3.83K/sq.ft</p>
@@ -1168,15 +1232,16 @@
                                     <h5>AMENITIES</h5>
                                     <div class="d-flex">
                                         <div class="text-center">
-                                            <img src="./images/water-drop-grey.png" class="icons" alt="Water drop icon">
+                                            <img src="./images/water-drop-grey.png" class="icons"
+                                                alt="Water drop icon" />
                                             <p>24X7 Water Supply</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon">
+                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon" />
                                             <p>Fire Sprinkles</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon">
+                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon" />
                                             <p>Power Backup</p>
                                         </div>
                                     </div>
@@ -1184,12 +1249,14 @@
                             </div>
                             <div class="single-property-info-container faded-blue">
                                 <h5>Tulip Affordable Floors</h5>
-                                <p class="location">Dwarka Mor, South West Delhi, New Delhi</p>
+                                <p class="location">
+                                    Dwarka Mor, South West Delhi, New Delhi
+                                </p>
                                 <div class="smaller-container">
                                     <h5>1 BHK</h5>
-                                    <p style="font-size: 1.1rem;">400sq.ft</p>
+                                    <p style="font-size: 1.1rem">400sq.ft</p>
                                     <div class="image-container">
-                                        <img src="./images/property-image-1.jpg" alt="Property">
+                                        <img src="./images/property-image-1.jpg" alt="Property" />
                                     </div>
                                     <h5>₹18 L</h5>
                                     <p class="mb-3">₹3.83K/sq.ft</p>
@@ -1207,15 +1274,16 @@
                                     <h5>AMENITIES</h5>
                                     <div class="d-flex">
                                         <div class="text-center">
-                                            <img src="./images/water-drop-grey.png" class="icons" alt="Water drop icon">
+                                            <img src="./images/water-drop-grey.png" class="icons"
+                                                alt="Water drop icon" />
                                             <p>24X7 Water Supply</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon">
+                                            <img src="./images/sprinkler.png" class="icons" alt="Sprinkler icon" />
                                             <p>Fire Sprinkles</p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon">
+                                            <img src="./images/power-gray.png" class="icons" alt="Power cable icon" />
                                             <p>Power Backup</p>
                                         </div>
                                         <!-- </div> -->
@@ -1224,7 +1292,7 @@
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightProperties">
-                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
@@ -1234,7 +1302,7 @@
                     <div class="developer my-4">
                         <div class="d-flex align-items-start">
                             <div class="profile-image">
-                                <img src="./images/user.png" alt="Profile photo">
+                                <img src="./images/user.png" alt="Profile photo" />
                             </div>
                             <div class="developer-info">
                                 <h4>Swadesh Developers</h4>
@@ -1251,17 +1319,22 @@
                             </div>
                         </div>
                         <div class="developer-comment expanded">
-                            <p>Swadesh Developers is amongst the leading colonizers of Bhopal today and provides the
-                                best set of infrastructure. They understand your wish and
-                                endeavour to bring an assortment of style, quality and comfort; where every niche of
-                                construction spells the story of luxury. Their art of perfection starts
-                                from civic amenities to lavish facilities and from comfort zones to recreation
-                                areas; and it all comes under your value for money. This essence of
-                                goodness does not end here, their awe inspiring architecture leaves little doubt in
-                                mind of people as every project defines the statement of excellence.
-                                So, it may get crucial for end users to choose eligible out of the best. Swadesh
-                                Developers believes in delivering quality construction and timely
-                                delivered projects to their property investors.</p>
+                            <p>
+                                Swadesh Developers is amongst the leading colonizers of Bhopal
+                                today and provides the best set of infrastructure. They
+                                understand your wish and endeavour to bring an assortment of
+                                style, quality and comfort; where every niche of construction
+                                spells the story of luxury. Their art of perfection starts
+                                from civic amenities to lavish facilities and from comfort
+                                zones to recreation areas; and it all comes under your value
+                                for money. This essence of goodness does not end here, their
+                                awe inspiring architecture leaves little doubt in mind of
+                                people as every project defines the statement of excellence.
+                                So, it may get crucial for end users to choose eligible out of
+                                the best. Swadesh Developers believes in delivering quality
+                                construction and timely delivered projects to their property
+                                investors.
+                            </p>
                         </div>
                         <p id="read-btn">Read Less</p>
                     </div>
@@ -1279,8 +1352,10 @@
                         <div class="question-container">
                             <button class="tag">For Project</button>
                             <h4>Q:What is the rera registration number of the project?</h4>
-                            <p><span>A:</span>The project is registered on RERA and RERA ID for the project is
-                                P-BPL-21-3015.</p>
+                            <p>
+                                <span>A:</span>The project is registered on RERA and RERA ID
+                                for the project is P-BPL-21-3015.
+                            </p>
                             <p class="time">Answered 3 years ago</p>
                         </div>
                         <div class="question-container">
@@ -1305,12 +1380,15 @@
                             <div id="collapseOne" class="accordion-collapse collapse show"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <strong>This is the first item's accordion body.</strong> It
+                                    is shown by default, until the collapse plugin adds the
+                                    appropriate classes that we use to style each element. These
+                                    classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any
+                                    of this with custom CSS or overriding our default variables.
+                                    It's also worth noting that just about any HTML can go
+                                    within the <code>.accordion-body</code>, though the
+                                    transition does limit overflow.
                                 </div>
                             </div>
                         </div>
@@ -1324,12 +1402,15 @@
                             <div id="collapseTwo" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <strong>This is the second item's accordion body.</strong>
+                                    It is hidden by default, until the collapse plugin adds the
+                                    appropriate classes that we use to style each element. These
+                                    classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any
+                                    of this with custom CSS or overriding our default variables.
+                                    It's also worth noting that just about any HTML can go
+                                    within the <code>.accordion-body</code>, though the
+                                    transition does limit overflow.
                                 </div>
                             </div>
                         </div>
@@ -1343,12 +1424,15 @@
                             <div id="collapseThree" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <strong>This is the third item's accordion body.</strong> It
+                                    is hidden by default, until the collapse plugin adds the
+                                    appropriate classes that we use to style each element. These
+                                    classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any
+                                    of this with custom CSS or overriding our default variables.
+                                    It's also worth noting that just about any HTML can go
+                                    within the <code>.accordion-body</code>, though the
+                                    transition does limit overflow.
                                 </div>
                             </div>
                         </div>
@@ -1362,12 +1446,15 @@
                             <div id="collapseFour" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <strong>This is the third item's accordion body.</strong> It
+                                    is hidden by default, until the collapse plugin adds the
+                                    appropriate classes that we use to style each element. These
+                                    classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any
+                                    of this with custom CSS or overriding our default variables.
+                                    It's also worth noting that just about any HTML can go
+                                    within the <code>.accordion-body</code>, though the
+                                    transition does limit overflow.
                                 </div>
                             </div>
                         </div>
@@ -1381,12 +1468,15 @@
                             <div id="collapseFive" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <strong>This is the third item's accordion body.</strong> It
+                                    is hidden by default, until the collapse plugin adds the
+                                    appropriate classes that we use to style each element. These
+                                    classes control the overall appearance, as well as the
+                                    showing and hiding via CSS transitions. You can modify any
+                                    of this with custom CSS or overriding our default variables.
+                                    It's also worth noting that just about any HTML can go
+                                    within the <code>.accordion-body</code>, though the
+                                    transition does limit overflow.
                                 </div>
                             </div>
                         </div>
@@ -1397,160 +1487,186 @@
                     <h4>Resale Projects in Kolar Road</h4>
                     <button class="nav-prev-button hidden" id="slideLeftRelatedProperties">
                         <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
-                            alt="Right Aroow icon">
+                            alt="Right Aroow icon" />
                     </button>
                     <div class="listed-properties-container-slider d-flex my-4">
                         <div class="property-containter">
-                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image">
+                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image" />
                             <h4 class="px-1">6 BHK Independent Building Floor</h4>
                             <div class="d-flex align-items-center justify-content-between px-2">
                                 <p class="price">Rs.2 Cr</p>
                                 <div class="d-flex">
-                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon">
+                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon" />
                                     <div class="arrow-pair">
                                         <img src="./images/send.png" width="24px" alt="Send icon"
-                                            class="realezi-arrow arrow">
+                                            class="realezi-arrow arrow" />
                                         <img src="./images/realezi-filled-arrow.png" width="24px" alt="Realazi arrow"
-                                            class="filled-arrow arrow  hidden">
+                                            class="filled-arrow arrow hidden" />
                                     </div>
                                 </div>
                             </div>
                             <p class="about px-1">
-                                Very nice property in sec24 rohini near rithala metro station with in 1km and is iskon
-                                temple 200 mtr More About This Property One
+                                Very nice property in sec24 rohini near rithala metro station
+                                with in 1km and is iskon temple 200 mtr More About This
+                                Property One
                             </p>
                             <div class="small-details d-flex justify-content-between px-2">
-                                <p>AREA<br> 2100 sq. ft</p>
-                                <p>AVERAGE PRICE<br> Rs. 6.65k/sq.ft</p>
-                                <p>POSSESSION STARTS<br>July, 2025</p>
-                                <p>SIZES<br>900 sq.ft - 1400 sq.ft</p>
+                                <p>
+                                    AREA<br />
+                                    2100 sq. ft
+                                </p>
+                                <p>
+                                    AVERAGE PRICE<br />
+                                    Rs. 6.65k/sq.ft
+                                </p>
+                                <p>POSSESSION STARTS<br />July, 2025</p>
+                                <p>SIZES<br />900 sq.ft - 1400 sq.ft</p>
                                 <div class="expand-details">
-                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow">
+                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow" />
                                 </div>
                             </div>
                             <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                 <button>Interested</button>
                                 <button class="d-flex align-items-center">
-                                    <img src="./images/phone.png" width="15px" alt="Phone icon">
+                                    <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                     <p>Contact Seller</p>
                                 </button>
                             </div>
                         </div>
                         <div class="property-containter">
-                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image">
+                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image" />
                             <h4 class="px-1">6 BHK Independent Building Floor</h4>
                             <div class="d-flex align-items-center justify-content-between px-2">
                                 <p class="price">Rs.2 Cr</p>
                                 <div class="d-flex">
-                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon">
+                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon" />
                                     <div class="arrow-pair">
                                         <img src="./images/send.png" width="24px" alt="Send icon"
-                                            class="realezi-arrow arrow">
+                                            class="realezi-arrow arrow" />
                                         <img src="./images/realezi-filled-arrow.png" width="24px" alt="Realazi arrow"
-                                            class="filled-arrow arrow hidden">
+                                            class="filled-arrow arrow hidden" />
                                     </div>
                                 </div>
                             </div>
                             <p class="about px-1">
-                                Very nice property in sec24 rohini near rithala metro station with in 1km and is iskon
-                                temple 200 mtr More About This Property One
+                                Very nice property in sec24 rohini near rithala metro station
+                                with in 1km and is iskon temple 200 mtr More About This
+                                Property One
                             </p>
                             <div class="small-details d-flex justify-content-between px-2">
-                                <p>AREA<br> 2100 sq. ft</p>
-                                <p>AVERAGE PRICE<br> Rs. 6.65k/sq.ft</p>
-                                <p>POSSESSION STARTS<br>July, 2025</p>
-                                <p>SIZES<br>900 sq.ft - 1400 sq.ft</p>
+                                <p>
+                                    AREA<br />
+                                    2100 sq. ft
+                                </p>
+                                <p>
+                                    AVERAGE PRICE<br />
+                                    Rs. 6.65k/sq.ft
+                                </p>
+                                <p>POSSESSION STARTS<br />July, 2025</p>
+                                <p>SIZES<br />900 sq.ft - 1400 sq.ft</p>
                                 <div class="expand-details">
-                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow">
+                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow" />
                                 </div>
                             </div>
                             <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                 <button>Interested</button>
                                 <button class="d-flex align-items-center">
-                                    <img src="./images/phone.png" width="15px" alt="Phone icon">
+                                    <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                     <p>Contact Seller</p>
                                 </button>
                             </div>
                         </div>
                         <div class="property-containter">
-                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image">
+                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image" />
                             <h4 class="px-1">6 BHK Independent Building Floor</h4>
                             <div class="d-flex align-items-center justify-content-between px-2">
                                 <p class="price">Rs.2 Cr</p>
                                 <div class="d-flex">
-                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon">
+                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon" />
                                     <div class="arrow-pair">
                                         <img src="./images/send.png" width="24px" alt="Send icon"
-                                            class="realezi-arrow arrow">
+                                            class="realezi-arrow arrow" />
                                         <img src="./images/realezi-filled-arrow.png" width="24px" alt="Realazi arrow"
-                                            class="filled-arrow arrow  hidden">
+                                            class="filled-arrow arrow hidden" />
                                     </div>
                                 </div>
                             </div>
                             <p class="about px-1">
-                                Very nice property in sec24 rohini near rithala metro station with in 1km and is iskon
-                                temple 200 mtr More About This Property One
+                                Very nice property in sec24 rohini near rithala metro station
+                                with in 1km and is iskon temple 200 mtr More About This
+                                Property One
                             </p>
                             <div class="small-details d-flex justify-content-between px-2">
-                                <p>AREA<br> 2100 sq. ft</p>
-                                <p>AVERAGE PRICE<br> Rs. 6.65k/sq.ft</p>
-                                <p>POSSESSION STARTS<br>July, 2025</p>
-                                <p>SIZES<br>900 sq.ft - 1400 sq.ft</p>
+                                <p>
+                                    AREA<br />
+                                    2100 sq. ft
+                                </p>
+                                <p>
+                                    AVERAGE PRICE<br />
+                                    Rs. 6.65k/sq.ft
+                                </p>
+                                <p>POSSESSION STARTS<br />July, 2025</p>
+                                <p>SIZES<br />900 sq.ft - 1400 sq.ft</p>
                                 <div class="expand-details">
-                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow">
+                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow" />
                                 </div>
                             </div>
                             <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                 <button>Interested</button>
                                 <button class="d-flex align-items-center">
-                                    <img src="./images/phone.png" width="15px" alt="Phone icon">
+                                    <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                     <p>Contact Seller</p>
                                 </button>
                             </div>
                         </div>
                         <div class="property-containter">
-                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image">
+                            <img src="./images/property-image-2.jpg" class="property-image" alt="Property Image" />
                             <h4 class="px-1">6 BHK Independent Building Floor</h4>
                             <div class="d-flex align-items-center justify-content-between px-2">
                                 <p class="price">Rs.2 Cr</p>
                                 <div class="d-flex">
-                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon">
+                                    <img src="./images/Share.png" width="25px" height="24px" alt="Share icon" />
                                     <div class="arrow-pair">
                                         <img src="./images/send.png" width="24px" alt="Send icon"
-                                            class="realezi-arrow arrow">
+                                            class="realezi-arrow arrow" />
                                         <img src="./images/realezi-filled-arrow.png" width="24px" alt="Realazi arrow"
-                                            class="filled-arrow arrow  hidden">
+                                            class="filled-arrow arrow hidden" />
                                     </div>
                                 </div>
                             </div>
                             <p class="about px-1">
-                                Very nice property in sec24 rohini near rithala metro station with in 1km and is iskon
-                                temple 200 mtr More About This Property One
+                                Very nice property in sec24 rohini near rithala metro station
+                                with in 1km and is iskon temple 200 mtr More About This
+                                Property One
                             </p>
                             <div class="small-details d-flex justify-content-between px-2">
-                                <p>AREA<br> 2100 sq. ft</p>
-                                <p>AVERAGE PRICE<br> Rs. 6.65k/sq.ft</p>
-                                <p>POSSESSION STARTS<br>July, 2025</p>
-                                <p>SIZES<br>900 sq.ft - 1400 sq.ft</p>
+                                <p>
+                                    AREA<br />
+                                    2100 sq. ft
+                                </p>
+                                <p>
+                                    AVERAGE PRICE<br />
+                                    Rs. 6.65k/sq.ft
+                                </p>
+                                <p>POSSESSION STARTS<br />July, 2025</p>
+                                <p>SIZES<br />900 sq.ft - 1400 sq.ft</p>
                                 <div class="expand-details">
-                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow">
+                                    <img src="./images/dropdown-arrow-grey.png" width="7px" alt="Dropdown Arrow" />
                                 </div>
                             </div>
                             <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                 <button>Interested</button>
                                 <button class="d-flex align-items-center">
-                                    <img src="./images/phone.png" width="15px" alt="Phone icon">
+                                    <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                     <p>Contact Seller</p>
                                 </button>
                             </div>
                         </div>
-
                     </div>
                     <button class="nav-button" id="slideRightRelatedProperties">
-                        <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon">
+                        <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
                     </button>
                 </div>
-
             </div>
             <div class="property-details-div-right">
                 <div class="scheduling-container">
@@ -1564,23 +1680,27 @@
                             <p class="mb-0">Deposit</p>
                         </div>
                     </div>
-                    <button class="blue-btn" id="open-schedule-form-modal-container">Connect with Seller</button>
+                    <button class="blue-btn" id="open-schedule-form-modal-container">
+                        Connect with Seller
+                    </button>
                     <div class="break d-flex align-items-center my-4">
-                        <hr>
+                        <hr />
                         <p>or</p>
-                        <hr>
+                        <hr />
                     </div>
-                    <p class="schedule-container-heading">Pick your visit date & visit</p>
+                    <p class="schedule-container-heading">
+                        Pick your visit date & visit
+                    </p>
                     <div class="date-container active">
                         <button class="nav-prev-button hidden" id="slideLeftDate">
                             <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
-                                alt="Right Aroow icon">
+                                alt="Right Aroow icon" />
                         </button>
                         <div class="date-container-slider d-flex justify-content-start mb-4">
                             <!-- Dates will be dynamically generated here -->
                         </div>
                         <button class="nav-button" id="slideRightDate">
-                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon">
+                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon" />
                         </button>
                     </div>
                     <div class="calendar-container">
@@ -1589,9 +1709,9 @@
                             <select id="year-select"></select>
                             <div class="nav-arrows">
                                 <span id="prev-month" class="arrow"><img src="./images/chevron.png" width="10px"
-                                        alt="Left Chvron icon"></span>
+                                        alt="Left Chvron icon" /></span>
                                 <span id="next-month" class="arrow"><img src="./images/chevron.png" width="10px"
-                                        alt="Left Chvron icon" style="transform: rotate(180deg)"></span>
+                                        alt="Left Chvron icon" style="transform: rotate(180deg)" /></span>
                             </div>
                         </div>
                         <div class="calendar-body">
@@ -1605,16 +1725,18 @@
                         <p class="time">1:00 pm - 4:00 pm</p>
                         <p class="time">4:00 pm - 7:00 pm</p>
                     </div>
-                    <button class="blue-btn" id="open-schedule-form-modal-container">Schedule Visit</button>
+                    <button class="blue-btn" id="open-schedule-form-modal-container">
+                        Schedule Visit
+                    </button>
                 </div>
 
                 <div class="schedule-form-modal-container modal-container">
-                    <img src="./images/cross.png" width="15px" class="close-icon">
+                    <img src="./images/cross.png" width="15px" class="close-icon" />
                     <div class="schedule-form-modal modals">
                         <h4>Please share your details</h4>
                         <form>
                             <div class="input-group">
-                                <input required="" type="text" name="name" autocomplete="off" class="input">
+                                <input required="" type="text" name="name" autocomplete="off" class="input" />
                                 <label class="user-label">Name</label>
                             </div>
                             <div class="phone-number-container d-flex align-items-end justify-content-start">
@@ -1627,24 +1749,26 @@
                                 </select>
                                 <div class="input-group">
                                     <input id="phone-number" type="number" name="phone-number" autocomplete="off"
-                                        class="input" required maxlength=10>
+                                        class="input" required maxlength="10" />
                                     <label class="user-label">Enter mobile number</label>
                                 </div>
                                 <button class="verify-btn">Verify</button>
                             </div>
                             <div class="input-group">
-                                <input type="email" name="email" autocomplete="off" class="input" required>
+                                <input type="email" name="email" autocomplete="off" class="input" required />
                                 <label class="user-label">Email ID</label>
                             </div>
                             <div class="input-group">
-                                <input type="number" name="numberOfPeople" autocomplete="off" class="input" required>
+                                <input type="number" name="numberOfPeople" autocomplete="off" class="input" required />
                                 <label class="user-label">Number of people</label>
                             </div>
                             <div class="no-transform d-flex align-items-center justify-content-start">
-                                <input type="checkbox" id="checkboxId" name="checkboxName" required>
+                                <input type="checkbox" id="checkboxId" name="checkboxName" required />
                                 <label>I agree to be contacted by Realezi Dedicated Manager</label>
                             </div>
-                            <button type="submit" class="submit-btn" id="event-scheduled" disabled>Submit</button>
+                            <button type="submit" class="submit-btn" id="event-scheduled" disabled>
+                                Submit
+                            </button>
                         </form>
                     </div>
                     <div class="confirmation-popup-modal">
@@ -1663,7 +1787,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <img src="./images/youtube.png" class="play-btn">
+                        <img src="./images/youtube.png" class="play-btn" />
                     </div>
                     <div class="video-container">
                         <div class="video">
@@ -1671,7 +1795,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <img src="./images/youtube.png" class="play-btn">
+                        <img src="./images/youtube.png" class="play-btn" />
                     </div>
                 </div>
 
@@ -1680,17 +1804,17 @@
                         <h5>Featured Properties</h5>
                         <div class="d-flex align-items-center justify-content-between my-3">
                             <div class="property-container">
-                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image" />
                                 <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
                             </div>
                             <div class="property-container">
-                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image" />
                                 <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
                             </div>
                         </div>
                         <button class="d-flex align-items-center">
                             <p>View More</p>
-                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
@@ -1700,38 +1824,44 @@
                         <h5>Featured Properties</h5>
                         <div class="d-flex align-items-center justify-content-between my-3">
                             <div class="property-container">
-                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image" />
                                 <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
                             </div>
                             <div class="property-container">
-                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image">
+                                <img class="property-image" src="./images/property-image-4.png" alt="Property Image" />
                                 <p>Semi furnished 1 BHK in block 2, Garden Villas</p>
                             </div>
                         </div>
                         <button class="d-flex align-items-center">
                             <p>View More</p>
-                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Arrow icon">
+                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="disclamer-container pt-3">
-            <p><span>Disclaimer:</span> Realezi only acts as a medium for advertisement / information content.
-                We do not in
-                any way facilitate and cannot be deemed to be facilitating any transaction between seller /
-                developer and the visitors / users of our website. The details displayed on our website are for
-                information purposes only. Information regarding real estate projects (including the property /
-                project detail, listings, floor area, location, price etc.) are either third party content or
-                sourced from public sources. Nothing contained herein shall be deemed to constitute any sort of
-                legal advise, solicitation, marketing, offer of sale, invitation to offer, invitation to acquire
-                etc. by Housing.com. Users of this website are hereby advised to exercise due diligence and to
-                independently validate and verify all information about any property / project before deciding
-                to purchase the same or taking any other action. Information on this website does not guarantee
-                that the developer / project is registered under the Real Estate (Regulation and Development)
-                Act, 2016 or is compliant with the same, and the same should also be verified independently.</p>
+        <div class="disclamer-container pb-3">
+            <p>
+                <span>Disclaimer:</span> Realezi only acts as a medium for
+                advertisement / information content. We do not in any way facilitate
+                and cannot be deemed to be facilitating any transaction between seller
+                / developer and the visitors / users of our website. The details
+                displayed on our website are for information purposes only.
+                Information regarding real estate projects (including the property /
+                project detail, listings, floor area, location, price etc.) are either
+                third party content or sourced from public sources. Nothing contained
+                herein shall be deemed to constitute any sort of legal advise,
+                solicitation, marketing, offer of sale, invitation to offer,
+                invitation to acquire etc. by Housing.com. Users of this website are
+                hereby advised to exercise due diligence and to independently validate
+                and verify all information about any property / project before
+                deciding to purchase the same or taking any other action. Information
+                on this website does not guarantee that the developer / project is
+                registered under the Real Estate (Regulation and Development) Act,
+                2016 or is compliant with the same, and the same should also be
+                verified independently.
+            </p>
         </div>
     </main>
 
@@ -1740,8 +1870,11 @@
             <div class="upper-footer">
                 <div class="columns d-flex align-items-start justify-content-between my-3">
                     <div>
-                        <img src="./images/logo.png" width="150px" class="mb-3">
-                        <h3>Connecting You to Your<br> Dream Property.</h3>
+                        <img src="./images/logo.png" width="150px" class="mb-3" />
+                        <h3>
+                            Connecting You to Your<br />
+                            Dream Property.
+                        </h3>
                         <button class="white-btn">Try it yourself</button>
                     </div>
                     <div>
@@ -1790,8 +1923,6 @@
                                     <span class="text-2">Google Play</span>
                                 </span>
                             </a>
-
-
                         </div>
                     </div>
                     <div>
@@ -1818,36 +1949,36 @@
                             <button class="align-items-center blue-btn refer-btn mt-3">
                                 <p class="mx-2">Refer & Earn</p>
                                 <lottie-player src="./animation-files/fire-animation.json" background="transparent"
-                                    speed="1" style="width: 25px; height: 25px;" loop autoplay></lottie-player>
+                                    speed="1" style="width: 25px; height: 25px" loop autoplay></lottie-player>
                             </button>
                             <li>Realezi Community</li>
                             <li>Customers</li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
 
             <div class="lower-footer">
-                <div class="lower-upper ">
+                <div class="lower-upper">
                     <ul class="d-flex align-items-center justify-content-center">
-                        <li>Privacy policies </li>
+                        <li>Privacy policies</li>
                         <li>Terms and conditions</li>
                         <li>Disclaimer</li>
                     </ul>
-
                 </div>
                 <div class="lower-bottom d-flex align-items-center justify-content-between">
                     <p class="text-center">©2024 Realezi. All rights reserved</p>
-                    <p>Made with love <img src="./images/heart.png" width="15px"> from Realezi</p>
+                    <p>
+                        Made with love <img src="./images/heart.png" width="15px" /> from
+                        Realezi
+                    </p>
                     <div class="socials-container">
-                        <button class="fb-btn  social-btn">
-                            <img src="./images/fb.png" width="18px">
+                        <button class="fb-btn social-btn">
+                            <img src="./images/fb.png" width="18px" />
                             <span class="text">Facebook</span>
                         </button>
-                        <button class="linkedin-btn  social-btn">
-                            <img src="./images/linkedin.png" width="18px">
+                        <button class="linkedin-btn social-btn">
+                            <img src="./images/linkedin.png" width="18px" />
                             <span class="text">LinkedIn</span>
                         </button>
                         <button class="insta-btn social-btn">
@@ -1858,54 +1989,51 @@
                             </svg>
                             <span class="text">Instagram</span>
                         </button>
-                        <button class="youtube-btn  social-btn">
-                            <img src="./images/youtube-triangle.png" width="10px">
+                        <button class="youtube-btn social-btn">
+                            <img src="./images/youtube-triangle.png" width="10px" />
                             <span class="text">Youtube</span>
                         </button>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const arrowPairs = document.querySelectorAll('.arrow-pair');
+        document.addEventListener("DOMContentLoaded", function () {
+            const arrowPairs = document.querySelectorAll(".arrow-pair");
 
             arrowPairs.forEach(function (pair) {
-                const realeziArrow = pair.querySelector('.realezi-arrow');
-                const filledArrow = pair.querySelector('.filled-arrow');
+                const realeziArrow = pair.querySelector(".realezi-arrow");
+                const filledArrow = pair.querySelector(".filled-arrow");
 
-                realeziArrow.addEventListener('click', function () {
-                    realeziArrow.classList.add('hidden');
-                    filledArrow.classList.remove('hidden');
+                realeziArrow.addEventListener("click", function () {
+                    realeziArrow.classList.add("hidden");
+                    filledArrow.classList.remove("hidden");
                 });
 
-                filledArrow.addEventListener('click', function () {
-                    filledArrow.classList.add('hidden');
-                    realeziArrow.classList.remove('hidden');
+                filledArrow.addEventListener("click", function () {
+                    filledArrow.classList.add("hidden");
+                    realeziArrow.classList.remove("hidden");
                 });
             });
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            const expandDetailsContainers = document.querySelectorAll(".expand-details");
+            const expandDetailsContainers =
+                document.querySelectorAll(".expand-details");
 
             expandDetailsContainers.forEach(function (expandContainer) {
                 expandContainer.addEventListener("click", function () {
                     const smallDetails = expandContainer.parentElement;
-                    const dropdown = expandContainer.querySelector('img')
+                    const dropdown = expandContainer.querySelector("img");
 
                     // if (smallDetails && smallDetails.classList.contains("small-details")) {
                     smallDetails.classList.toggle("expand");
-                    dropdown.classList.toggle("rotate")
+                    dropdown.classList.toggle("rotate");
                     // }
                 });
             });
         });
-
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

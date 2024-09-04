@@ -6,7 +6,7 @@ document.addEventListener("scroll", function () {
     const categoriesHeight = document.querySelector(
       ".categories-container"
     ).offsetHeight;
-    const disclamer = document.querySelector(".disclamer-container.pt-3");
+    const disclamer = document.querySelector(".disclamer-container.pb-3");
 
     const stickyOffset =
       container.offsetTop - (navbarHeight + categoriesHeight);
