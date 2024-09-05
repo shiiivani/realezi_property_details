@@ -1,9 +1,9 @@
+// Opening and Closing Brochure Modal
 document.addEventListener("DOMContentLoaded", function () {
   const modalButtons = document.querySelectorAll(
     ".open-brochure-modal-container"
   );
   const modal = document.querySelector(".brochure-modal-container");
-  const modalContent = document.querySelector(".brochure-modal");
   const closeIcon = document.querySelector(
     ".brochure-modal-container .close-icon"
   );
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Otp sent message
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".brochure-modal form");
   const countryCodeSelect = document.getElementById("country-code");
@@ -83,14 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Confirmation Modal Popup and form reset
 document.addEventListener("DOMContentLoaded", function () {
-  const submitButton = document.querySelectorAll(".submit-btn");
+  const submitButtons = document.querySelectorAll(".submit-btn");
   const modals = document.querySelectorAll(".modals");
   const confirmationPopupModals = document.querySelectorAll(
     ".confirmation-popup-modal"
   );
   const closeIcons = document.querySelectorAll(".modal-container .close-icon");
 
-  submitButton.forEach((button, index) => {
+  submitButtons.forEach((button, index) => {
     button.addEventListener("click", function (event) {
       event.preventDefault();
 
@@ -104,21 +105,22 @@ document.addEventListener("DOMContentLoaded", function () {
       const video = confirmationModal.querySelector("video");
       video.play();
 
-      video.onended = function () {
+      setTimeout(function () {
         video.classList.add("shrink");
-
         confirmationModal.classList.add("show");
-      };
+      }, 3500);
     });
   });
 
   closeIcons.forEach((closeIcon, index) => {
     closeIcon.addEventListener("click", function () {
-      // Hide the confirmation modal
-      confirmationPopupModals[index].style.display = "none";
+      const confirmationModal = confirmationPopupModals[index];
+      const video = confirmationModal.querySelector("video");
 
-      // Show the original modals container
+      confirmationPopupModals[index].style.display = "none";
       modals[index].style.display = "block";
+      confirmationModal.classList.remove("show");
+      video.classList.remove("shrink");
     });
   });
 });

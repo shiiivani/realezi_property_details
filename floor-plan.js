@@ -1,3 +1,4 @@
+// Selecting specific apartment in Floor Plan Selection
 document.addEventListener("DOMContentLoaded", function () {
   const categories = document.querySelectorAll(
     ".floor-plan-properties-categories"
@@ -9,20 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   categories.forEach((category) => {
     category.addEventListener("click", function () {
-      // Remove active class from all categories and containers
       categories.forEach((cat) => cat.classList.remove("active"));
       containers.forEach((container) => container.classList.remove("active"));
 
-      // Add active class to the clicked category and its corresponding container
       const targetId = category.getAttribute("data-target");
       category.classList.add("active");
       document.getElementById(targetId).classList.add("active");
     });
   });
 
+  // Selecting square foot for specific apartment
   squareFootContainers.forEach((squareFoot) => {
     squareFoot.addEventListener("click", function () {
-      // Remove active class from all square foot containers and properties
       const parentContainer = squareFoot.closest(".floor-plan");
       const squareFoots = parentContainer.querySelectorAll(
         ".square-foot-container p"
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
       squareFoots.forEach((sq) => sq.classList.remove("active"));
       properties.forEach((prop) => prop.classList.remove("active"));
 
-      // Add active class to the clicked square foot and its corresponding property container
       const targetId = squareFoot.getAttribute("data-target");
       squareFoot.classList.add("active");
       document.getElementById(targetId).classList.add("active");

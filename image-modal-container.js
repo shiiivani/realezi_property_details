@@ -1,3 +1,4 @@
+// Opening and closing Image modal
 document.addEventListener("DOMContentLoaded", function () {
   const propertyImagesDiv = document.querySelector(".property-images-div");
   const carouselItems =
@@ -6,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImage = document.getElementById("modalImage");
   const closeModal = document.getElementById("closeModal");
 
-  // Function to show modal
   function showModal(event) {
     const imgSrc = event.target.src;
     modalImage.src = imgSrc;
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   closeModal.addEventListener("click", hideModal);
 });
 
+// Images slider
 document.addEventListener("DOMContentLoaded", function () {
   const carousels = document.querySelectorAll(".image-modal .carousel");
 
@@ -60,12 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ".image-video-container"
   );
   const imageModal = document.getElementById("imageVideoModal");
-  const modalImage = document.getElementById("modalImage");
   const closeModal = document.querySelector(
     ".image-video-modal-container .close-icon"
   );
 
-  // Function to show modal
   function showModal() {
     imageModal.classList.add("active");
     document.body.style.overflow = "hidden";
@@ -83,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   closeModal.addEventListener("click", hideModal);
 });
 
+// Selecting categories in image slider
 document.addEventListener("DOMContentLoaded", function () {
   const categories = document.querySelectorAll(".category");
   const carousel = document.getElementById("carouselExampleCaptions2");

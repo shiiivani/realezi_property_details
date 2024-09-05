@@ -1,3 +1,4 @@
+// Brochure section slider
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".brochure-container-inner-slider");
   const slideRightBtn = document.getElementById("slideRightBrochures");

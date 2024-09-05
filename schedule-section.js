@@ -7,26 +7,23 @@ document.addEventListener("scroll", function () {
       ".categories-container"
     ).offsetHeight;
     const disclamer = document.querySelector(".disclamer-container.pb-3");
-
-    const stickyOffset =
-      container.offsetTop - (navbarHeight + categoriesHeight);
     const containerHeight = container.offsetHeight;
     const disclamerTop = disclamer.getBoundingClientRect().top + window.scrollY;
 
-    // Check if the container should be fixed
+    const threshold = 152;
+    const offset = 150;
+
     if (
       window.scrollY >= 665 &&
-      window.scrollY + containerHeight < disclamerTop
+      window.scrollY + containerHeight < disclamerTop - offset
     ) {
       container.classList.add("fixed");
       container.classList.remove("absolute");
       container.style.top = `${navbarHeight + categoriesHeight + 10}px`;
-    } else if (window.scrollY + containerHeight >= disclamerTop) {
-      // When the container hits the footer
+    } else if (window.scrollY + containerHeight >= disclamerTop - threshold) {
       container.classList.remove("fixed");
       container.classList.add("absolute");
       container.style.top = "initial";
-      // container.style.bottom = `${footerTop - containerHeight}px`;
     } else {
       container.classList.remove("fixed");
       container.classList.remove("absolute");
@@ -39,24 +36,19 @@ document.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const dateContainerSlider = document.querySelector(".date-container-slider");
 
-  // Get the current date
   const today = new Date();
   const currentYear = today.getFullYear();
   const currentMonth = today.getMonth();
 
-  // Get the number of days in the current month
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
-  // Function to get day name
   function getDayName(date) {
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[date.getDay()];
   }
 
-  // Clear existing dates
   dateContainerSlider.innerHTML = "";
 
-  // Generate days and dates starting from today
   for (let day = today.getDate(); day <= daysInMonth; day++) {
     const date = new Date(currentYear, currentMonth, day);
     const dayName = day === today.getDate() ? "Today" : getDayName(date);
@@ -189,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Event listeners
   monthSelect.addEventListener("change", (e) => {
     currentMonth = parseInt(e.target.value);
     generateCalendar(currentMonth, currentYear);

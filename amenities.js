@@ -1,3 +1,4 @@
+// Amenities Slider
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".amenities-container-inner-slider");
   const slideRightBtn = document.getElementById("slideRightAmenities");

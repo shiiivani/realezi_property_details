@@ -425,7 +425,7 @@ button.d-flex p {
 }
 
 .image-modal-header-inner {
-  align-items: center;
+  align-items: flex-end;
 }
 
 .image-modal-header h4 {
@@ -1521,17 +1521,19 @@ form .no-transform label {
   text-align: center;
   border-radius: 20px;
   display: none;
+  width: 450px;
+  height: 400px;
 }
 
 .confirmation-popup-modal video {
-  width: 450px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
 }
 
 .confirmation-popup-modal h4 {
   color: #ec7100;
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
 .confirmation-popup-modal p {
@@ -1542,18 +1544,18 @@ form .no-transform label {
 .confirmation-popup-modal h4,
 .confirmation-popup-modal p {
   opacity: 0;
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .confirmation-popup-modal.show h4,
 .confirmation-popup-modal.show p {
   opacity: 1;
-  transform: translateY(-30px);
+  transform: translateY(-60px);
 }
 
 .Realezi-arrow-loader.shrink {
-  width: 70%; /* Adjust the percentage to control the reduction */
-  transition: width 1s ease;
+  width: 55%;
+  transition: width 0.5s ease;
 }
 
 /* Resource Section */
@@ -2099,19 +2101,31 @@ form .no-transform label {
 }
 
 /* Property Details Div Right */
-
 .property-details-div-right {
   width: 28%;
-  transition: left 0.5s ease-in-out, right 0.5s ease-in-out,
-    bottom 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
 }
 
 .property-details-div-right.fixed {
   z-index: 199;
-  left: 66.8%;
+  right: 12%;
   width: 300px;
   position: fixed;
-  transition: bottom 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 1500px) {
+  .property-details-div-right.fixed {
+    right: 14%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .property-details-div-right.fixed {
+    right: 16%;
+  }
 }
 
 .property-details-div-right.absolute {
@@ -2120,6 +2134,7 @@ form .no-transform label {
   z-index: 80;
   right: -10px;
   width: 320px;
+  transform: translateY(40px);
 }
 
 .property-details-div-right .scheduling-container {
@@ -2359,7 +2374,6 @@ form .no-transform label {
 }
 
 /* Video Section */
-
 .video-section .video-container {
   margin-bottom: 15px;
   position: relative;
@@ -2387,7 +2401,6 @@ form .no-transform label {
 }
 
 /* Featured Properties Section */
-
 .featured-property-container-inner {
   background-color: #f7f9ff;
   border-radius: 20px;
@@ -2441,7 +2454,6 @@ form .no-transform label {
 }
 
 /* Disclamer Section  */
-
 .disclamer-container p {
   font-size: 0.9rem;
   color: #434343;
@@ -2781,6 +2793,7 @@ form .no-transform label {
   font-size: 0.9rem;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1400px) {
   .property-details-div-right .scheduling-container {
     padding: 15px;
@@ -2853,6 +2866,9 @@ form .no-transform label {
   .listed-properties-container .my-4 {
     flex-direction: row;
   }
+  .disclamer-container.pb-3 {
+    margin-top: 70px;
+  }
   .footer .columns div:first-child img {
     margin-top: 30px;
   }
@@ -2895,11 +2911,16 @@ form .no-transform label {
     top: 83px;
   }
   .image-modal-header-inner {
+    margin-bottom: 5px;
+  }
+  .image-modal-header-inner-left {
     flex-direction: column;
+  }
+  .image-modal-header-inner-left {
     align-items: flex-start;
   }
-  .image-modal-header-inner-right {
-    margin: 15px 0;
+  .image-modal-header button:first-child {
+    margin-left: 0;
   }
   .image-video-container {
     width: 130px;
@@ -3067,11 +3088,20 @@ form .no-transform label {
     flex-direction: column;
     align-items: flex-start;
   }
-  .image-modal-header-inner-left button {
-    margin-bottom: 15px;
-  }
   .carousel-progress {
     width: 20%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .image-modal-header-inner-left div.d-flex,
+  .image-modal-header-inner-right {
+    flex-direction: column;
+  }
+  .image-modal-header-inner-left div.d-flex button:last-child,
+  .image-modal-header-inner-right button:last-child {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
 
@@ -3125,11 +3155,35 @@ form .no-transform label {
 }
 
 @media screen and (max-width: 560px) {
+  .image-modal-container {
+    padding: 30px;
+  }
+  .image-modal button {
+    font-size: 0.7rem;
+  }
+  .image-modal button img {
+    width: 10px;
+  }
+  .image-modal-header h4 {
+    font-size: 1rem;
+  }
+  .image-modal-header .price {
+    font-size: 0.8rem;
+  }
+  .image-modal-header .view-brochure {
+    padding: 4px 10px;
+  }
+  .image-categories .category {
+    font-size: 0.8rem;
+  }
   .image-modal .carousel-item {
     margin-top: 80px;
   }
   .modal-container form {
     padding: 10px;
+  }
+  .modal-container .modals {
+    padding: 15px;
   }
   .carousel-progress {
     top: 40px;

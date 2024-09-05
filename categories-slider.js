@@ -1,3 +1,4 @@
+// Categories section slider
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".categories-slider");
   const slideRightBtn = document.getElementById("slideRightBtn");
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Fixing Categories container
+// Fixing Categories container on top of the screen
 document.addEventListener("scroll", function () {
   const container = document.querySelector(".categories-container");
   const navbarHeight = document.querySelector(".navbar").offsetHeight;
