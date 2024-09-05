@@ -2,7 +2,7 @@
 document.addEventListener("scroll", function () {
   if (window.innerWidth > 1200) {
     const container = document.querySelector(".property-details-div-right");
-    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+    const navbarHeight = document.querySelector("nav").offsetHeight;
     const categoriesHeight = document.querySelector(
       ".categories-container"
     ).offsetHeight;

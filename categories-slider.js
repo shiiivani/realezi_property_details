@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Fixing Categories container on top of the screen
 document.addEventListener("scroll", function () {
   const container = document.querySelector(".categories-container");
-  const navbarHeight = document.querySelector(".navbar").offsetHeight;
+  const navbarHeight = document.querySelector("nav").offsetHeight;
   const stickyOffset = container.offsetTop - navbarHeight;
   const propertyDetailsCont = document.querySelector(".property-details-div");
 
-  if (window.scrollY >= 656) {
+  if (window.scrollY >= 610) {
     container.classList.add("fixed");
     propertyDetailsCont.style.marginTop = "90px";
   } else {

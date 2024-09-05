@@ -26,87 +26,139 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar p-0">
-        <div class="container">
-            <div id="left-nav-items" class="d-flex align-items-center">
-                <div class="navbar-brand px-4 br-light">
-                    <a href="#">
-                        <img src="./images/logo.png" alt="" width="100" class="d-inline-block align-text-top" />
-                    </a>
-                </div>
+    <nav>
+        <div id="pl-nav-1">
+            <div class="pl-nav-1-left">
+                <svg width="97" height="24" viewBox="0 0 97 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_836)">
+                        <path
+                            d="M13.3215 0C13.9866 0.148341 14.6615 0.2635 15.3147 0.450878C19.8381 1.75472 22.7866 4.67469 23.9254 9.16591C24.9694 13.2843 23.9411 17.0026 21.0223 20.1627C19.1 22.2453 16.7022 23.4925 13.9017 23.8731C10.3434 24.3552 7.14031 23.4437 4.36549 21.1581C2.07815 19.2726 0.734161 16.8484 0.217091 13.9616C0.142096 13.5381 0.0710478 13.1126 0 12.6871C0 12.2323 0 11.7755 0 11.3208C0.0335504 11.2329 0.0868362 11.149 0.096704 11.0592C0.223011 9.74561 0.503255 8.47105 1.05585 7.2609C2.70968 3.64216 5.46673 1.33507 9.36647 0.366949C9.80065 0.259597 10.2269 0.122967 10.6572 0C11.5453 0 12.4334 0 13.3215 0ZM23.4971 12.0664C23.6135 5.96096 18.5099 0.80026 12.238 0.788549C5.93052 0.77879 0.858494 5.68185 0.826918 11.9317C0.793367 18.3338 5.95025 23.19 12.1314 23.2368C18.3757 23.2837 23.5721 18.1347 23.4991 12.0664H23.4971Z"
+                            fill="white" />
+                        <path
+                            d="M97 6.34359C96.9349 6.46656 96.848 6.58367 96.8105 6.7164C96.5639 7.57326 95.7725 8.19981 94.908 8.20957C94.0101 8.22128 93.1575 7.54984 92.899 6.63052C92.6779 5.84392 93.0786 4.94802 93.864 4.47177C94.9969 3.78471 96.4494 4.36637 96.8125 5.64483C96.8441 5.75609 96.9369 5.85173 97.002 5.95322V6.34359H97Z"
+                            fill="#EC7100" />
+                        <path
+                            d="M68.3303 12.6715C68.4506 12.5017 68.5868 12.3397 68.6875 12.1601C69.8854 10.0053 71.709 8.76977 74.2075 8.74245C76.6053 8.71512 78.4625 9.79645 79.7571 11.803C79.8499 11.9474 79.9406 12.0918 80.0334 12.2382C80.0827 12.2285 80.1321 12.2187 80.1834 12.2089C80.1834 12.0469 80.1834 11.8869 80.1834 11.7249C80.1775 11.0105 80.1775 10.2942 80.1637 9.57979C80.1577 9.3202 80.2308 9.19723 80.5228 9.19723C84.0752 9.20504 87.6257 9.20309 91.178 9.20699C91.2234 9.20699 91.2708 9.23041 91.3853 9.26164C91.3853 10.0229 91.403 10.7958 91.3715 11.5687C91.3636 11.7327 91.1919 11.9064 91.0655 12.0489C89.4236 13.8895 87.7756 15.7242 86.1297 17.5609C86.0665 17.6312 86.0113 17.7093 85.8929 17.8635C86.1119 17.8927 86.26 17.9259 86.406 17.9279C88.4289 17.9454 90.4518 17.9474 92.4727 17.9825C92.9029 17.9903 92.9898 17.84 92.9878 17.4516C92.974 14.883 92.9898 12.3124 92.972 9.74375C92.9681 9.3202 93.0746 9.17381 93.5187 9.19138C94.4048 9.22651 95.2949 9.20699 96.181 9.19918C96.4257 9.19918 96.5836 9.23041 96.5836 9.53685C96.5757 13.4386 96.5777 17.3423 96.5737 21.2441C96.5737 21.3046 96.5461 21.367 96.5204 21.4744C95.5159 21.4744 94.5173 21.4744 93.5187 21.4744C89.3426 21.4705 85.1666 21.4568 80.9906 21.4724C80.513 21.4724 80.434 21.3261 80.3807 20.8771C80.2327 19.6299 80.6748 18.7106 81.555 17.8166C83.0431 16.3039 84.3989 14.6644 85.808 13.0756C85.8692 13.0053 85.9166 12.9233 86.0212 12.7711H80.2939C80.5248 13.7451 80.8189 14.6819 80.5919 15.7203H71.5807C71.561 16.7665 72.4648 17.8283 73.5325 18.0508C74.7542 18.3065 75.812 18.0508 76.633 17.0613C76.6942 16.9871 76.8284 16.9012 76.9053 16.9188C77.9572 17.153 79.0072 17.4028 80.1163 17.6644C79.7374 18.6149 79.167 19.3352 78.4447 19.9344C75.2199 22.6065 70.5742 21.6579 68.6559 17.9493C68.5769 17.7991 68.4348 17.68 68.3224 17.5473C68.2079 16.8017 67.9967 16.0521 68.0046 15.3065C68.0145 14.4282 68.2138 13.5518 68.3322 12.6754L68.3303 12.6715ZM76.8777 13.7099C76.6606 12.5115 75.362 11.7171 73.9312 11.8186C72.9681 11.8869 71.7425 12.855 71.7919 13.7099H76.8777Z"
+                            fill="#EC7100" />
+                        <path
+                            d="M41.3261 15.7613C41.336 17.0066 42.4905 18.0899 43.872 18.1406C44.8549 18.1758 45.7193 17.8986 46.3607 17.1023C46.4357 17.0105 46.6074 16.9168 46.71 16.9403C47.7501 17.1647 48.7842 17.4126 49.8223 17.6546C49.2519 19.4581 46.9231 21.5135 43.9056 21.4412C40.8821 21.369 38.4073 19.2161 37.8369 16.2044C37.2863 13.3059 38.9342 10.2864 41.7011 9.18944C43.4596 8.49263 45.2081 8.58242 46.9014 9.41781C48.5691 10.2415 49.6289 11.598 50.2683 13.3488C50.7656 10.9871 51.93 9.12308 54.2154 8.21547C56.5304 7.29419 58.6579 7.78606 60.5683 9.53687V8.15886H63.8187V21.0587H60.6137V19.7822C60.442 19.8837 60.3413 19.9227 60.2663 19.9891C57.831 22.2025 54.0713 21.8531 51.8669 19.2142C51.109 18.3066 50.5959 17.2857 50.4045 16.1185C50.363 15.8648 50.2959 15.7106 49.9821 15.7106C47.1383 15.7223 44.2944 15.7203 41.4505 15.7223C41.4189 15.7223 41.3893 15.7399 41.3242 15.7594L41.3261 15.7613ZM60.7479 14.4848C60.738 14.3423 60.734 14.112 60.7025 13.8876C60.5031 12.4822 59.765 11.4438 58.4132 10.9637C57.0336 10.4757 55.7173 10.665 54.62 11.7151C53.6589 12.6364 53.4063 13.8017 53.501 15.0704C53.6845 17.5121 56.0271 19.0912 58.3204 18.3241C59.8282 17.8186 60.7577 16.3801 60.7479 14.4848ZM46.635 13.7002C46.4732 12.6306 45.2772 11.7952 43.9786 11.8108C42.757 11.8244 41.6419 12.6676 41.5077 13.7002H46.635Z"
+                            fill="white" />
+                        <path
+                            d="M27.3179 21.4217V3.93306C27.3593 3.90379 27.385 3.86865 27.4106 3.86865C29.5914 3.93892 31.7821 3.90379 33.949 4.11263C36.043 4.31368 37.5764 6.0235 37.7619 8.10418C37.8211 8.76195 37.8093 9.44315 37.7007 10.0931C37.4244 11.7444 36.3686 12.7964 34.8549 13.4444C34.7365 13.4952 34.622 13.5538 34.4404 13.6377C35.8357 16.2317 37.2152 18.8003 38.6382 21.4471C37.4264 21.4471 36.3133 21.4607 35.2022 21.4295C35.068 21.4256 34.9003 21.2148 34.8174 21.0625C33.6135 18.8452 32.4215 16.6221 31.2275 14.3989C31.2038 14.356 31.1939 14.2994 31.1604 14.2701C31.0341 14.1686 30.8999 14.0749 30.7696 13.9793C30.7183 14.1159 30.6216 14.2525 30.6196 14.3891C30.6078 15.4627 30.6117 16.5342 30.6117 17.6078C30.6117 18.7125 30.6117 19.8192 30.6117 20.924C30.6117 21.0821 30.5979 21.2402 30.59 21.4217H27.3159H27.3179ZM30.6137 8.89468C30.6137 9.39826 30.596 9.90379 30.6275 10.4054C30.6354 10.5284 30.8091 10.747 30.9019 10.745C31.7051 10.7236 32.5202 10.7333 33.3037 10.5908C34.2529 10.4191 34.6496 9.79253 34.6003 8.8127C34.5569 7.94022 33.9609 7.25317 33.0886 7.15558C32.4037 7.07945 31.711 7.08726 31.0242 7.04432C30.6867 7.02285 30.5999 7.17705 30.6098 7.48154C30.6275 7.95193 30.6137 8.42428 30.6137 8.89663V8.89468Z"
+                            fill="white" />
+                        <path
+                            d="M68.3303 12.6715C68.2138 13.5479 68.0125 14.4243 68.0026 15.3026C67.9948 16.0482 68.2059 16.7958 68.3204 17.5433C68.3204 18.8237 68.3204 20.1042 68.3204 21.4158H65.0936V3.45288H68.3303V12.6695V12.6715Z"
+                            fill="white" />
+                        <path
+                            d="M18.2635 6.48211C18.2299 6.57775 18.1806 6.74756 18.1115 6.90957C16.4063 10.8308 14.6992 14.7521 12.9862 18.6695C12.8974 18.8725 12.7908 19.0969 12.625 19.2355C12.2895 19.5127 11.8494 19.3175 11.6777 18.8276C11.2633 17.6487 10.8429 16.4697 10.46 15.2791C10.312 14.8204 10.1028 14.5511 9.58378 14.4496C8.3286 14.2036 7.09119 13.8777 5.84193 13.6005C5.52222 13.5303 5.21829 13.3917 5.25381 13.0657C5.28144 12.8256 5.48077 12.5192 5.69589 12.3982C9.50681 10.257 13.3316 8.13924 17.1563 6.01757C17.7582 5.6838 18.2536 5.86142 18.2635 6.48406V6.48211Z"
+                            fill="#EC7100" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1_836">
+                            <rect width="97" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
 
-                <div id="location-dropdown" class="dropdown pe-4 br-light d-flex justify-content-lg-start"
-                    style="min-height: 49px">
-                    <button class="btn btn-outline-light" type="button" id="locationDropdownBtn"
+                <div class="nav-vertical-line"></div>
+
+                <div class="dropdown">
+                    <button class="location-menu-type-1 rounded-0" type="button" id="dropdownLocation"
+                        style="display: flex; gap: 10px; align-items: center; flex-wrap: nowrap; justify-content: space-between;"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <span id="location-selection"> Location </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        <span id="locationSelection" class="location-selection-text">Gujarat</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.41 0.590088L6 5.17009L10.59 0.590088L12 2.00009L6 8.00009L0 2.00009L1.41 0.590088Z"
+                                fill="#ffffff" />
                         </svg>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="locationDropdown">
-                        <li>
-                            <a class="dropdown-item dropdown-location" href="#">Location 1</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item dropdown-location" href="#">Location 2</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item dropdown-location" href="#">Location 3</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Search Box -->
-                <div id="nav-search-box-div" style="min-height: 49px" class="px-4 br-light d-flex align-items-center">
-                    <div class="input-group bg-white rounded-2 flex-nowrap" style="height: fit-content">
-                        <div class="d-flex align-items-center px-2 bg-transparent">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g id="Search" clip-path="url(#clip0_1_282)">
-                                    <path id="Vector"
-                                        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
-                                        fill="#434343" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_282">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
 
-                        <input id="nav-search" type="text" class="form-control border-0"
-                            placeholder="Search locality, landmark, building or project" aria-label="Search"
-                            aria-describedby="button-addon2" />
+                    </button>
+                    <div class="dropdown-menu location-dropdown-menu" id="locationDropdown"
+                        aria-labelledby="dropdownLocation">
+                        <div class="d-grid col-1 item-box">
+                            <button data-location-is="Apartment"
+                                class="location-types location-item-type-1 text-nowrap text-start">Location-1</button>
+                            <button data-location-is="Duplex"
+                                class="location-types location-item-type-1 text-nowrap text-start">Location-2</button>
+                            <button data-location-is="Villa"
+                                class="location-types location-item-type-1 text-nowrap text-start">Location-3</button>
+                            <button data-location-is="Penthouse"
+                                class="location-types location-item-type-1 text-nowrap text-start">Location-4</button>
+                            <button data-location-is="Studio"
+                                class="location-types location-item-type-1 text-nowrap text-start">Location-5</button>
+                            <button data-location-is="Independent House"
+                                class="location-types location-item-type-1 text-nowrap text-start">Location-6 Lorem
+                                ipsum dolor sit amet</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="right-nav-items" class="d-flex gap-4">
-                <div id="list-property">
-                    <button class="btn btn-list-property py-1 px-2">
+
+                <div class="nav-vertical-line"></div>
+
+                <div id="mob-post-property">
+                    <button id="pl-post-property-nav">
                         Post Your Property
                     </button>
                 </div>
-                <!--<button id="hamBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarHam" aria-controls="navbarHam" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <img src="./images/Menu.png" alt width="24" height="24" class="d-inline-block align-text-top">
+
+
+                <div id="pl-nav-searchbox" class="position-relative">
+                    <span id="pl-search-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_849)">
+                                <path
+                                    d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+                                    fill="#434343" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_849">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                    <input type="text" id="pl-search-input"
+                        placeholder="Search locality, landmark, building or project" />
+                    <div id="pl-search-tag-div">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_849)">
+                                <path
+                                    d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+                                    fill="#434343" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_849">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="pl-search-tag" id="pl-tag-location">Vadodara</div>
+                    </div>
+                    <div id="pl-search-drop-div"
+                        style="width: 100%; position: absolute; top: 55px; left: 0; height: 300px; background-color: #ffffff; z-index: 500; box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.253) inset; border-radius: 10px;">
+                        <span style="color: #606266; padding: 10px 5px;">Search Result</span>
+                        <hr />
+                        <div class="pl-tag-list-all">
+                        </div>
+                        <hr />
+                        <ul style="list-style:none; padding: 0;" class="pl-search-drop">
+                            <li>Bengaluru</li>
+                            <li>Mumbai</li>
+                            <li>Delhi</li>
+                            <li>Chennai</li>
+                            <li>Hyderabad</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="nav-vertical-line"></div>
+            </div>
+            <div class="pl-nav-1-right">
+                <button id="pl-post-property-nav">
+                    Post Your Property
                 </button>
-                <ul class="navbar-nav nav-b  d-flex align-items-end position-absolute mt-1">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white;" href="#">Home</a>
-                    </li>
-                    <hr class="border-bottom border-1 border-secondary h-100 w-100 my-0" />
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white;" href="#">About</a>
-                    </li>
-                    <hr class="border-bottom border-1 border-secondary h-100 w-100 my-0" />
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white;" href="#">Contact</a>
-                    </li>
-                </ul>-->
             </div>
         </div>
     </nav>
