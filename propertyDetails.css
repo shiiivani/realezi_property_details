@@ -158,6 +158,11 @@ nav {
   border-radius: 10px;
 }
 
+#pl-post-property-nav:hover {
+  background-color: #fff;
+  color: #111f3c;
+}
+
 .dropdown-menu {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -2164,17 +2169,40 @@ form .no-transform label {
 }
 
 .property-containter {
-  border-radius: 20px;
+  border-radius: 10px;
   width: 350px;
   margin-right: 30px;
-  height: max-content;
+  height: 480px;
   margin-top: 10px;
   border: 0.46px solid #111f3c;
   flex: 0 0 auto;
+  position: relative;
+}
+
+.property-containter .tag {
+  background-color: #ec7100;
+  padding: 3px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #fff;
+  font-size: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .property-containter h4 {
   font-size: 1.2rem;
+}
+
+.property-containter .content {
+  background-color: #fff;
+  position: relative;
+  padding-top: 7px;
+  border-radius: 20px;
+  bottom: 25px;
 }
 
 .property-containter .about {
@@ -2189,8 +2217,8 @@ form .no-transform label {
 .property-containter .property-image {
   height: 240px;
   width: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   margin-bottom: 8px;
 }
 
@@ -2207,7 +2235,7 @@ form .no-transform label {
   height: 40px;
   overflow: hidden;
   box-shadow: 0 0 1.1px 0 #00000045;
-  margin: 0 5px 10px 5px;
+  margin: 0 5px 15px 5px;
   border-radius: 3px;
   padding: 4px;
 }
@@ -3526,6 +3554,9 @@ form .no-transform label {
   }
   .listed-properties-container .btn-container {
     flex-direction: column;
+  }
+  .property-containter {
+    height: 560px;
   }
   .listed-properties-container .btn-container button {
     margin-top: 15px;
