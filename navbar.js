@@ -69,23 +69,19 @@ window.onload = () => {
 
   /* handle dropdiv visibility */
   searchInput.addEventListener("focus", () => {
-    console.log("focus triggered");
     tagDiv.style.display = "none";
     searchDropDiv.style.display = "block";
   });
 
   searchInput.addEventListener("blur", (e) => {
-    console.log("blur triggered");
     searchDropDiv.style.display = "none";
     tagDiv.style.display = "flex";
   });
   searchDropdownList.querySelectorAll("li").forEach((item) => {
-    console.log(item);
     item.addEventListener("mousedown", (e) => {
       e.preventDefault();
       /* tagDiv.style.display = "flex"; */
       /* check if it exists on selectedTags, push if not else nothing */
-      console.log(e.target.textContent);
       if (!selectedTags.includes(e.target.textContent)) {
         selectedTags.push(e.target.textContent);
         const mainlocation = document.getElementById("pl-tag-location");
@@ -146,7 +142,6 @@ window.onload = () => {
         selectedTags = selectedTags.filter(
           (tag) => tag !== e.target.textContent
         );
-        console.log(selectedTags);
         /* remove from tagDiv */
         if (selectedTags.length === 0) {
           const newTag = document.createElement("div");
@@ -160,17 +155,11 @@ window.onload = () => {
           tagDiv.appendChild(newTag);
         }
         tagDiv.querySelectorAll(".pl-search-tag").forEach((item) => {
-          console.log(
-            item.textContent +
-              " is the item and length is: " +
-              selectedTags.length
-          );
           /* case 1: if len of selectedTags >= 2 and selected tag context is true */
           if (
             selectedTags.length >= 2 &&
             e.target.textContent == item.textContent
           ) {
-            console.log("triggered case 1");
             /* remove the item and decrease the counter */
             tagDiv.removeChild(item);
             document.getElementById("pl-tag-counter").textContent =
@@ -188,7 +177,6 @@ window.onload = () => {
             selectedTags.length === 1 &&
             e.target.textContent !== item.textContent
           ) {
-            console.log("triggered case 1.5");
             const tagCounter = document.getElementById("pl-tag-counter");
             tagCounter.remove();
             /*  const newTag = document.createElement("div");
@@ -203,7 +191,6 @@ window.onload = () => {
             selectedTags.length >= 2 &&
             e.target.textContent !== item.textContent
           ) {
-            console.log("triggered case 2");
             /* reduce counter */
             document.getElementById("pl-tag-counter").textContent =
               selectedTags.length - 1 + "+";
@@ -215,7 +202,6 @@ window.onload = () => {
             selectedTags.length == 1 &&
             e.target.textContent == item.textContent
           ) {
-            console.log("triggered case 3");
             tagDiv.removeChild(item);
             const newTag = document.createElement("div");
             newTag.classList.add("pl-search-tag");

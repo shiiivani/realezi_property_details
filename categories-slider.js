@@ -27,7 +27,7 @@ document.addEventListener("scroll", function () {
   const stickyOffset = container.offsetTop - navbarHeight;
   const propertyDetailsCont = document.querySelector(".property-details-div");
 
-  if (window.scrollY >= 610) {
+  if (window.scrollY >= 585) {
     container.classList.add("fixed");
     propertyDetailsCont.style.marginTop = "90px";
   } else {
@@ -36,6 +36,7 @@ document.addEventListener("scroll", function () {
   }
 });
 
+// Second navbar categories becoming active when particular section shows o screen
 document.addEventListener("DOMContentLoaded", function () {
   const categories = document.querySelectorAll(".category");
 
@@ -66,5 +67,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".section").forEach((section) => {
     observer.observe(section);
+  });
+});
+
+// Slide to that section when clicked on the second navbar
+document.addEventListener("DOMContentLoaded", function () {
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach((category) => {
+    category.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   });
 });

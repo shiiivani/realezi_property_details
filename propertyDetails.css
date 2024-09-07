@@ -81,16 +81,6 @@ nav {
 #mob-post-property {
   display: none;
 }
-#pl-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: clamp(0.75rem, 1vw, 1rem);
-  font-family: "Familjen Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  overflow-x: hidden;
-}
 .pl-mobile-filter-btn {
   display: none;
   position: fixed;
@@ -104,24 +94,14 @@ nav {
   align-items: center;
 }
 
-#pl-body footer ul {
-  list-style: none;
-}
-
-#pl-body nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
 #pl-nav-1 {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 30px;
+  padding-inline: 50px;
   background-color: #111f3c;
-  min-height: 30px;
+  min-height: 72px;
   border-radius: 0px 0px 20px 20px;
   position: relative;
 }
@@ -283,7 +263,7 @@ nav {
 #pl-search-input {
   border: none;
   width: clamp(30vw, 30vw, 70vw);
-  padding: 3px;
+  padding: 10px;
   border-radius: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -295,7 +275,7 @@ nav {
 
 #pl-search-input {
   border: none;
-  padding: 3px;
+  padding: 10px;
   border-radius: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -431,6 +411,55 @@ nav {
   align-self: flex-end;
 }
 
+/* Share Container */
+.share-container {
+  position: relative;
+  z-index: 40;
+}
+
+.share-container ul {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 5;
+  width: max-content;
+  padding-left: 0;
+  top: 40px;
+  left: -35px;
+  box-shadow: 0px 0px 20px 2px #00000025;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.share-container ul.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.share-container ul li:hover {
+  cursor: pointer;
+  background-color: #f7f9ff;
+}
+
+.share-container ul li p {
+  margin: 0;
+  margin-left: 12px;
+  color: #616161;
+}
+
+.share-container ul li:first-child {
+  color: #434343;
+  background-color: #f7f9ff;
+}
+
+.share-container ul li {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+}
+
 /* Property Details Heading */
 
 .property-details-heading-div {
@@ -482,6 +511,7 @@ nav {
 .property-details-heading-right .share-icon {
   margin-right: 10px;
 }
+
 .property-details-heading-right .price {
   font-size: 1.1rem;
   color: #ec7100;
@@ -566,11 +596,11 @@ nav {
 }
 
 .carousel-control-next {
-  right: 15px !important;
+  right: -55px !important;
 }
 
 .carousel-control-prev {
-  left: 2px !important;
+  left: -55px !important;
 }
 
 .carousel-control-prev-icon {
@@ -594,10 +624,9 @@ nav {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
-  padding: 60px;
+  height: 100vh;
+  padding: 40px;
   font-family: "Familjen Grotesk", sans-serif;
-  overflow-y: auto;
   display: none;
 }
 
@@ -617,6 +646,7 @@ nav {
 
 .image-modal-header-inner {
   align-items: flex-end;
+  width: 97%;
 }
 
 .image-modal-header h4 {
@@ -673,10 +703,20 @@ nav {
 }
 
 .image-modal .carousel-item {
-  width: 100vw;
-  height: 80vh;
+  width: 70vw;
+  height: 65vh;
   margin-top: 40px;
   position: relative;
+}
+
+.image-modal .carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal .carousel-inner {
+  width: 70vw;
 }
 
 .image-modal .carousel-item p {
@@ -750,7 +790,7 @@ main.container {
 
 .categories-container.fixed {
   position: fixed;
-  top: 60px;
+  top: 70px;
   left: 5px;
   right: 5px;
   width: 100%;
@@ -765,6 +805,10 @@ main.container {
   white-space: nowrap;
 }
 
+.categories-container p:hover {
+  cursor: pointer;
+}
+
 .categories-container p.active {
   border-bottom: 3px solid #111f3c;
 }
@@ -777,7 +821,6 @@ main.container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  margin-right: 40px;
 }
 
 .categories-container .nav-button {
@@ -812,16 +855,10 @@ main.container {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .categories-container .nav-button {
-    display: none;
-  }
-}
-
 /* Property Details Div */
 
 .property-details-div {
-  width: 85%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -831,7 +868,7 @@ main.container {
 
 .property-details-div-left {
   margin-right: 20px;
-  width: 70%;
+  width: 68%;
 }
 
 .property-overview-container {
@@ -1422,7 +1459,7 @@ main.container {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #041a40;
+  background-color: #111f3c;
   border: none;
   border-radius: 50%;
   padding: 9px;
@@ -1801,7 +1838,7 @@ form .no-transform label {
   font-size: 0.85rem;
   padding: 3px 20px;
   border-radius: 15px;
-  background-color: #041a40;
+  background-color: #111f3c;
   border: none;
   color: #fff;
   margin-top: 20px;
@@ -1965,7 +2002,7 @@ form .no-transform label {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #041a40;
+  background-color: #111f3c;
   border: none;
   border-radius: 50%;
   padding: 9px;
@@ -1979,7 +2016,7 @@ form .no-transform label {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #041a40;
+  background-color: #111f3c;
   border: none;
   border-radius: 50%;
   padding: 9px;
@@ -2070,7 +2107,7 @@ form .no-transform label {
 .question-answer-inner-container .d-flex button {
   padding: 7px 25px;
   border-radius: 8px;
-  border: 1px solid #041a40;
+  border: 1px solid #111f3c;
   background-color: #f7f9ff;
 }
 
@@ -2085,7 +2122,7 @@ form .no-transform label {
 .question-container .tag {
   font-size: 0.85rem;
   color: #fff;
-  background-color: #041a40;
+  background-color: #111f3c;
   padding: 3px 10px;
   border-radius: 3px;
   border: none;
@@ -2133,7 +2170,7 @@ form .no-transform label {
 }
 
 .listed-properties-container-slider {
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .listed-properties-container .nav-button {
@@ -2172,7 +2209,7 @@ form .no-transform label {
   border-radius: 10px;
   width: 350px;
   margin-right: 30px;
-  height: 480px;
+  /* height: 480px; */
   margin-top: 10px;
   border: 0.46px solid #111f3c;
   flex: 0 0 auto;
@@ -2200,9 +2237,10 @@ form .no-transform label {
 .property-containter .content {
   background-color: #fff;
   position: relative;
-  padding-top: 7px;
+  padding-top: 10px;
   border-radius: 20px;
-  bottom: 25px;
+  /* bottom: 25px; */
+  margin-top: -25px;
 }
 
 .property-containter .about {
@@ -2242,6 +2280,10 @@ form .no-transform label {
 
 .property-containter .small-details.expand {
   height: max-content;
+}
+
+.property-containter .small-details.expand + .property-containter {
+  height: 1000px;
 }
 
 .property-containter .small-details p {
@@ -2316,14 +2358,14 @@ form .no-transform label {
 
 /* Property Details Div Right */
 .property-details-div-right {
-  width: 28%;
+  width: 30%;
   transition: transform 0.5s ease-in-out;
   transform: translateY(0);
 }
 
 .property-details-div-right.fixed {
   z-index: 199;
-  right: 12%;
+  right: 14.5%;
   width: 300px;
   position: fixed;
   transition: transform 0.5s ease-in-out;
@@ -2334,8 +2376,8 @@ form .no-transform label {
   position: absolute;
   bottom: 65px;
   z-index: 80;
-  right: -10px;
-  width: 320px;
+  right: -50px;
+  width: 300px;
   transform: translateY(40px);
 }
 
@@ -2406,7 +2448,7 @@ form .no-transform label {
   right: 0;
   top: 40%;
   transform: translateY(-50%);
-  background-color: #041a40;
+  background-color: #111f3c;
   border: none;
   border-radius: 50%;
   padding: 7px 9px 9px 9px;
@@ -2420,7 +2462,7 @@ form .no-transform label {
   left: 0;
   top: 40%;
   transform: translateY(-50%);
-  background-color: #041a40;
+  background-color: #111f3c;
   border: none;
   border-radius: 50%;
   padding: 7px 9px 9px 9px;
@@ -2446,7 +2488,11 @@ form .no-transform label {
 
 .scheduling-container .date-container .date:hover {
   cursor: pointer;
-  background-color: #041a40;
+  background-color: #111f3c;
+  color: #fff;
+}
+.scheduling-container .date-container .date.active {
+  background-color: #111f3c;
   color: #fff;
 }
 .scheduling-container .date-container .date:first-child {
@@ -2469,13 +2515,18 @@ form .no-transform label {
   color: #6b6d72;
   font-family: "Familjen Grotesk", sans-serif;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin-right: 6px;
 }
 
 .scheduling-container .time:hover {
   cursor: pointer;
-  background-color: #041a40;
+  background-color: #111f3c;
+  color: #fff;
+}
+
+.scheduling-container .time.active {
+  background-color: #111f3c;
   color: #fff;
 }
 
@@ -2495,7 +2546,7 @@ form .no-transform label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .calendar-header select {
@@ -2505,8 +2556,18 @@ form .no-transform label {
 }
 
 .nav-arrows {
-  display: flex;
+  display: none;
   align-items: center;
+  position: relative;
+  bottom: 5px;
+}
+
+.nav-arrows span {
+  padding-right: 4px;
+}
+
+.nav-arrows span:hover {
+  transform: scale(1.2);
 }
 
 .arrow {
@@ -2530,17 +2591,27 @@ form .no-transform label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
 }
 
 .calendar-grid .date {
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .calendar-grid .date:hover {
   background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.calendar-grid .date.today {
+  background-color: #e6e6e6;
+}
+
+.calendar-grid .date.active {
+  background-color: #111f3c;
+  color: #fff;
 }
 
 .calendar-grid .inactive-date {
@@ -2635,7 +2706,7 @@ form .no-transform label {
 
 .featured-property-container-inner button {
   border: none;
-  background-color: #041a40;
+  background-color: #111f3c;
   color: #fff;
   margin-left: auto;
   margin-right: auto;
@@ -2672,7 +2743,7 @@ form .no-transform label {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   position: relative;
-  padding: 60px 10px;
+  padding: 55px 10px 20px 10px;
 }
 
 .footer .upper-footer ul {
@@ -2995,6 +3066,11 @@ form .no-transform label {
 }
 
 /* Media Queries */
+@media screen and (min-width: 1600px) {
+  .property-details-div-right.fixed {
+    right: 16%;
+  }
+}
 
 @media screen and (min-width: 1500px) {
   .property-details-div-right.fixed {
@@ -3002,9 +3078,9 @@ form .no-transform label {
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .property-details-div-right.fixed {
-    right: 16%;
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1120px !important;
   }
 }
 
@@ -3035,6 +3111,12 @@ form .no-transform label {
 @media screen and (max-width: 1290px) {
   .property-details-div-right.fixed {
     left: 67%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .categories-container .nav-button {
+    display: none;
   }
 }
 
@@ -3073,6 +3155,12 @@ form .no-transform label {
     margin-left: auto;
     margin-right: auto;
   }
+  .scheduling-container .calendar-grid .date {
+    font-size: 0.95rem;
+  }
+  .calendar-grid div {
+    padding: 11px;
+  }
   .image-video-container {
     width: 170px;
     height: 120px;
@@ -3104,6 +3192,9 @@ form .no-transform label {
   .carousel-progress {
     width: 15%;
   }
+  .carousel-counter {
+    left: 53%;
+  }
   .image-video-container {
     width: 150px;
     height: 100px;
@@ -3133,6 +3224,10 @@ form .no-transform label {
   .image-video-container {
     width: 130px;
     height: 100px;
+  }
+  .image-modal .carousel-item,
+  .image-modal .carousel-inner {
+    height: 60vh;
   }
   .footer .upper-footer ul {
     padding-right: 10px;
@@ -3219,6 +3314,16 @@ form .no-transform label {
   }
   .categories-container.fixed {
     top: 96px !important;
+  }
+  .image-modal .carousel-item,
+  .image-modal .carousel-inner {
+    width: 90vw;
+  }
+  .image-modal .carousel-control-next {
+    right: -20px !important;
+  }
+  .image-modal .carousel-control-prev {
+    left: -20px !important;
   }
 }
 
@@ -3335,7 +3440,10 @@ form .no-transform label {
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 745px) {
+  .image-modal-container {
+    overflow-y: auto;
+  }
   .image-modal .carousel-item {
     height: 700px;
   }
@@ -3545,6 +3653,12 @@ form .no-transform label {
   }
   .brochure-container .view-btn {
     left: 30%;
+  }
+  .scheduling-container .calendar-grid .date {
+    font-size: 0.8rem;
+  }
+  .calendar-grid div {
+    padding: 10px;
   }
   .disclamer-container {
     padding: 20px;

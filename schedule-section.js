@@ -11,10 +11,10 @@ document.addEventListener("scroll", function () {
     const disclamerTop = disclamer.getBoundingClientRect().top + window.scrollY;
 
     const threshold = 152;
-    const offset = 150;
+    const offset = 140;
 
     if (
-      window.scrollY >= 665 &&
+      window.scrollY >= 610 &&
       window.scrollY + containerHeight < disclamerTop - offset
     ) {
       container.classList.add("fixed");
@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dateContainerSlider.innerHTML = "";
 
-  for (let day = today.getDate(); day <= daysInMonth; day++) {
-    const date = new Date(currentYear, currentMonth, day);
-    const dayName = day === today.getDate() ? "Today" : getDayName(date);
+  for (let i = 0; i < 3; i++) {
+    const futureDate = new Date(currentYear, currentMonth, today.getDate() + i);
+    const dayName = i === 0 ? "Today" : getDayName(futureDate);
 
     const dateDiv = document.createElement("div");
     dateDiv.classList.add("date");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dayP.textContent = dayName;
 
     const dateP = document.createElement("p");
-    dateP.textContent = day.toString().padStart(2, "0");
+    dateP.textContent = futureDate.getDate().toString().padStart(2, "0");
 
     dateDiv.appendChild(dayP);
     dateDiv.appendChild(dateP);
@@ -130,27 +130,37 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentMonth = today.getMonth();
   let currentYear = today.getFullYear();
 
-  // Populate month and year dropdowns
+  // Function to populate month and year dropdowns based on current date
   function populateDropdowns() {
-    monthSelect.innerHTML = months
-      .map(
-        (month, index) =>
-          `<option value="${index}" ${
-            index === currentMonth ? "selected" : ""
-          }>${month}</option>`
-      )
-      .join("");
+    monthSelect.innerHTML = "";
+    yearSelect.innerHTML = "";
 
-    const yearRange = 10;
-    yearSelect.innerHTML = Array.from({ length: yearRange * 2 + 1 }, (_, i) => {
-      const year = currentYear - yearRange + i;
-      return `<option value="${year}" ${
+    const date = today.getDate();
+    const monthOptions =
+      date > 15 ? [currentMonth, currentMonth + 1] : [currentMonth];
+
+    monthOptions.forEach((month) => {
+      const monthIndex = month % 12;
+      monthSelect.innerHTML += `<option value="${monthIndex}" ${
+        monthIndex === currentMonth ? "selected" : ""
+      }>${months[monthIndex]}</option>`;
+    });
+
+    const yearOptions =
+      today.getMonth() === 11 && date > 15
+        ? [currentYear, currentYear + 1]
+        : [currentYear];
+    yearOptions.forEach((year) => {
+      yearSelect.innerHTML += `<option value="${year}" ${
         year === currentYear ? "selected" : ""
       }>${year}</option>`;
-    }).join("");
+    });
+
+    // Update button visibility based on dropdown limits
+    updateButtonVisibility();
   }
 
-  // Generate calendar grid
+  // Generate calendar grid for the selected month and year
   function generateCalendar(month, year) {
     calendarGrid.innerHTML = "";
     const firstDay = new Date(year, month, 1).getDay();
@@ -178,6 +188,43 @@ document.addEventListener("DOMContentLoaded", function () {
     const remainingDays = (7 - ((firstDay + lastDate) % 7)) % 7;
     for (let i = 1; i <= remainingDays; i++) {
       calendarGrid.innerHTML += `<div class="date inactive-date">${i}</div>`;
+    }
+
+    // Update button visibility based on the new month and year
+    updateButtonVisibility();
+  }
+
+  // Function to update visibility or enable/disable state of next/prev buttons
+  function updateButtonVisibility() {
+    const selectedMonth = parseInt(monthSelect.value);
+    const selectedYear = parseInt(yearSelect.value);
+
+    // Disable previous button if we're at the current month and year
+    if (
+      selectedMonth === today.getMonth() &&
+      selectedYear === today.getFullYear()
+    ) {
+      prevMonthBtn.disabled = true;
+    } else {
+      prevMonthBtn.disabled = false;
+    }
+
+    // Disable next button if there's no next month or year in the dropdown
+    const maxMonth =
+      today.getDate() > 15 && today.getMonth() === 11
+        ? 0
+        : today.getMonth() + 1;
+    const maxYear =
+      today.getMonth() === 11 && today.getDate() > 15
+        ? today.getFullYear() + 1
+        : today.getFullYear();
+
+    if (selectedMonth >= maxMonth && selectedYear >= maxYear) {
+      nextMonthBtn.disabled = true;
+      nextMonthBtn.style.display = "none";
+    } else {
+      nextMonthBtn.disabled = false;
+      nextMonthBtn.style.display = "block";
     }
   }
 
@@ -215,8 +262,8 @@ document.addEventListener("DOMContentLoaded", function () {
     generateCalendar(currentMonth, currentYear);
   });
 
-  populateDropdowns();
-  generateCalendar(currentMonth, currentYear);
+  populateDropdowns(); // Populate month and year dropdowns on page load
+  generateCalendar(currentMonth, currentYear); // Generate initial calendar
 });
 
 // Opening Calendar
@@ -230,10 +277,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const viewCalendarBtn = document.querySelector(
     ".date-container-slider .date .view-calendar"
   );
+  const upperSection = document.querySelector(".scheduling-container-upper");
 
   viewCalendarBtn.addEventListener("click", function () {
+    upperSection.classList.add("d-none");
+    upperSection.classList.remove("d-flex");
     calendarCont.classList.add("active");
     dateCont.classList.remove("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dates = document.querySelectorAll(".scheduling-container .date");
+  const times = document.querySelectorAll(".scheduling-container .time");
+
+  times.forEach((time) => {
+    time.addEventListener("click", function () {
+      times.forEach((t) => t.classList.remove("active"));
+      time.classList.add("active");
+    });
+  });
+
+  dates.forEach((date) => {
+    date.addEventListener("click", function () {
+      dates.forEach((d) => d.classList.remove("active"));
+      date.classList.add("active");
+    });
   });
 });
 
