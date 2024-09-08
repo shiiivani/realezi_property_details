@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const phoneNumberInput = document.getElementById("phone-number");
   const sendOtpBtn = document.getElementById("send-otp-btn");
   const otpSentMessage = document.getElementById("otp-sent-message");
+  const otpCont = document.querySelector(".otp-container");
 
   sendOtpBtn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -52,8 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       otpSentMessage.textContent = `We have sent the OTP to ${countryCode} ${phoneNumber}.`;
       otpSentMessage.classList.add("active");
       phoneNumberCont.classList.add("sent");
-
-      phoneNumberInput.style.marginBottom = "0";
+      otpCont.style.display = "flex";
     } else {
       alert("Please enter a valid phone number.");
     }

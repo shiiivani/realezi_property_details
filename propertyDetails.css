@@ -414,7 +414,54 @@ nav {
 /* Share Container */
 .share-container {
   position: relative;
-  z-index: 40;
+}
+
+.share-container::before {
+  content: "Share this property";
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background-color: #00000090;
+  color: #fff;
+  z-index: 100;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.arrow-pair {
+  position: relative;
+}
+
+.arrow-pair::before {
+  content: "Save this property";
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background-color: #00000090;
+  color: #fff;
+  z-index: 100;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.share-container:hover::before,
+.arrow-pair:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.property-overview-container .share-container:before {
+  left: 0px;
 }
 
 .share-container ul {
@@ -1645,9 +1692,12 @@ form .no-transform label {
   font-weight: 300;
 }
 
-.brochure-modal .phone-number-container.sent input,
-.brochure-modal .phone-number-container.sent select {
+.brochure-modal .phone-number-container.sent input {
   margin-bottom: 0;
+}
+
+.brochure-modal .phone-number-container.sent select {
+  top: 6.5px;
 }
 
 .phone-number-container {
@@ -1684,6 +1734,10 @@ form .no-transform label {
   margin: 0;
 }
 
+.brochure-modal .otp-container {
+  display: none;
+}
+
 .brochure-modal .otp-container input {
   width: 100%;
 }
@@ -1694,6 +1748,15 @@ form .no-transform label {
   font-size: 0.8rem;
   width: 40%;
   white-space: nowrap;
+}
+
+.otp-container .otp-verification {
+  position: absolute;
+  right: 20px;
+  top: 23px;
+  width: max-content !important;
+  margin: 0 !important;
+  display: none;
 }
 
 .phone-number-container .verify-btn {
@@ -2171,6 +2234,7 @@ form .no-transform label {
 
 .listed-properties-container-slider {
   overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .listed-properties-container .nav-button {
@@ -3079,7 +3143,7 @@ form .no-transform label {
 }
 
 @media (min-width: 1400px) {
-  .container {
+  main.container {
     max-width: 1120px !important;
   }
 }
