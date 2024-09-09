@@ -1021,6 +1021,8 @@ main.container {
 .property-details-div-left {
   margin-right: 20px;
   width: 68%;
+  position: relative;
+  z-index: 20;
 }
 
 .property-overview-container {
@@ -1672,7 +1674,7 @@ main.container {
   overflow-y: auto;
   align-items: center;
   justify-content: center;
-  z-index: 900;
+  z-index: 999;
   display: none;
   transform: scale(0);
   transition: all 0.5s;
@@ -2545,22 +2547,29 @@ form .no-transform label {
   width: 30%;
   transition: transform 0.5s ease-in-out;
   transform: translateY(0);
+  -webkit-transform: translateZ(0);
 }
 
 .property-details-div-right.fixed {
-  z-index: 199;
-  right: 14.5%;
-  width: 300px;
+  width: 100%;
+  z-index: 10;
   position: fixed;
   transition: transform 0.5s ease-in-out;
-  transform: translateY(0);
+}
+
+.property-details-div-right.fixed .scheduling-container,
+.property-details-div-right.fixed .video-section,
+.property-details-div-right.fixed .featured-property-container {
+  width: 300px;
+  margin-left: 690px;
+  z-index: 10;
 }
 
 .property-details-div-right.absolute {
   position: absolute;
   bottom: 65px;
-  z-index: 80;
-  right: -50px;
+  z-index: 20;
+  right: -8px;
   width: 300px;
   transform: translateY(40px);
 }
@@ -3274,7 +3283,7 @@ form .no-transform label {
 }
 
 /* Media Queries */
-@media screen and (min-width: 1600px) {
+/* @media screen and (min-width: 1600px) {
   .property-details-div-right.fixed {
     right: 16%;
   }
@@ -3284,7 +3293,7 @@ form .no-transform label {
   .property-details-div-right.fixed {
     right: 14%;
   }
-}
+} */
 
 @media (min-width: 1400px) {
   main.container {
@@ -3297,7 +3306,7 @@ form .no-transform label {
     padding: 15px;
   }
   .property-details-div-left {
-    width: 70%;
+    width: 67%;
   }
   .property-details-div-right {
     width: 30%;
@@ -3305,9 +3314,6 @@ form .no-transform label {
   .property-details-div-right.absolute {
     right: -70px;
   }
-  /* .image-video-container {
-    width: 140px;
-  } */
   .calendar-grid {
     gap: 0;
   }
@@ -3316,11 +3322,11 @@ form .no-transform label {
   }
 }
 
-@media screen and (max-width: 1290px) {
+/* @media screen and (max-width: 1290px) {
   .property-details-div-right.fixed {
     left: 67%;
   }
-}
+} */
 
 @media screen and (min-width: 1200px) {
   .categories-container .nav-button {
