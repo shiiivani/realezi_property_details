@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ".open-brochure-modal-container"
   );
   const modal = document.querySelector(".brochure-modal-container");
+  const modalContent = document.querySelector(
+    ".brochure-modal-container .modals"
+  );
   const closeIcon = document.querySelector(
     ".brochure-modal-container .close-icon"
   );
@@ -32,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
   closeIcon.addEventListener("click", function () {
     hideModal();
   });
+
+  modal.addEventListener("click", function (e) {
+    if (!modalContent.contains(e.target)) {
+      hideModal();
+    }
+  });
 });
 
 // Otp sent message
@@ -43,6 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const sendOtpBtn = document.getElementById("send-otp-btn");
   const otpSentMessage = document.getElementById("otp-sent-message");
   const otpCont = document.querySelector(".otp-container");
+  const otpInput = document.querySelector(".otp-container .input-group input");
+  const otpVerification = document.querySelector(
+    ".otp-container .input-group .otp-verification"
+  );
 
   sendOtpBtn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -56,6 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
       otpCont.style.display = "flex";
     } else {
       alert("Please enter a valid phone number.");
+    }
+  });
+
+  otpInput.addEventListener("input", function () {
+    if (otpInput.value.length === 4) {
+      otpVerification.style.display = "block";
+    } else {
+      otpVerification.style.display = "none";
     }
   });
 });

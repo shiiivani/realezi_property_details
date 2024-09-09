@@ -29,7 +29,7 @@
     <nav>
         <div id="pl-nav-1">
             <div class="pl-nav-1-left">
-                <svg width="97" height="24" viewBox="0 0 97 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="97" height="20" viewBox="0 0 97 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_836)">
                         <path
                             d="M13.3215 0C13.9866 0.148341 14.6615 0.2635 15.3147 0.450878C19.8381 1.75472 22.7866 4.67469 23.9254 9.16591C24.9694 13.2843 23.9411 17.0026 21.0223 20.1627C19.1 22.2453 16.7022 23.4925 13.9017 23.8731C10.3434 24.3552 7.14031 23.4437 4.36549 21.1581C2.07815 19.2726 0.734161 16.8484 0.217091 13.9616C0.142096 13.5381 0.0710478 13.1126 0 12.6871C0 12.2323 0 11.7755 0 11.3208C0.0335504 11.2329 0.0868362 11.149 0.096704 11.0592C0.223011 9.74561 0.503255 8.47105 1.05585 7.2609C2.70968 3.64216 5.46673 1.33507 9.36647 0.366949C9.80065 0.259597 10.2269 0.122967 10.6572 0C11.5453 0 12.4334 0 13.3215 0ZM23.4971 12.0664C23.6135 5.96096 18.5099 0.80026 12.238 0.788549C5.93052 0.77879 0.858494 5.68185 0.826918 11.9317C0.793367 18.3338 5.95025 23.19 12.1314 23.2368C18.3757 23.2837 23.5721 18.1347 23.4991 12.0664H23.4971Z"
@@ -64,10 +64,10 @@
 
                 <div class="dropdown">
                     <button class="location-menu-type-1 rounded-0" type="button" id="dropdownLocation"
-                        style="display: flex; gap: 10px; align-items: center; flex-wrap: nowrap; justify-content: space-between;"
+                        style="display: flex; gap: 5px; align-items: center; flex-wrap: nowrap; justify-content: space-between;"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <span id="locationSelection" class="location-selection-text">Gujarat</span>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="10" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M1.41 0.590088L6 5.17009L10.59 0.590088L12 2.00009L6 8.00009L0 2.00009L1.41 0.590088Z"
                                 fill="#ffffff" />
@@ -170,46 +170,75 @@
                 <p>Suri Buiildtech</p>
                 <div class="d-flex">
                     <button>Managed by Realezi</button>
-                    <button class="d-flex align-items-center">
+                    <!-- <button class="d-flex align-items-center">
                         <img src="./images/star.png" width="20px" alt="Star icon" />
                         <p>4.2</p>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <div class="property-details-heading-right">
+                <div class="property-date d-flex align-items-center justify-content-end mb-4">
+                    <p class="mb-0" style="color: #616161; font-size: 0.9rem">Last updated: Aug 22, 2024</p>
+                    <div class="info-icon-container position-relative" style="margin-left: 8px;">
+                        <img src="./images/information-button.png" width="15px" alt="Information Icon" />
+                        <p>Whenever any new information is added on this page, date is updated. Information may include
+                            reviews, project details or resale & rent listing present in this project etc</p>
+                    </div>
+                </div>
                 <div class="d-flex align-items-center">
-                    <button class="report-btn d-flex align-items-center">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_0_526)">
-                                <path d="M14.4 6L14 4H5V21H7V14H12.6L13 16H20V6H14.4Z" fill="#041A40" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_0_526">
-                                    <rect width="24" height="24" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <p>Report</p>
-                    </button>
+                    <div class="report-btn-container relative">
+                        <button class="report-btn d-flex align-items-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_0_526)">
+                                    <path d="M14.4 6L14 4H5V21H7V14H12.6L13 16H20V6H14.4Z" fill="#041A40" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_0_526">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>Report</p>
+                        </button>
+                        <ul>
+                            <li>Tell us what is wrong with this property</li>
+                            <li>Photos are inappropriate </li>
+                            <li>Property details mismatches from actual visit</li>
+                            <li>Number is incorrect </li>
+                            <li>
+                                <p>Others</p>
+                                <textarea name="others" placeholder="" rows="4" cols="40"></textarea>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="share-container">
                         <img src="./images/Share.png" width="30px" alt="Share icon" class="share-icon" />
                         <ul>
                             <li>Share it with family and friends</li>
                             <li>
-                                <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                <p>Copy to Clipboard</p>
+                                <button onclick="copyLink()">
+                                    <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                    <p>Copy to Clipboard</p>
+                                </button>
                             </li>
                             <li>
-                                <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                <p>Facebook</p>
+                                <button onclick="shareToFacebook()">
+                                    <img src="./images/facebook.png" width="20px" alt="Facebook icon">
+                                    <p>Facebook</p>
+                                </button>
                             </li>
                             <li>
-                                <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                <p>Mail</p>
+                                <button onclick="shareToEmail()">
+                                    <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                    <p>Mail</p>
+                                </button>
                             </li>
                             <li>
-                                <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                <p>Whatsapp</p>
+                                <button onclick="shareToWhatsApp()">
+                                    <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
+                                    <p>Whatsapp</p>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -219,7 +248,13 @@
                             class="filled-arrow arrow hidden" />
                     </div>
                 </div>
-                <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
+                <div class="price-container d-flex align-items-center mt-4">
+                    <p class="price">Rs.2 Cr | 2100 k/sq. ft</p>
+                    <div class="info-icon-container position-relative" style="margin-left: 6px; z-index: 20">
+                        <img src="./images/information-button.png" width="15px" alt="Information Icon" />
+                        <p>Price includes everything except stamp duty and registration</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -378,25 +413,33 @@
                                     <ul>
                                         <li>Share it with family and friends</li>
                                         <li>
-                                            <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                            <p>Copy to Clipboard</p>
+                                            <button onclick="copyLink()">
+                                                <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                                <p>Copy to Clipboard</p>
+                                            </button>
                                         </li>
                                         <li>
-                                            <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                            <p>Facebook</p>
+                                            <button onclick="shareToFacebook()">
+                                                <img src="./images/facebook.png" width="20px" alt="Facebook icon">
+                                                <p>Facebook</p>
+                                            </button>
                                         </li>
                                         <li>
-                                            <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                            <p>Mail</p>
+                                            <button onclick="shareToEmail()">
+                                                <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                                <p>Mail</p>
+                                            </button>
                                         </li>
                                         <li>
-                                            <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                            <p>Whatsapp</p>
+                                            <button onclick="shareToWhatsApp()">
+                                                <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
+                                                <p>Whatsapp</p>
+                                            </button>
                                         </li>
                                     </ul>
                                 </div>
-                                <button class="d-flex align-items-center">
-                                    <div class="arrow-pair">
+                                <button class="arrow-pair d-flex align-items-center">
+                                    <div class="">
                                         <img src="./images/send.png" width="20px" alt="Send icon"
                                             class="realezi-arrow arrow" />
                                         <img src="./images/realezi-filled-arrow.png" width="20px" alt="Realazi arrow"
@@ -407,7 +450,7 @@
                             </div>
                         </div>
                         <div class="image-modal-header-inner-right d-flex">
-                            <button class="d-flex align-items-center" id="another-button-id">
+                            <button class="d-flex align-items-center open-brochure-modal-container">
                                 <img src="./images/phone-blue.png" width="20px" alt="Phone Icon" />
                                 <p>Contact Seller</p>
                             </button>
@@ -479,20 +522,28 @@
                                 <ul>
                                     <li>Share it with family and friends</li>
                                     <li>
-                                        <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                        <p>Copy to Clipboard</p>
+                                        <button onclick="copyLink()">
+                                            <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                            <p>Copy to Clipboard</p>
+                                        </button>
                                     </li>
                                     <li>
-                                        <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                        <p>Facebook</p>
+                                        <button onclick="shareToFacebook()">
+                                            <img src="./images/facebook.png" width="20px" alt="Facebook icon">
+                                            <p>Facebook</p>
+                                        </button>
                                     </li>
                                     <li>
-                                        <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                        <p>Mail</p>
+                                        <button onclick="shareToEmail()">
+                                            <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                            <p>Mail</p>
+                                        </button>
                                     </li>
                                     <li>
-                                        <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                        <p>Whatsapp</p>
+                                        <button onclick="shareToWhatsApp()">
+                                            <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
+                                            <p>Whatsapp</p>
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -583,10 +634,55 @@
                                 </svg>
                                 <p>Download Brochure</p>
                             </button>
-                            <button class="blue-btn">
+                            <button class="blue-btn" id="another-button-id">
                                 <p style="color: #ffffff">Schedule Visit</p>
                             </button>
                         </div>
+                    </div>
+                </div>
+
+                <div class="scheduling-container-mobile-view">
+                    <div class="scheduling-container">
+                        <p class="schedule-container-heading">
+                            Pick your visit date & visit us
+                        </p>
+                        <div class="date-container active">
+                            <button class="nav-prev-button hidden" id="slideLeftDate">
+                                <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
+                                    alt="Right Aroow icon" />
+                            </button>
+                            <div class="date-container-slider d-flex justify-content-start mb-4">
+                                <!-- Dates will be dynamically generated here -->
+                            </div>
+                            <button class="nav-button" id="slideRightDate">
+                                <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon" />
+                            </button>
+                        </div>
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <select class="month-select"></select>
+                                <select class="year-select"></select>
+                                <div class="nav-arrows">
+                                    <span class="prev-month" class="arrow"><img src="./images/chevron.png" width="10px"
+                                            alt="Left Chvron icon" /></span>
+                                    <span class="next-month" class="arrow"><img src="./images/chevron.png" width="10px"
+                                            alt="Left Chvron icon" style="transform: rotate(180deg)" /></span>
+                                </div>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="calendar-grid" id="calendar-grid">
+                                    <!-- Calendar days will be dynamically generated here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-container d-flex align-items-center flex-wrap mt-3">
+                            <p class="time">10:00 am - 1:00 pm</p>
+                            <p class="time">1:00 pm - 4:00 pm</p>
+                            <p class="time">4:00 pm - 7:00 pm</p>
+                        </div>
+                        <button class="blue-btn" id="open-schedule-form-modal-container">
+                            Schedule Visit
+                        </button>
                     </div>
                 </div>
 
@@ -622,15 +718,15 @@
                     <div class="floor-plan-container my-4">
                         <div class="floor-plan-properties-categories-container d-flex justify-content-start">
                             <div class="floor-plan-properties-categories active" data-target="1BHK-floor-plan">
-                                <p>1BHK<br />Apartment</p>
+                                <p>1BHK</p>
                                 <p>1.75Cr</p>
                             </div>
                             <div class="floor-plan-properties-categories" data-target="2BHK-floor-plan">
-                                <p>2BHK<br />Apartment</p>
+                                <p>2BHK</p>
                                 <p>2.3Cr - 2.38Cr</p>
                             </div>
                             <div class="floor-plan-properties-categories" data-target="3BHK-floor-plan">
-                                <p>3BHK<br />Apartment</p>
+                                <p>3BHK</p>
                                 <p>4.52Cr - 4.61Cr</p>
                             </div>
                         </div>
@@ -878,35 +974,43 @@
                                         <ul>
                                             <li>Share it with family and friends</li>
                                             <li>
-                                                <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                                <p>Copy to Clipboard</p>
+                                                <button onclick="copyLink()">
+                                                    <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                                    <p>Copy to Clipboard</p>
+                                                </button>
                                             </li>
                                             <li>
-                                                <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                                <p>Facebook</p>
+                                                <button onclick="shareToFacebook()">
+                                                    <img src="./images/facebook.png" width="20px" alt="Facebook icon">
+                                                    <p>Facebook</p>
+                                                </button>
                                             </li>
                                             <li>
-                                                <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                                <p>Mail</p>
+                                                <button onclick="shareToEmail()">
+                                                    <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                                    <p>Mail</p>
+                                                </button>
                                             </li>
                                             <li>
-                                                <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                                <p>Whatsapp</p>
+                                                <button onclick="shareToWhatsApp()">
+                                                    <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
+                                                    <p>Whatsapp</p>
+                                                </button>
                                             </li>
                                         </ul>
                                     </div>
-                                    <button class="d-flex align-items-center">
-                                        <div class="arrow-pair">
-                                            <img src="./images/send.png" width="30px" alt="Send icon"
+                                    <button class="arrow-pair d-flex align-items-center">
+                                        <div class="">
+                                            <img src="./images/send.png" width="20px" alt="Send icon"
                                                 class="realezi-arrow arrow" />
-                                            <img src="./images/realezi-filled-arrow.png" width="28px"
+                                            <img src="./images/realezi-filled-arrow.png" width="20px"
                                                 alt="Realazi arrow" class="filled-arrow arrow hidden" />
                                         </div>
                                         <p>Save</p>
                                     </button>
                                 </div>
                                 <div class="image-modal-header-inner-right d-flex">
-                                    <button class="d-flex align-items-center">
+                                    <button class="d-flex align-items-center open-brochure-modal-container">
                                         <img src="./images/phone-blue.png" width="20px" alt="Phone Icon" />
                                         <p>Contact Seller</p>
                                     </button>
@@ -1273,15 +1377,6 @@
                                     <button>Calculate</button>
                                 </div>
                             </div>
-                            <div class="single-resource-container">
-                                <img src="./images/resource-1.png" alt="Sticker" />
-                                <div class="content">
-                                    <h6>EMI <br /><span>Calculator</span></h6>
-                                    <p>EMI Starts at</p>
-                                    <p>Rs 36.54k</p>
-                                    <button>Calculate</button>
-                                </div>
-                            </div>
                         </div>
                         <button class="nav-button" id="slideRightResources">
                             <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
@@ -1434,6 +1529,7 @@
                             <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
                         </button>
                     </div>
+                    <button class="see-more-btn">See More</button>
                 </div>
 
                 <div class="developer-information-container section py-3 my-5" id="qa">
@@ -1644,20 +1740,30 @@
                                             <ul>
                                                 <li>Share it with family and friends</li>
                                                 <li>
-                                                    <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                                    <p>Copy to Clipboard</p>
+                                                    <button onclick="copyLink()">
+                                                        <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                                        <p>Copy to Clipboard</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                                    <p>Facebook</p>
+                                                    <button onclick="shareToFacebook()">
+                                                        <img src="./images/facebook.png" width="20px"
+                                                            alt="Facebook icon">
+                                                        <p>Facebook</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                                    <p>Mail</p>
+                                                    <button onclick="shareToEmail()">
+                                                        <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                                        <p>Mail</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                                    <p>Whatsapp</p>
+                                                    <button onclick="shareToWhatsApp()">
+                                                        <img src="./images/whatsapp.png" width="20px"
+                                                            alt="Whatsapp icon">
+                                                        <p>Whatsapp</p>
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1691,7 +1797,7 @@
                                 </div>
                                 <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                     <button>Interested</button>
-                                    <button class="d-flex align-items-center">
+                                    <button class="d-flex align-items-center open-brochure-modal-container">
                                         <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                         <p>Contact Seller</p>
                                     </button>
@@ -1713,20 +1819,30 @@
                                             <ul>
                                                 <li>Share it with family and friends</li>
                                                 <li>
-                                                    <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                                    <p>Copy to Clipboard</p>
+                                                    <button onclick="copyLink()">
+                                                        <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                                        <p>Copy to Clipboard</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                                    <p>Facebook</p>
+                                                    <button onclick="shareToFacebook()">
+                                                        <img src="./images/facebook.png" width="20px"
+                                                            alt="Facebook icon">
+                                                        <p>Facebook</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                                    <p>Mail</p>
+                                                    <button onclick="shareToEmail()">
+                                                        <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                                        <p>Mail</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                                    <p>Whatsapp</p>
+                                                    <button onclick="shareToWhatsApp()">
+                                                        <img src="./images/whatsapp.png" width="20px"
+                                                            alt="Whatsapp icon">
+                                                        <p>Whatsapp</p>
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1760,7 +1876,7 @@
                                 </div>
                                 <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                     <button>Interested</button>
-                                    <button class="d-flex align-items-center">
+                                    <button class="d-flex align-items-center open-brochure-modal-container">
                                         <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                         <p>Contact Seller</p>
                                     </button>
@@ -1808,7 +1924,7 @@
                                 </div>
                                 <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                     <button>Interested</button>
-                                    <button class="d-flex align-items-center">
+                                    <button class="d-flex align-items-center open-brochure-modal-container">
                                         <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                         <p>Contact Seller</p>
                                     </button>
@@ -1830,20 +1946,30 @@
                                             <ul>
                                                 <li>Share it with family and friends</li>
                                                 <li>
-                                                    <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                                    <p>Copy to Clipboard</p>
+                                                    <button onclick="copyLink()">
+                                                        <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                                        <p>Copy to Clipboard</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                                    <p>Facebook</p>
+                                                    <button onclick="shareToFacebook()">
+                                                        <img src="./images/facebook.png" width="20px"
+                                                            alt="Facebook icon">
+                                                        <p>Facebook</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                                    <p>Mail</p>
+                                                    <button onclick="shareToEmail()">
+                                                        <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                                        <p>Mail</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                                    <p>Whatsapp</p>
+                                                    <button onclick="shareToWhatsApp()">
+                                                        <img src="./images/whatsapp.png" width="20px"
+                                                            alt="Whatsapp icon">
+                                                        <p>Whatsapp</p>
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1877,7 +2003,7 @@
                                 </div>
                                 <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                     <button>Interested</button>
-                                    <button class="d-flex align-items-center">
+                                    <button class="d-flex align-items-center open-brochure-modal-container">
                                         <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                         <p>Contact Seller</p>
                                     </button>
@@ -1899,20 +2025,30 @@
                                             <ul>
                                                 <li>Share it with family and friends</li>
                                                 <li>
-                                                    <img src="./images/clip.png" width="20px" alt="Clip icon">
-                                                    <p>Copy to Clipboard</p>
+                                                    <button onclick="copyLink()">
+                                                        <img src="./images/clip.png" width="20px" alt="Clip icon">
+                                                        <p>Copy to Clipboard</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/facebook.png" width="20px" alt="Facebook icon">
-                                                    <p>Facebook</p>
+                                                    <button onclick="shareToFacebook()">
+                                                        <img src="./images/facebook.png" width="20px"
+                                                            alt="Facebook icon">
+                                                        <p>Facebook</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/gmail.png" width="20px" alt="Gmail icon">
-                                                    <p>Mail</p>
+                                                    <button onclick="shareToEmail()">
+                                                        <img src="./images/gmail.png" width="20px" alt="Gmail icon">
+                                                        <p>Mail</p>
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon">
-                                                    <p>Whatsapp</p>
+                                                    <button onclick="shareToWhatsApp()">
+                                                        <img src="./images/whatsapp.png" width="20px"
+                                                            alt="Whatsapp icon">
+                                                        <p>Whatsapp</p>
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1946,7 +2082,7 @@
                                 </div>
                                 <div class="btn-container d-flex align-items-center justify-content-end px-2 pb-2">
                                     <button>Interested</button>
-                                    <button class="d-flex align-items-center">
+                                    <button class="d-flex align-items-center open-brochure-modal-container">
                                         <img src="./images/phone.png" width="15px" alt="Phone icon" />
                                         <p>Contact Seller</p>
                                     </button>
@@ -1960,7 +2096,7 @@
                 </div>
             </div>
             <div class="property-details-div-right">
-                <div class="scheduling-container">
+                <div class="scheduling-container scheduling-container-larger-screen">
                     <div class="scheduling-container-upper d-flex flex-column justify-content-center">
                         <div class="property-info d-flex justify-content-center">
                             <div class="text-center py-2">
@@ -1972,7 +2108,7 @@
                                 <p class="mb-0">Deposit</p>
                             </div>
                         </div>
-                        <button class="blue-btn" id="open-schedule-form-modal-container">
+                        <button class="blue-btn open-brochure-modal-container">
                             Connect with Seller
                         </button>
                         <div class="break d-flex align-items-center my-4">
@@ -1998,12 +2134,12 @@
                     </div>
                     <div class="calendar-container">
                         <div class="calendar-header">
-                            <select id="month-select"></select>
-                            <select id="year-select"></select>
+                            <select class="month-select"></select>
+                            <select class="year-select"></select>
                             <div class="nav-arrows">
-                                <span id="prev-month" class="arrow"><img src="./images/chevron.png" width="10px"
+                                <span class="prev-month" class="arrow"><img src="./images/chevron.png" width="10px"
                                         alt="Left Chvron icon" /></span>
-                                <span id="next-month" class="arrow"><img src="./images/chevron.png" width="10px"
+                                <span class="next-month" class="arrow"><img src="./images/chevron.png" width="10px"
                                         alt="Left Chvron icon" style="transform: rotate(180deg)" /></span>
                             </div>
                         </div>
@@ -2185,7 +2321,7 @@
                             </button>
                         </ul>
                         <div class="playStore-btn d-flex align-items-center justify-content-between">
-                            <a href="#" class="googlePlay-button">
+                            <a href="#" class="googlePlay-button" id="launch-button">
                                 <span class="icon">
                                     <svg fill="currentcolor" viewBox="-52.01 0 560.035 560.035"
                                         xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -2327,6 +2463,7 @@
             });
         });
 
+        // Share Dropdown
         document.addEventListener("DOMContentLoaded", function () {
             const shareCont = document.querySelectorAll(".share-container");
             shareCont.forEach((share) => {
@@ -2337,6 +2474,75 @@
                 })
             })
         })
+
+        // Report Btn
+        document.addEventListener("DOMContentLoaded", function () {
+            const reportBtn = document.querySelector(".report-btn")
+            const reportDropdown = document.querySelector(".report-btn-container ul")
+
+            reportBtn.addEventListener("click", function () {
+                reportDropdown.classList.toggle("active")
+            });
+        })
+
+        // Play store Buttons
+        document.addEventListener("DOMContentLoaded", function () {
+            const googlePlayButton = document.querySelector(".googlePlay-button");
+            const googlePlayOriginalText1 = "Download form";
+            const googlePlayOriginalText2 = "App store";
+
+            googlePlayButton.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const googlePlayText1 = googlePlayButton.querySelector(".text-1");
+                const googlePlayText2 = googlePlayButton.querySelector(".text-2");
+                const googlePlayIcon = googlePlayButton.querySelector(".icon");
+
+                googlePlayText1.textContent = "Launching";
+                googlePlayText1.classList.add("launch-text");
+                googlePlayText2.classList.add("soon-text")
+                googlePlayText2.textContent = "Soon";
+                googlePlayIcon.style.display = "none";
+
+                setTimeout(function () {
+                    googlePlayText1.textContent = googlePlayOriginalText1;
+                    googlePlayText2.textContent = googlePlayOriginalText2;
+                    googlePlayText1.classList.remove("launch-text");
+                    googlePlayText2.classList.remove("soon-text")
+                    googlePlayIcon.style.display = "";
+                }, 3000);
+            });
+
+            const appstoreButton = document.querySelector(".appstore-button");
+            const appstoreOriginalText1 = "GET IT ON";
+            const appstoreOriginalText2 = "Google Play";
+
+            appstoreButton.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const appstoreText1 = appstoreButton.querySelector(".text-1");
+                const appstoreText2 = appstoreButton.querySelector(".text-2");
+                const appstoreIcon = appstoreButton.querySelector(".icon");
+
+                appstoreText1.textContent = "Launching";
+                appstoreText2.textContent = "Soon";
+                appstoreText1.classList.add("launch-text");
+                appstoreText2.classList.add("soon-text")
+                appstoreIcon.style.display = "none";
+
+                setTimeout(function () {
+                    appstoreText1.textContent = appstoreOriginalText1;
+                    appstoreText2.textContent = appstoreOriginalText2;
+                    appstoreText1.classList.remove("launch-text");
+                    appstoreText2.classList.remove("soon-text")
+                    appstoreIcon.style.display = "";
+                }, 3000);
+            });
+        });
+
+
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -2360,6 +2566,7 @@
     <script defer src="./inventorySlider.js"></script>
     <script defer src="./rive-animations.js"></script>
     <script defer src="./related-properties-slider.js"></script>
+    <script defer src="share-functionality.js"></script>
 </body>
 
 </html>

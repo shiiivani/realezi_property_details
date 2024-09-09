@@ -34,7 +34,9 @@ document.addEventListener("scroll", function () {
 
 // Generating current days and dates
 document.addEventListener("DOMContentLoaded", function () {
-  const dateContainerSlider = document.querySelector(".date-container-slider");
+  const dateContainerSliders = document.querySelectorAll(
+    ".date-container-slider"
+  );
 
   const today = new Date();
   const currentYear = today.getFullYear();
@@ -47,246 +49,268 @@ document.addEventListener("DOMContentLoaded", function () {
     return days[date.getDay()];
   }
 
-  dateContainerSlider.innerHTML = "";
+  // Loop through each date-container-slider
+  dateContainerSliders.forEach(function (dateContainerSlider) {
+    dateContainerSlider.innerHTML = "";
 
-  for (let i = 0; i < 3; i++) {
-    const futureDate = new Date(currentYear, currentMonth, today.getDate() + i);
-    const dayName = i === 0 ? "Today" : getDayName(futureDate);
+    for (let i = 0; i < 3; i++) {
+      const futureDate = new Date(
+        currentYear,
+        currentMonth,
+        today.getDate() + i
+      );
+      const dayName = i === 0 ? "Today" : getDayName(futureDate);
 
-    const dateDiv = document.createElement("div");
-    dateDiv.classList.add("date");
+      const dateDiv = document.createElement("div");
+      dateDiv.classList.add("date");
 
-    const dayP = document.createElement("p");
-    dayP.textContent = dayName;
+      const dayP = document.createElement("p");
+      dayP.textContent = dayName;
 
-    const dateP = document.createElement("p");
-    dateP.textContent = futureDate.getDate().toString().padStart(2, "0");
+      const dateP = document.createElement("p");
+      dateP.textContent = futureDate.getDate().toString().padStart(2, "0");
 
-    dateDiv.appendChild(dayP);
-    dateDiv.appendChild(dateP);
+      dateDiv.appendChild(dayP);
+      dateDiv.appendChild(dateP);
 
-    dateContainerSlider.appendChild(dateDiv);
-  }
+      dateContainerSlider.appendChild(dateDiv);
+    }
 
-  // Add the last "View Calendar" div
-  const viewCalendarDiv = document.createElement("div");
-  viewCalendarDiv.classList.add("date");
+    // Add the last "View Calendar" div
+    const viewCalendarDiv = document.createElement("div");
+    viewCalendarDiv.classList.add("date");
 
-  const viewCalendarP = document.createElement("p");
-  viewCalendarP.textContent = "View Calendar";
-  viewCalendarP.classList.add("view-calendar");
-  viewCalendarP.setAttribute("colspan", "2");
+    const viewCalendarP = document.createElement("p");
+    viewCalendarP.textContent = "View Calendar";
+    viewCalendarP.classList.add("view-calendar");
+    viewCalendarP.setAttribute("colspan", "2");
 
-  viewCalendarDiv.appendChild(viewCalendarP);
-  dateContainerSlider.appendChild(viewCalendarDiv);
+    viewCalendarDiv.appendChild(viewCalendarP);
+    dateContainerSlider.appendChild(viewCalendarDiv);
+  });
 });
 
 // Dates Slider
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".date-container-slider");
-  const slideRightBtn = document.getElementById("slideRightDate");
-  const slideLeftBtn = document.getElementById("slideLeftDate");
+  const sliders = document.querySelectorAll(".date-container-slider");
 
-  slideRightBtn.addEventListener("click", function () {
-    slideLeftBtn.classList.remove("hidden");
-    slider.scrollBy({
-      left: 100,
-      behavior: "smooth",
+  sliders.forEach(function (slider) {
+    const slideRightBtn = slider.parentElement.querySelector("#slideRightDate");
+    const slideLeftBtn = slider.parentElement.querySelector("#slideLeftDate");
+
+    slideRightBtn.addEventListener("click", function () {
+      slideLeftBtn.classList.remove("hidden");
+      slider.scrollBy({
+        left: 100,
+        behavior: "smooth",
+      });
     });
-  });
 
-  slideLeftBtn.addEventListener("click", function () {
-    slider.scrollBy({
-      left: -150,
-      behavior: "smooth",
+    slideLeftBtn.addEventListener("click", function () {
+      slider.scrollBy({
+        left: -150,
+        behavior: "smooth",
+      });
     });
   });
 });
 
 // Right Side Calendar
 document.addEventListener("DOMContentLoaded", function () {
-  const monthSelect = document.getElementById("month-select");
-  const yearSelect = document.getElementById("year-select");
-  const calendarGrid = document.getElementById("calendar-grid");
-  const prevMonthBtn = document.getElementById("prev-month");
-  const nextMonthBtn = document.getElementById("next-month");
+  const calendars = document.querySelectorAll(".calendar-container");
 
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+  calendars.forEach(function (calendar) {
+    const monthSelect = calendar.querySelector(".month-select");
+    const yearSelect = calendar.querySelector(".year-select");
+    const calendarGrid = calendar.querySelector(".calendar-grid");
+    const prevMonthBtn = calendar.querySelector(".prev-month");
+    const nextMonthBtn = calendar.querySelector(".next-month");
 
-  const today = new Date();
-  let currentMonth = today.getMonth();
-  let currentYear = today.getFullYear();
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
 
-  // Function to populate month and year dropdowns based on current date
-  function populateDropdowns() {
-    monthSelect.innerHTML = "";
-    yearSelect.innerHTML = "";
+    const today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
 
-    const date = today.getDate();
-    const monthOptions =
-      date > 15 ? [currentMonth, currentMonth + 1] : [currentMonth];
+    function populateDropdowns() {
+      monthSelect.innerHTML = "";
+      yearSelect.innerHTML = "";
 
-    monthOptions.forEach((month) => {
-      const monthIndex = month % 12;
-      monthSelect.innerHTML += `<option value="${monthIndex}" ${
-        monthIndex === currentMonth ? "selected" : ""
-      }>${months[monthIndex]}</option>`;
+      const date = today.getDate();
+      const monthOptions =
+        date > 15 ? [currentMonth, currentMonth + 1] : [currentMonth];
+
+      monthOptions.forEach((month) => {
+        const monthIndex = month % 12;
+        monthSelect.innerHTML += `<option value="${monthIndex}" ${
+          monthIndex === currentMonth ? "selected" : ""
+        }>${months[monthIndex]}</option>`;
+      });
+
+      const yearOptions =
+        today.getMonth() === 11 && date > 15
+          ? [currentYear, currentYear + 1]
+          : [currentYear];
+      yearOptions.forEach((year) => {
+        yearSelect.innerHTML += `<option value="${year}" ${
+          year === currentYear ? "selected" : ""
+        }>${year}</option>`;
+      });
+
+      updateButtonVisibility();
+    }
+
+    // Generate calendar grid for the selected month and year
+    function generateCalendar(month, year) {
+      calendarGrid.innerHTML = "";
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+      const prevLastDate = new Date(year, month, 0).getDate();
+
+      // Previous month's days
+      for (let i = firstDay - 1; i >= 0; i--) {
+        const date = prevLastDate - i;
+        calendarGrid.innerHTML += `<div class="date inactive-date">${date}</div>`;
+      }
+
+      // Current month's days
+      for (let i = 1; i <= lastDate; i++) {
+        const isToday =
+          i === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear();
+        calendarGrid.innerHTML += `<div class="date ${
+          isToday ? "today" : ""
+        }">${i}</div>`;
+      }
+
+      // Next month's days
+      const remainingDays = (7 - ((firstDay + lastDate) % 7)) % 7;
+      for (let i = 1; i <= remainingDays; i++) {
+        calendarGrid.innerHTML += `<div class="date inactive-date">${i}</div>`;
+      }
+
+      // Update button visibility based on the new month and year
+      updateButtonVisibility();
+    }
+
+    // Function to update visibility or enable/disable state of next/prev buttons
+    function updateButtonVisibility() {
+      const selectedMonth = parseInt(monthSelect.value);
+      const selectedYear = parseInt(yearSelect.value);
+
+      // Disable previous button if we're at the current month and year
+      if (
+        selectedMonth === today.getMonth() &&
+        selectedYear === today.getFullYear()
+      ) {
+        prevMonthBtn.disabled = true;
+      } else {
+        prevMonthBtn.disabled = false;
+      }
+
+      // Disable next button if there's no next month or year in the dropdown
+      const maxMonth =
+        today.getDate() > 15 && today.getMonth() === 11
+          ? 0
+          : today.getMonth() + 1;
+      const maxYear =
+        today.getMonth() === 11 && today.getDate() > 15
+          ? today.getFullYear() + 1
+          : today.getFullYear();
+
+      if (selectedMonth >= maxMonth && selectedYear >= maxYear) {
+        nextMonthBtn.disabled = true;
+        nextMonthBtn.style.display = "none";
+      } else {
+        nextMonthBtn.disabled = false;
+        nextMonthBtn.style.display = "block";
+      }
+    }
+
+    monthSelect.addEventListener("change", (e) => {
+      currentMonth = parseInt(e.target.value);
+      generateCalendar(currentMonth, currentYear);
     });
 
-    const yearOptions =
-      today.getMonth() === 11 && date > 15
-        ? [currentYear, currentYear + 1]
-        : [currentYear];
-    yearOptions.forEach((year) => {
-      yearSelect.innerHTML += `<option value="${year}" ${
-        year === currentYear ? "selected" : ""
-      }>${year}</option>`;
+    yearSelect.addEventListener("change", (e) => {
+      currentYear = parseInt(e.target.value);
+      generateCalendar(currentMonth, currentYear);
     });
 
-    // Update button visibility based on dropdown limits
-    updateButtonVisibility();
-  }
+    prevMonthBtn.addEventListener("click", () => {
+      if (currentMonth === 0) {
+        currentMonth = 11;
+        currentYear--;
+      } else {
+        currentMonth--;
+      }
+      monthSelect.value = currentMonth;
+      yearSelect.value = currentYear;
+      generateCalendar(currentMonth, currentYear);
+    });
 
-  // Generate calendar grid for the selected month and year
-  function generateCalendar(month, year) {
-    calendarGrid.innerHTML = "";
-    const firstDay = new Date(year, month, 1).getDay();
-    const lastDate = new Date(year, month + 1, 0).getDate();
-    const prevLastDate = new Date(year, month, 0).getDate();
+    nextMonthBtn.addEventListener("click", () => {
+      if (currentMonth === 11) {
+        currentMonth = 0;
+        currentYear++;
+      } else {
+        currentMonth++;
+      }
+      monthSelect.value = currentMonth;
+      yearSelect.value = currentYear;
+      generateCalendar(currentMonth, currentYear);
+    });
 
-    // Previous month's days
-    for (let i = firstDay - 1; i >= 0; i--) {
-      const date = prevLastDate - i;
-      calendarGrid.innerHTML += `<div class="date inactive-date">${date}</div>`;
-    }
-
-    // Current month's days
-    for (let i = 1; i <= lastDate; i++) {
-      const isToday =
-        i === today.getDate() &&
-        month === today.getMonth() &&
-        year === today.getFullYear();
-      calendarGrid.innerHTML += `<div class="date ${
-        isToday ? "today" : ""
-      }">${i}</div>`;
-    }
-
-    // Next month's days
-    const remainingDays = (7 - ((firstDay + lastDate) % 7)) % 7;
-    for (let i = 1; i <= remainingDays; i++) {
-      calendarGrid.innerHTML += `<div class="date inactive-date">${i}</div>`;
-    }
-
-    // Update button visibility based on the new month and year
-    updateButtonVisibility();
-  }
-
-  // Function to update visibility or enable/disable state of next/prev buttons
-  function updateButtonVisibility() {
-    const selectedMonth = parseInt(monthSelect.value);
-    const selectedYear = parseInt(yearSelect.value);
-
-    // Disable previous button if we're at the current month and year
-    if (
-      selectedMonth === today.getMonth() &&
-      selectedYear === today.getFullYear()
-    ) {
-      prevMonthBtn.disabled = true;
-    } else {
-      prevMonthBtn.disabled = false;
-    }
-
-    // Disable next button if there's no next month or year in the dropdown
-    const maxMonth =
-      today.getDate() > 15 && today.getMonth() === 11
-        ? 0
-        : today.getMonth() + 1;
-    const maxYear =
-      today.getMonth() === 11 && today.getDate() > 15
-        ? today.getFullYear() + 1
-        : today.getFullYear();
-
-    if (selectedMonth >= maxMonth && selectedYear >= maxYear) {
-      nextMonthBtn.disabled = true;
-      nextMonthBtn.style.display = "none";
-    } else {
-      nextMonthBtn.disabled = false;
-      nextMonthBtn.style.display = "block";
-    }
-  }
-
-  monthSelect.addEventListener("change", (e) => {
-    currentMonth = parseInt(e.target.value);
-    generateCalendar(currentMonth, currentYear);
+    populateDropdowns(); // Populate month and year dropdowns on page load
+    generateCalendar(currentMonth, currentYear); // Generate initial calendar
   });
-
-  yearSelect.addEventListener("change", (e) => {
-    currentYear = parseInt(e.target.value);
-    generateCalendar(currentMonth, currentYear);
-  });
-
-  prevMonthBtn.addEventListener("click", () => {
-    if (currentMonth === 0) {
-      currentMonth = 11;
-      currentYear--;
-    } else {
-      currentMonth--;
-    }
-    monthSelect.value = currentMonth;
-    yearSelect.value = currentYear;
-    generateCalendar(currentMonth, currentYear);
-  });
-
-  nextMonthBtn.addEventListener("click", () => {
-    if (currentMonth === 11) {
-      currentMonth = 0;
-      currentYear++;
-    } else {
-      currentMonth++;
-    }
-    monthSelect.value = currentMonth;
-    yearSelect.value = currentYear;
-    generateCalendar(currentMonth, currentYear);
-  });
-
-  populateDropdowns(); // Populate month and year dropdowns on page load
-  generateCalendar(currentMonth, currentYear); // Generate initial calendar
 });
 
-// Opening Calendar
+// View Calendar
 document.addEventListener("DOMContentLoaded", function () {
-  const dateCont = document.querySelector(
-    ".scheduling-container .date-container"
+  const schedulingContainers = document.querySelectorAll(
+    ".scheduling-container"
   );
-  const calendarCont = document.querySelector(
-    ".scheduling-container .calendar-container"
-  );
-  const viewCalendarBtn = document.querySelector(
-    ".date-container-slider .date .view-calendar"
-  );
-  const upperSection = document.querySelector(".scheduling-container-upper");
 
-  viewCalendarBtn.addEventListener("click", function () {
-    upperSection.classList.add("d-none");
-    upperSection.classList.remove("d-flex");
-    calendarCont.classList.add("active");
-    dateCont.classList.remove("active");
+  schedulingContainers.forEach(function (container) {
+    const dateCont = container.querySelector(".date-container");
+    const calendarCont = container.querySelector(".calendar-container");
+    const viewCalendarBtn = container.querySelector(
+      ".date-container-slider .date .view-calendar"
+    );
+    const upperSection = container.querySelector(".scheduling-container-upper");
+
+    // Function to show the calendar and hide the upper section
+    const openCalendar = function () {
+      if (upperSection) {
+        upperSection.classList.add("d-none");
+        upperSection.classList.remove("d-flex");
+      }
+      calendarCont.classList.add("active");
+      dateCont.classList.remove("active");
+    };
+
+    // Add both click and touch events
+    viewCalendarBtn.addEventListener("click", openCalendar);
+    viewCalendarBtn.addEventListener("touchstart", openCalendar);
   });
 });
 
+// Selecting date and time of schedule
 document.addEventListener("DOMContentLoaded", function () {
   const dates = document.querySelectorAll(".scheduling-container .date");
   const times = document.querySelectorAll(".scheduling-container .time");
@@ -306,61 +330,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const modalButtons = document.querySelectorAll(
-  "#open-schedule-form-modal-container, #another-button-id"
-);
-
-const modal = document.querySelector(".schedule-form-modal-container");
-const closeIcon = document.querySelector(
-  ".schedule-form-modal-container .close-icon"
-);
-
-function showModal() {
-  modal.style.display = "flex";
-  modal.offsetHeight;
-  modal.classList.add("show");
-  modal.classList.remove("hide");
-}
-
-function hideModal() {
-  modal.classList.add("hide");
-  modal.classList.remove("show");
-
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 500);
-}
-
-// Add event listener to each button to show the modal
-modalButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    showModal();
-  });
-});
-
-// Event listener for closing the modal
-closeIcon.addEventListener("click", function () {
-  hideModal();
-});
-
-// Schedule confirmation Modal
+// Opening Schedule form
 document.addEventListener("DOMContentLoaded", function () {
-  const modalButton = document.getElementById("event-scheduled");
-  const modal = document.querySelector(
-    ".schedule-confirmation-modal-container"
+  const modalButtons = document.querySelectorAll(
+    "#open-schedule-form-modal-container, #another-button-id"
   );
-  const scheduleFormModal = document.querySelector(
-    ".schedule-form-modal-container"
+
+  const modal = document.querySelector(".schedule-form-modal-container");
+  const modalContent = document.querySelector(
+    ".schedule-form-modal-container .modals"
   );
   const closeIcon = document.querySelector(
-    ".schedule-confirmation-modal-container .close-icon"
+    ".schedule-form-modal-container .close-icon"
   );
+
   function showModal() {
     modal.style.display = "flex";
     modal.offsetHeight;
     modal.classList.add("show");
-    scheduleFormModal.classList.add("hide");
-    scheduleFormModal.classList.remove("show");
+    modal.classList.remove("hide");
   }
 
   function hideModal() {
@@ -369,17 +357,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       modal.style.display = "none";
-      scheduleFormModal.style.display = "none";
     }, 500);
   }
 
-  modalButton.addEventListener("click", function () {
-    showModal();
+  // Add event listener to each button to show the modal
+  modalButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      showModal();
+    });
   });
 
   // Event listener for closing the modal
   closeIcon.addEventListener("click", function () {
     hideModal();
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (!modalContent.contains(e.target)) {
+      hideModal();
+    }
   });
 });
 

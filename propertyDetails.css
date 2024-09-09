@@ -66,7 +66,7 @@ nav {
   background-color: #111f3c;
   position: fixed !important;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   width: 100%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -101,7 +101,7 @@ nav {
   justify-content: space-between;
   padding-inline: 50px;
   background-color: #111f3c;
-  min-height: 72px;
+  min-height: 55px;
   border-radius: 0px 0px 20px 20px;
   position: relative;
 }
@@ -112,9 +112,10 @@ nav {
   align-items: center;
   position: relative;
 }
+
 .nav-vertical-line {
   border-left: 1px solid #ffffff;
-  min-height: 60px;
+  min-height: 55px;
   margin: 0 10px;
 }
 
@@ -136,6 +137,7 @@ nav {
   border: #ffffff 1px solid;
   padding: 4px 15px;
   border-radius: 10px;
+  font-size: 0.85rem;
 }
 
 #pl-post-property-nav:hover {
@@ -176,6 +178,7 @@ nav {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 0.85rem;
 }
 
 .location-item-box {
@@ -263,7 +266,7 @@ nav {
 #pl-search-input {
   border: none;
   width: clamp(30vw, 30vw, 70vw);
-  padding: 10px;
+  padding: 3px;
   border-radius: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -275,7 +278,7 @@ nav {
 
 #pl-search-input {
   border: none;
-  padding: 10px;
+  padding: 3px;
   border-radius: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -441,12 +444,12 @@ nav {
   content: "Save this property";
   position: absolute;
   top: -30px;
-  left: -20px;
+  left: -5px;
   padding: 4px 8px;
   border-radius: 3px;
   background-color: #00000090;
   color: #fff;
-  z-index: 100;
+  z-index: 40;
   font-size: 0.7rem;
   white-space: nowrap;
   opacity: 0;
@@ -467,7 +470,6 @@ nav {
 .share-container ul {
   position: absolute;
   background-color: #ffffff;
-  z-index: 5;
   width: max-content;
   padding-left: 0;
   top: 40px;
@@ -481,13 +483,18 @@ nav {
 
 .share-container ul.active {
   opacity: 1;
+  z-index: 100;
   visibility: visible;
   transform: translateY(0);
 }
 
-.share-container ul li:hover {
+.share-container ul li button:hover {
   cursor: pointer;
-  background-color: #f7f9ff;
+  background-color: #fff;
+}
+
+.share-container ul li button p:hover {
+  color: #ec7100;
 }
 
 .share-container ul li p {
@@ -499,19 +506,21 @@ nav {
 .share-container ul li:first-child {
   color: #434343;
   background-color: #f7f9ff;
+  padding: 7px 10px;
 }
 
-.share-container ul li {
+.share-container ul li button {
   display: flex;
   align-items: center;
   padding: 7px 10px;
+  border: none;
 }
 
 /* Property Details Heading */
 
 .property-details-heading-div {
   font-family: "Familjen Grotesk", sans-serif;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -541,6 +550,51 @@ nav {
   background-color: #111f3c;
 }
 
+.property-details-heading-div .report-btn-container ul {
+  padding-left: 0;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px 1px #00000020;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.property-details-heading-div .report-btn-container ul.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 100;
+}
+
+.property-details-heading-div .report-btn-container ul li:first-child {
+  background-color: #f7f9ff;
+  color: #434343;
+  font-size: 1rem;
+}
+
+.property-details-heading-div .report-btn-container ul li {
+  padding: 4px 15px;
+  color: #6b6d72;
+  font-size: 0.85rem;
+}
+
+.property-details-heading-div .report-btn-container ul li:hover {
+  cursor: pointer;
+}
+
+.property-details-heading-div .report-btn-container ul li p {
+  margin-bottom: 5px;
+}
+
+.property-details-heading-div .report-btn-container ul li textarea {
+  border: 1px solid #d9d9d9;
+  height: 70px;
+  /* width: 100%; */
+  border-radius: 3px;
+}
+
 .property-details-heading-div .report-btn:hover p {
   color: #fff;
 }
@@ -555,20 +609,71 @@ nav {
   margin-left: 10px;
 }
 
+.property-date .info-icon-container img {
+  z-index: 50;
+}
+
+.property-date .info-icon-container p {
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  width: 180px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #00000090;
+  color: #fff;
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.property-date .info-icon-container img:hover + p {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 210;
+}
+
 .property-details-heading-right .share-icon {
   margin-right: 10px;
 }
 
 .property-details-heading-right .price {
   font-size: 1.1rem;
-  color: #ec7100;
-  margin-top: 15px;
+  color: #434343;
   margin-bottom: 0;
   font-family: "Noto Sans", sans-serif;
 }
 
+.property-details-heading-right .price-container img {
+  margin-left: 10px;
+}
+
 .property-details-heading-div img {
   cursor: pointer;
+}
+
+.price-container .info-icon-container p {
+  position: absolute;
+  top: -50px;
+  left: -90px;
+  width: 180px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #00000090;
+  color: #fff;
+  z-index: 100;
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.price-container .info-icon-container img:hover + p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .arrow.hidden {
@@ -837,7 +942,7 @@ main.container {
 
 .categories-container.fixed {
   position: fixed;
-  top: 70px;
+  top: 50px;
   left: 5px;
   right: 5px;
   width: 100%;
@@ -1218,7 +1323,7 @@ main.container {
 }
 
 .image-video-container {
-  width: 170px;
+  width: 150px;
   height: 120px;
   position: relative;
 }
@@ -1340,7 +1445,7 @@ main.container {
 
 .loan-container-content {
   align-items: flex-end;
-  padding: 1.6rem;
+  padding: 1.2rem;
 }
 
 .loan-container-content h2 {
@@ -1365,7 +1470,7 @@ main.container {
 
 .loan-container-content button {
   background-color: #fff;
-  padding: 8px 15px;
+  padding: 6px 15px;
   border-radius: 20px;
   color: #111f3c;
   align-self: flex-start;
@@ -1752,8 +1857,9 @@ form .no-transform label {
 
 .otp-container .otp-verification {
   position: absolute;
-  right: 20px;
+  right: 35px;
   top: 23px;
+  color: green;
   width: max-content !important;
   margin: 0 !important;
   display: none;
@@ -1961,6 +2067,14 @@ form .no-transform label {
   position: relative;
 }
 
+.compare-property-container-inner.fullLenth {
+  height: max-content !important;
+}
+
+.compare-property-container-inner.fullLenth::after {
+  display: none;
+}
+
 .input-container {
   border: 1px solid #8b8f95;
   padding: 10px 15px;
@@ -2036,7 +2150,7 @@ form .no-transform label {
 }
 
 .single-property-info-container .smaller-container .blue-text {
-  color: #0f46a6;
+  color: #111f3c;
 }
 
 .single-property-info-container .image-container {
@@ -2090,6 +2204,12 @@ form .no-transform label {
 
 .compare-property-container-inner .nav-prev-button.hidden {
   display: none;
+}
+
+.compare-property-container .see-more-btn {
+  color: #111f3c;
+  border: none;
+  background-color: transparent;
 }
 
 /* Developer Section */
@@ -2445,7 +2565,7 @@ form .no-transform label {
   transform: translateY(40px);
 }
 
-.property-details-div-right .scheduling-container {
+.scheduling-container {
   background-color: #ebf0ff;
   padding: 25px;
   border-radius: 10px;
@@ -2537,6 +2657,17 @@ form .no-transform label {
 
 .date-container .nav-prev-button.hidden {
   display: none;
+}
+
+.scheduling-container-mobile-view {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scheduling-container-mobile-view .scheduling-container {
+  width: 350px;
 }
 
 .scheduling-container .date-container .date {
@@ -2928,6 +3059,19 @@ form .no-transform label {
   bottom: 10px;
 }
 
+.playStore-btn .texts .launch-text {
+  font-size: 1rem;
+  white-space: wrap;
+  margin-right: 10px;
+}
+
+.playStore-btn .texts .soon-text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-left: 15px;
+}
+
 .googlePlay-button {
   display: inline-flex;
   align-items: center;
@@ -3161,9 +3305,9 @@ form .no-transform label {
   .property-details-div-right.absolute {
     right: -70px;
   }
-  .image-video-container {
-    width: 180px;
-  }
+  /* .image-video-container {
+    width: 140px;
+  } */
   .calendar-grid {
     gap: 0;
   }
@@ -3182,6 +3326,9 @@ form .no-transform label {
   .categories-container .nav-button {
     display: none;
   }
+  .scheduling-container-mobile-view {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -3196,7 +3343,9 @@ form .no-transform label {
     height: 90px;
   }
   .image-video-container .play-btn {
-    width: 30px;
+    width: 40px;
+    top: 32%;
+    left: 36%;
   }
   .property-details-div {
     flex-direction: column;
@@ -3218,6 +3367,9 @@ form .no-transform label {
     width: 360px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .scheduling-container-larger-screen {
+    display: none;
   }
   .scheduling-container .calendar-grid .date {
     font-size: 0.95rem;
@@ -3432,6 +3584,9 @@ form .no-transform label {
     align-items: flex-start;
     justify-content: flex-start;
   }
+  .property-details-heading-right .property-date {
+    justify-content: flex-start !important;
+  }
   .property-details-heading-left {
     margin-bottom: 20px;
   }
@@ -3445,8 +3600,12 @@ form .no-transform label {
     margin-right: 4px;
     margin-left: 4px;
   }
-  .property-overview-content .d-flex:first-child {
+  .property-overview-content > .d-flex:first-child {
     flex-wrap: wrap;
+    justify-content: flex-start !important;
+  }
+  .property-overview-content > .d-flex:first-child > div {
+    margin-right: 10px;
   }
   .property-overview-content .d-flex:first-child .upper-row {
     height: 80px;
@@ -3460,13 +3619,10 @@ form .no-transform label {
   }
   .loan-container-content {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .loan-container-content img {
-    margin-bottom: 15px;
-  }
-  .loan-container-content button {
-    align-self: center;
+    display: none;
   }
   .question-answer-inner-container .d-flex {
     flex-direction: column;
@@ -3549,6 +3705,14 @@ form .no-transform label {
   .image-modal .carousel-item {
     height: 50vh;
   }
+
+  .image-modal .carousel-control-next {
+    right: -5px !important;
+  }
+
+  .image-modal .carousel-control-prev {
+    left: -5px !important;
+  }
 }
 
 @media screen and (max-width: 615px) {
@@ -3624,12 +3788,7 @@ form .no-transform label {
     top: 10px;
   }
   .footer .columns > div:first-child {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: none;
   }
   .footer .upper-footer .px-5 {
     padding: 0 !important;
@@ -3691,6 +3850,9 @@ form .no-transform label {
     margin-bottom: 20px;
     margin-top: 15px;
   }
+  .floor-plan-properties-categories > p:last-child {
+    display: none;
+  }
   .property-containter {
     width: 97%;
   }
@@ -3708,6 +3870,20 @@ form .no-transform label {
 
   .floor-plan-image-container {
     width: 250px;
+  }
+
+  .image-video-container {
+    height: 100px;
+  }
+
+  .image-video-container .play-btn {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .compare-property-container .see-more-btn {
+    display: none;
   }
 }
 
@@ -3730,11 +3906,14 @@ form .no-transform label {
   .disclamer-container p {
     font-size: 0.8rem;
   }
-  .listed-properties-container .btn-container {
-    flex-direction: column;
+  .question-answer-inner-container .d-flex button {
+    padding: 7px 15px;
   }
-  .property-containter {
-    height: 560px;
+  .property-containter h4 {
+    font-size: 1.1rem;
+  }
+  .property-containter .about {
+    font-size: 0.85rem;
   }
   .listed-properties-container .btn-container button {
     margin-top: 15px;
@@ -3742,12 +3921,29 @@ form .no-transform label {
   .property-details-div-right .scheduling-container {
     width: 100%;
   }
+  .property-overview-content h6 {
+    font-size: 0.9rem;
+  }
+  .compare-property-container-inner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+  }
+  .compare-property-container-inner {
+    height: 600px;
+  }
 }
 
 @media screen and (max-width: 405px) {
-  .floor-plan-properties-categories-container {
-    flex-wrap: wrap;
-  }
   .floor-plan-properties-categories {
     margin-bottom: 15px;
     width: 110px;
@@ -3760,9 +3956,6 @@ form .no-transform label {
   }
   .image-modal-header-inner-right button {
     margin-bottom: 15px;
-  }
-  .image-video-container {
-    width: calc(100% / 1);
   }
   .image-video-container .play-btn {
     top: 35%;
@@ -3798,5 +3991,8 @@ form .no-transform label {
     padding-right: 0px;
     margin: 0px;
     margin-left: 20px;
+  }
+  .scheduling-container-mobile-view .scheduling-container {
+    width: 100%;
   }
 }

@@ -18,3 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const seeMoreBtn = document.querySelector(".see-more-btn");
+  const comparePropertyContainer = document.querySelector(
+    ".compare-property-container-inner"
+  );
+
+  seeMoreBtn.addEventListener("click", function () {
+    comparePropertyContainer.classList.toggle("fullLenth");
+
+    if (comparePropertyContainer.classList.contains("fullLenth")) {
+      seeMoreBtn.textContent = "See less";
+    } else {
+      seeMoreBtn.textContent = "See more";
+    }
+  });
+});
