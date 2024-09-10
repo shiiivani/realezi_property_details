@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const carouselItems =
     propertyImagesDiv.querySelectorAll(".carousel-item img");
   const imageModal = document.getElementById("imageModal");
+  const modalHeader = imageModal.querySelector(".image-modal-header");
+  const modalCategories = imageModal.querySelector(".image-categories");
+  const modalContent = imageModal.querySelector(".image-modal");
   const modalImage = document.getElementById("modalImage");
   const closeModal = document.getElementById("closeModal");
 
@@ -24,6 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   closeModal.addEventListener("click", hideModal);
+
+  imageModal.addEventListener("click", function (e) {
+    if (
+      e.target === modalContent ||
+      e.target === modalHeader ||
+      e.target === modalCategories
+    ) {
+      hideModal();
+    }
+  });
 });
 
 // Images slider
@@ -64,6 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeModal = document.querySelector(
     ".image-video-modal-container .close-icon"
   );
+  const modalHeader = imageModal.querySelector(".image-modal-header");
+  const modalCategories = imageModal.querySelector(".image-categories");
+  const modalContent = imageModal.querySelector(".image-modal");
 
   function showModal() {
     imageModal.classList.add("active");
@@ -80,6 +96,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   closeModal.addEventListener("click", hideModal);
+
+  imageModal.addEventListener("click", function (e) {
+    if (
+      e.target === modalContent ||
+      e.target === modalHeader ||
+      e.target === modalCategories
+    ) {
+      hideModal();
+    }
+  });
 });
 
 // Selecting categories in image slider

@@ -536,6 +536,29 @@ nav {
   font-family: "Noto Sans", sans-serif;
 }
 
+.property-details-heading-left .manage-btn:before {
+  content: "This property is managed by Realezi's dedicated relationship manager. This helps with better & Smooth communication, prevents your privacy and avoids any scams";
+  position: absolute;
+  top: -80px;
+  left: 0px;
+  text-align: center;
+  width: 280px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background-color: #00000090;
+  color: #fff;
+  z-index: 100;
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.property-details-heading-left .manage-btn:hover:before {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .property-details-heading-div button {
   background-color: transparent;
   border: 1px solid #6b6d72;
@@ -560,6 +583,28 @@ nav {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.property-details-heading-div .report-btn-container:before {
+  content: "Report this property";
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background-color: #00000090;
+  color: #fff;
+  z-index: 100;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.property-details-heading-div .report-btn-container:hover:before {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .property-details-heading-div .report-btn-container ul.active {
@@ -1052,6 +1097,37 @@ main.container {
   margin-left: 15px;
   font-family: "Roboto", sans-serif;
 }
+.property-overview-content .nav-button {
+  position: absolute;
+  right: 0px;
+  top: 23%;
+  transform: translateY(-50%);
+  background-color: #111f3c;
+  border: none;
+  border-radius: 50%;
+  padding: 7px 9px 9px 9px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 4px 0 #00000015;
+}
+
+.property-overview-content .nav-prev-button {
+  position: absolute;
+  left: -10px;
+  top: 24%;
+  transform: translateY(-50%);
+  background-color: #111f3c;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 9px 9px 9px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 4px 0 #00000015;
+}
+
+.nav-prev-button.hidden {
+  display: none;
+}
 
 .property-overview-btn-container button img {
   margin-right: 6px;
@@ -1150,8 +1226,8 @@ main.container {
 
 .floor-plan-properties-categories {
   padding: 15px 10px;
-  background-color: #e3e3e3;
-  box-shadow: 0 4px 4px 0 #00000010;
+  background-color: #ffffff;
+  /* box-shadow: 0 4px 4px 0 #00000010; */
   margin-right: 20px;
   border-radius: 6px;
   color: #606266;
@@ -1164,7 +1240,8 @@ main.container {
 }
 
 .floor-plan-properties-categories.active {
-  background-color: #fff;
+  background-color: #ffffff;
+  box-shadow: 0 0px 20px 2px #00000020;
 }
 
 .floor-plan-properties-categories p {
@@ -1709,6 +1786,10 @@ main.container {
   cursor: pointer;
 }
 
+.modal-container .scheduling-container.hidden {
+  display: none;
+}
+
 .brochure-modal h4,
 .schedule-form-modal h4 {
   font-weight: 400;
@@ -1765,6 +1846,14 @@ form .no-transform label {
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 0 40px 30px #00000030;
+}
+
+.modal-container .schedule-form-modal {
+  display: none;
+}
+
+.modal-container .schedule-form-modal.active {
+  display: block;
 }
 
 .modal-container form {
@@ -2734,6 +2823,56 @@ form .no-transform label {
   color: #fff;
 }
 
+.scheduling-container .blue-btn:last-child {
+  background-color: #d9d9d9;
+}
+
+.scheduling-container .blue-btn:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse5 1.5s infinite;
+}
+
+@keyframes pulse5 {
+  0% {
+    box-shadow: 0 0 0 0 #d9d9d9;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+.scheduling-container .blue-btn.active {
+  background-color: #111f3c;
+}
+
+.scheduling-container .blue-btn.active:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #111f3c;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
 .calendar-container {
   background: #fff;
   padding: 20px;
@@ -2930,14 +3069,38 @@ form .no-transform label {
 }
 
 /* Disclamer Section  */
-.disclamer-container p {
+.disclaimer-container p {
   font-size: 0.9rem;
   color: #434343;
   font-family: "Familjen Grotesk", sans-serif;
+  margin-bottom: 3px;
 }
 
-.disclamer-container p span {
+.disclaimer-container p span {
   font-weight: 500;
+}
+
+.disclaimer-container .read-more-btn {
+  background-color: transparent;
+  color: #111f3c;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
+.disclaimer-container .read-more-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-container #more-text {
+    display: none;
+  }
+
+  .disclaimer-container .read-more-btn {
+    display: inline;
+  }
 }
 
 /* Footer */
@@ -3283,18 +3446,6 @@ form .no-transform label {
 }
 
 /* Media Queries */
-/* @media screen and (min-width: 1600px) {
-  .property-details-div-right.fixed {
-    right: 16%;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .property-details-div-right.fixed {
-    right: 14%;
-  }
-} */
-
 @media (min-width: 1400px) {
   main.container {
     max-width: 1120px !important;
@@ -3311,9 +3462,9 @@ form .no-transform label {
   .property-details-div-right {
     width: 30%;
   }
-  .property-details-div-right.absolute {
+  /* .property-details-div-right.absolute {
     right: -70px;
-  }
+  } */
   .calendar-grid {
     gap: 0;
   }
@@ -3321,12 +3472,6 @@ form .no-transform label {
     margin-bottom: 20px;
   }
 }
-
-/* @media screen and (max-width: 1290px) {
-  .property-details-div-right.fixed {
-    left: 67%;
-  }
-} */
 
 @media screen and (min-width: 1200px) {
   .categories-container .nav-button {
@@ -3338,6 +3483,12 @@ form .no-transform label {
 }
 
 @media screen and (max-width: 1200px) {
+  .property-images-div .carousel-control-next {
+    right: -30px !important;
+  }
+  .property-images-div .carousel-control-prev {
+    left: -30px !important;
+  }
   .featured-property-container-inner .property-image {
     height: 90px;
   }
@@ -3390,9 +3541,9 @@ form .no-transform label {
   .listed-properties-container .my-4 {
     flex-direction: row;
   }
-  .disclamer-container.pb-3 {
+  /* .disclamer-container.pb-3 {
     margin-top: 70px;
-  }
+  } */
   .footer .columns div:first-child img {
     margin-top: 30px;
   }
@@ -3564,6 +3715,10 @@ form .no-transform label {
   }
   .footer .lower-footer .lower-upper ul {
     margin: 15px 0 !important;
+    flex-direction: column;
+  }
+  .footer .lower-footer .lower-upper ul li {
+    margin-bottom: 5px;
   }
 }
 
@@ -3581,6 +3736,12 @@ form .no-transform label {
   }
   #location-dropdown {
     border: none;
+  }
+  .property-images-div .carousel-control-next {
+    right: -10px !important;
+  }
+  .property-images-div .carousel-control-prev {
+    left: -10px !important;
   }
   .categories-container.fixed {
     top: 152px;
@@ -3606,10 +3767,20 @@ form .no-transform label {
     margin-right: 4px;
     margin-left: 4px;
   }
-  .property-overview-content > .d-flex:first-child {
+  .property-overview-content {
+    overflow-x: hidden;
+  }
+  .property-overview-content .property-overview-slider {
+    overflow-x: auto;
+  }
+  .property-overview-slider .d-flex > div {
+    flex: 0 0 auto;
+    margin-right: 20px !important;
+  }
+  /* .property-overview-content > .d-flex:first-child {
     flex-wrap: wrap;
     justify-content: flex-start !important;
-  }
+  } */
   .property-overview-content > .d-flex:first-child > div {
     margin-right: 10px;
   }
@@ -3662,6 +3833,9 @@ form .no-transform label {
 
 @media screen and (min-width: 767px) {
   .compare-property-container-inner .nav-button {
+    display: none;
+  }
+  .property-overview-content .nav-button {
     display: none;
   }
 }
@@ -3793,21 +3967,34 @@ form .no-transform label {
   .carousel-counter {
     top: 10px;
   }
-  .footer .columns > div:first-child {
-    display: none;
+  .property-images-div .carousel-control-next {
+    right: -5px !important;
   }
-  .footer .upper-footer .px-5 {
-    padding: 0 !important;
+  .property-images-div .carousel-control-prev {
+    left: -5px !important;
   }
-  .footer .upper-footer .d-flex:last-child .image-container {
-    justify-content: center !important;
-  }
-  .footer .upper-footer .d-flex:last-child h5 {
-    margin-top: 20px;
+  .footer {
+    padding-top: 20px;
   }
   .footer .playStore-btn {
     position: static;
-    margin-top: 30px;
+  }
+  .footer .columns > div:first-child,
+  .playStore-btn.larger-screen,
+  .upper-footer .columns > div:nth-child(5) {
+    display: none !important;
+  }
+  /* .footer .upper-footer .px-5 {
+    padding: 0 !important;
+  } */
+  .footer .upper-footer .columns > div {
+    width: 100%;
+  }
+
+  .footer .upper-footer .columns > div:nth-child(2) ul > div {
+    position: absolute;
+    right: 0px;
+    left: 0px;
   }
   .upper-footer .columns div:nth-child(3) .d-flex {
     flex-direction: column;
@@ -3818,8 +4005,22 @@ form .no-transform label {
   .upper-footer .columns {
     margin-bottom: 0 !important;
   }
+  .upper-footer .columns div:nth-child(4) {
+    margin-top: 50px;
+  }
+  .upper-footer .columns div:nth-child(4) .d-flex {
+    justify-content: space-between;
+  }
   .lower-footer .lower-upper {
     padding-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .upper-footer .mobile-view-list,
+  .playStore-btn.smaller-screen,
+  .smaller-screen-refer-button {
+    display: none !important;
   }
 }
 
@@ -3842,13 +4043,10 @@ form .no-transform label {
   }
 }
 
-@media screen and (max-width: 510px) {
-  .footer .upper-footer div {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 470px) {
+  .modal-container .scheduling-container {
+    width: 95%;
+  }
   .floor-plan-info {
     flex-wrap: wrap;
   }
@@ -3865,13 +4063,17 @@ form .no-transform label {
 }
 
 @media screen and (max-width: 450px) {
-  .property-overview-content .d-flex:last-child {
+  .property-overview-content > .d-flex:last-child {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .property-overview-content .grey-btn {
     margin-bottom: 15px;
+  }
+  .property-overview-btn-container {
+    justify-content: space-between;
+    width: 100%;
   }
 
   .floor-plan-image-container {

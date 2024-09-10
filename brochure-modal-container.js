@@ -81,15 +81,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Checking validity of forms
 document.addEventListener("DOMContentLoaded", function () {
   const forms = document.querySelectorAll(".modals form");
 
   forms.forEach(function (form) {
     const submitButton = form.querySelector(".submit-btn");
-    const checkBox = document.querySelector(".modals #checkboxId");
+    const checkBox = form.querySelector("#checkboxId");
 
-    form.addEventListener("input", function () {
+    function checkFormValidity() {
       const isValid = form.checkValidity();
 
       if (isValid && checkBox.checked) {
@@ -99,7 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = true;
         submitButton.classList.remove("active");
       }
-    });
+    }
+
+    form.addEventListener("input", checkFormValidity);
+
+    checkBox.addEventListener("change", checkFormValidity);
   });
 });
 
@@ -133,15 +136,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  closeIcons.forEach((closeIcon, index) => {
-    closeIcon.addEventListener("click", function () {
-      const confirmationModal = confirmationPopupModals[index];
-      const video = confirmationModal.querySelector("video");
+  // closeIcons.forEach((closeIcon, index) => {
+  //   closeIcon.addEventListener("click", function () {
+  //     const confirmationModal = confirmationPopupModals[index];
+  // const video = confirmationModal.querySelector("video");
 
-      confirmationPopupModals[index].style.display = "none";
-      modals[index].style.display = "block";
-      confirmationModal.classList.remove("show");
-      video.classList.remove("shrink");
-    });
-  });
+  // confirmationPopupModals[index].style.display = "none";
+  // modals[index].style.display = "block";
+  // confirmationModal.classList.remove("show");
+  // video.classList.remove("shrink");
+  // });
+  // });
 });

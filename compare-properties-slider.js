@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   slideRightBtn.addEventListener("click", function () {
     slideLeftBtn.classList.remove("hidden");
     slider.scrollBy({
-      left: 100,
+      left: 280,
       behavior: "smooth",
     });
   });
 
   slideLeftBtn.addEventListener("click", function () {
     slider.scrollBy({
-      left: -150,
+      left: -280,
       behavior: "smooth",
     });
   });

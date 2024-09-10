@@ -6,7 +6,7 @@ document.addEventListener("scroll", function () {
     const categoriesHeight = document.querySelector(
       ".categories-container"
     ).offsetHeight;
-    const disclamer = document.querySelector(".disclamer-container.pb-3");
+    const disclamer = document.querySelector(".disclaimer-container.pb-3");
     const containerHeight = container.offsetHeight;
     const disclamerTop = disclamer.getBoundingClientRect().top + window.scrollY;
 
@@ -314,44 +314,72 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const dates = document.querySelectorAll(".scheduling-container .date");
   const times = document.querySelectorAll(".scheduling-container .time");
+  const modalButtons = document.querySelectorAll(
+    ".scheduling-container .blue-btn:last-child"
+  );
 
-  times.forEach((time) => {
-    time.addEventListener("click", function () {
-      times.forEach((t) => t.classList.remove("active"));
-      time.classList.add("active");
-    });
-  });
+  function checkActiveState() {
+    const activeDate = document.querySelector(
+      ".scheduling-container .date.active"
+    );
+    const activeTime = document.querySelector(
+      ".scheduling-container .time.active"
+    );
+
+    if (activeDate && activeTime) {
+      modalButtons.forEach((button) => button.classList.add("active"));
+    } else {
+      modalButtons.forEach((button) => button.classList.remove("active"));
+    }
+  }
 
   dates.forEach((date) => {
     date.addEventListener("click", function () {
       dates.forEach((d) => d.classList.remove("active"));
       date.classList.add("active");
+      checkActiveState(); // Check if both date and time are active
+    });
+  });
+
+  times.forEach((time) => {
+    time.addEventListener("click", function () {
+      times.forEach((t) => t.classList.remove("active"));
+      time.classList.add("active");
+      checkActiveState(); // Check if both date and time are active
     });
   });
 });
 
-// Opening Schedule form
+// Opening Schedule form Modal
 document.addEventListener("DOMContentLoaded", function () {
   const modalButtons = document.querySelectorAll(
-    "#open-schedule-form-modal-container, #another-button-id"
+    "#open-schedule-form-modal-container"
   );
-
   const modal = document.querySelector(".schedule-form-modal-container");
-  const modalContent = document.querySelector(
-    ".schedule-form-modal-container .modals"
-  );
+  const form = document.querySelector(".schedule-form-modal-container .modals");
   const closeIcon = document.querySelector(
     ".schedule-form-modal-container .close-icon"
   );
 
   function showModal() {
-    modal.style.display = "flex";
-    modal.offsetHeight;
-    modal.classList.add("show");
-    modal.classList.remove("hide");
+    const activeDate = document.querySelector(
+      ".property-details-div .scheduling-container .date.active"
+    );
+    const activeTime = document.querySelector(
+      ".property-details-div .scheduling-container .time.active"
+    );
+    console.log("working");
+    if (activeDate && activeTime) {
+      modal.style.display = "flex";
+      modal.offsetHeight;
+      form.classList.add("active");
+      modal.classList.add("show");
+      modal.classList.remove("hide");
+    }
   }
 
   function hideModal() {
+    form.classList.remove("active");
     modal.classList.add("hide");
     modal.classList.remove("show");
 
@@ -373,7 +401,72 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   modal.addEventListener("click", function (e) {
-    if (!modalContent.contains(e.target)) {
+    if (!form.contains(e.target)) {
+      hideModal();
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const modalButtons = document.querySelectorAll(
+    "#open-schedule-calendar-modal-container"
+  );
+  const modal = document.querySelector(".schedule-calendar-modal-container");
+  const form = document.querySelector(
+    ".schedule-calendar-modal-container .modals"
+  );
+  const calendar = document.querySelector(
+    ".schedule-calendar-modal-container .scheduling-container"
+  );
+  const scheduleVisitBtn = document.getElementById("open-schedule-form");
+  const closeIcon = document.querySelector(
+    ".schedule-calendar-modal-container .close-icon"
+  );
+
+  function showModal() {
+    modal.style.display = "flex";
+    modal.offsetHeight;
+    modal.classList.add("show");
+    modal.classList.remove("hide");
+  }
+
+  function hideModal() {
+    modal.classList.add("hide");
+    modal.classList.remove("show");
+
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 500);
+  }
+
+  function showForm() {
+    const activeDate = document.querySelector(
+      ".schedule-calendar-modal-container .scheduling-container .date.active"
+    );
+    const activeTime = document.querySelector(
+      ".schedule-calendar-modal-container .scheduling-container .time.active"
+    );
+    if (activeDate && activeTime) {
+      form.classList.add("active");
+      calendar.classList.add("hidden");
+    }
+  }
+
+  modalButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      showModal();
+    });
+  });
+
+  closeIcon.addEventListener("click", function () {
+    hideModal();
+  });
+
+  scheduleVisitBtn.addEventListener("click", function () {
+    showForm();
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (!calendar.contains(e.target) && !form.contains(e.target)) {
       hideModal();
     }
   });
