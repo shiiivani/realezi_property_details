@@ -45,42 +45,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Otp sent message
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".brochure-modal form");
-  const countryCodeSelect = document.getElementById("country-code");
-  const phoneNumberCont = document.querySelector(".phone-number-container");
-  const phoneNumberInput = document.getElementById("phone-number");
-  const sendOtpBtn = document.getElementById("send-otp-btn");
-  const otpSentMessage = document.getElementById("otp-sent-message");
-  const otpCont = document.querySelector(".otp-container");
-  const otpInput = document.querySelector(".otp-container .input-group input");
-  const otpVerification = document.querySelector(
-    ".otp-container .input-group .otp-verification"
-  );
+  // Handle OTP functionality for each form
+  document.querySelectorAll(".modals form").forEach((form) => {
+    const countryCodeSelect = form.querySelector("#country-code");
+    const phoneNumberCont = form.querySelector(".phone-number-container");
+    const phoneNumberInput = form.querySelector("#phone-number");
+    const sendOtpBtn = form.querySelector("#send-otp-btn");
+    const otpSentMessage = form.querySelector("#otp-sent-message");
+    const otpCont = form.querySelector(".otp-container");
+    const otpInput = otpCont.querySelector(".input-group input");
+    const otpVerification = otpCont.querySelector(
+      ".input-group .otp-verification"
+    );
 
-  sendOtpBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-    const countryCode = countryCodeSelect.value;
-    const phoneNumber = phoneNumberInput.value;
+    sendOtpBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      const countryCode = countryCodeSelect.value;
+      const phoneNumber = phoneNumberInput.value;
 
-    if (phoneNumber) {
-      otpSentMessage.textContent = `We have sent the OTP to ${countryCode} ${phoneNumber}.`;
-      otpSentMessage.classList.add("active");
-      phoneNumberCont.classList.add("sent");
-      otpCont.style.display = "flex";
-    } else {
-      alert("Please enter a valid phone number.");
-    }
-  });
+      if (phoneNumber) {
+        otpSentMessage.textContent = `We have sent the OTP to ${countryCode} ${phoneNumber}.`;
+        otpSentMessage.classList.add("active");
+        phoneNumberCont.classList.add("sent");
+        otpCont.style.display = "flex";
+      } else {
+        alert("Please enter a valid phone number.");
+      }
+    });
 
-  otpInput.addEventListener("input", function () {
-    if (otpInput.value.length === 4) {
-      otpVerification.style.display = "block";
-    } else {
-      otpVerification.style.display = "none";
-    }
+    otpInput.addEventListener("input", function () {
+      if (otpInput.value.length === 4) {
+        otpVerification.style.display = "block";
+      } else {
+        otpVerification.style.display = "none";
+      }
+    });
   });
 });
 
+// Checking Validity of Form
 document.addEventListener("DOMContentLoaded", function () {
   const forms = document.querySelectorAll(".modals form");
 

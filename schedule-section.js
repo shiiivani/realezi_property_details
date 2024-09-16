@@ -42,14 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentYear = today.getFullYear();
   const currentMonth = today.getMonth();
 
-  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
   function getDayName(date) {
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[date.getDay()];
   }
 
-  // Loop through each date-container-slider
   dateContainerSliders.forEach(function (dateContainerSlider) {
     dateContainerSlider.innerHTML = "";
 
@@ -192,9 +189,16 @@ document.addEventListener("DOMContentLoaded", function () {
           i === today.getDate() &&
           month === today.getMonth() &&
           year === today.getFullYear();
-        calendarGrid.innerHTML += `<div class="date ${
-          isToday ? "today" : ""
-        }">${i}</div>`;
+
+        const isPast =
+          i < today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear();
+
+        // Add disabled class for past dates
+        calendarGrid.innerHTML += `<button class="date" ${
+          isToday ? "" : isPast ? "disabled" : ""
+        }>${i}</button>`;
       }
 
       // Next month's days
@@ -223,22 +227,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Disable next button if there's no next month or year in the dropdown
-      const maxMonth =
-        today.getDate() > 15 && today.getMonth() === 11
-          ? 0
-          : today.getMonth() + 1;
-      const maxYear =
-        today.getMonth() === 11 && today.getDate() > 15
-          ? today.getFullYear() + 1
-          : today.getFullYear();
+      //   const maxMonth =
+      //     today.getDate() > 15 && today.getMonth() === 11
+      //       ? 0
+      //       : today.getMonth() + 1;
+      //   const maxYear =
+      //     today.getMonth() === 11 && today.getDate() > 15
+      //       ? today.getFullYear() + 1
+      //       : today.getFullYear();
 
-      if (selectedMonth >= maxMonth && selectedYear >= maxYear) {
-        nextMonthBtn.disabled = true;
-        nextMonthBtn.style.display = "none";
-      } else {
-        nextMonthBtn.disabled = false;
-        nextMonthBtn.style.display = "block";
-      }
+      //   if (selectedMonth >= maxMonth && selectedYear >= maxYear) {
+      //     nextMonthBtn.disabled = true;
+      //     nextMonthBtn.style.display = "none";
+      //   } else {
+      //     nextMonthBtn.disabled = false;
+      //     nextMonthBtn.style.display = "block";
+      //   }
     }
 
     monthSelect.addEventListener("change", (e) => {

@@ -423,7 +423,7 @@ nav {
   content: "Share this property";
   position: absolute;
   top: -30px;
-  left: -20px;
+  left: -25px;
   padding: 4px 8px;
   border-radius: 3px;
   background-color: #00000090;
@@ -464,7 +464,7 @@ nav {
 }
 
 .property-overview-container .share-container:before {
-  left: 0px;
+  left: 15px;
 }
 
 .share-container ul {
@@ -1900,16 +1900,16 @@ form .no-transform label {
   position: relative;
 }
 
-.brochure-modal .otp-sent {
+.modals .otp-sent {
   color: #ec7100;
   display: none;
 }
 
-.brochure-modal .otp-sent.active {
+.modals .otp-sent.active {
   display: block;
 }
 
-.brochure-modal .d-flex .otp-btn {
+.modals .d-flex .otp-btn {
   font-size: 0.85rem;
   color: #ffffff;
   border: none;
@@ -1922,23 +1922,23 @@ form .no-transform label {
   bottom: 3px;
 }
 
-.brochure-modal .phone-number-container.sent .otp-btn {
+.modals .phone-number-container.sent .otp-btn {
   margin: 0;
 }
 
-.brochure-modal .phone-number-container.sent select {
+.modals .phone-number-container.sent select {
   margin: 0;
 }
 
-.brochure-modal .otp-container {
+.modals .otp-container {
   display: none;
 }
 
-.brochure-modal .otp-container input {
+.modals .otp-container input {
   width: 100%;
 }
 
-.brochure-modal .otp-container p {
+.modals .otp-container p {
   margin-top: 8px;
   margin-left: 3px;
   font-size: 0.8rem;
@@ -2827,7 +2827,7 @@ form .no-transform label {
   background-color: #d9d9d9;
 }
 
-.scheduling-container .blue-btn:hover {
+.scheduling-container .blue-btn:last-child:hover {
   background-position: right center;
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;
@@ -2927,7 +2927,7 @@ form .no-transform label {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0;
+  gap: 5px;
 }
 
 .calendar-grid div {
@@ -2941,6 +2941,10 @@ form .no-transform label {
 .calendar-grid .date {
   cursor: pointer;
   font-size: 0.8rem;
+  padding: 3px 6px;
+  border-radius: 3px;
+  border: none;
+  background-color: transparent;
 }
 
 .calendar-grid .date:hover {
@@ -3465,9 +3469,9 @@ form .no-transform label {
   /* .property-details-div-right.absolute {
     right: -70px;
   } */
-  .calendar-grid {
+  /* .calendar-grid {
     gap: 0;
-  }
+  } */
   .listed-properties-container .property-containter {
     margin-bottom: 20px;
   }
@@ -3528,9 +3532,9 @@ form .no-transform label {
   .scheduling-container-larger-screen {
     display: none;
   }
-  .scheduling-container .calendar-grid .date {
+  /* .scheduling-container .calendar-grid .date {
     font-size: 0.95rem;
-  }
+  } */
   .calendar-grid div {
     padding: 11px;
   }
