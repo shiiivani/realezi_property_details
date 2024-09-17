@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Otp sent message
 document.addEventListener("DOMContentLoaded", function () {
-  // Handle OTP functionality for each form
   document.querySelectorAll(".modals form").forEach((form) => {
     const countryCodeSelect = form.querySelector("#country-code");
     const phoneNumberCont = form.querySelector(".phone-number-container");

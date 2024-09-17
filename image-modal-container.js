@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const propertyImagesDiv = document.querySelector(".property-images-div");
   const carouselItems =
     propertyImagesDiv.querySelectorAll(".carousel-item img");
+  const carouselInner = propertyImagesDiv.querySelector(".carousel-inner");
   const imageModal = document.getElementById("imageModal");
   const modalHeader = imageModal.querySelector(".image-modal-header");
+  const modalHeaderInner = imageModal.querySelector(
+    ".image-modal-header-inner"
+  );
+  const price = imageModal.querySelector(".price");
   const modalCategories = imageModal.querySelector(".image-categories");
   const modalContent = imageModal.querySelector(".image-modal");
   const modalImage = document.getElementById("modalImage");
@@ -29,10 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
   closeModal.addEventListener("click", hideModal);
 
   imageModal.addEventListener("click", function (e) {
+    console.log(e.target);
     if (
       e.target === modalContent ||
       e.target === modalHeader ||
-      e.target === modalCategories
+      e.target === modalCategories ||
+      e.target === carouselInner ||
+      e.target === modalHeaderInner ||
+      e.target === price
     ) {
       hideModal();
     }

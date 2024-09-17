@@ -1,54 +1,47 @@
 //property-type filter
 window.onload = () => {
-  let filters = {
-    propertyType: [],
-    bhkType: [],
-    budgetMin: 0,
-    budgetMax: 500000000,
-    saleType: [],
-    possessionStage: [],
-  };
+  // let filters = {
+  //   propertyType: [],
+  //   bhkType: [],
+  //   budgetMin: 0,
+  //   budgetMax: 500000000,
+  //   saleType: [],
+  //   possessionStage: [],
+  // };
 
   /* Flip chevron on dropdown open */
   //flip chevron on dropdown open
-  document.querySelectorAll(".dropdown").forEach((item) => {
-    item.addEventListener("shown.bs.dropdown", (event) => {
-      event.target.querySelector("svg").style.transform = "rotate(180deg)";
-    });
-    item.addEventListener("hidden.bs.dropdown", (event) => {
-      event.target.querySelector("svg").style.transform = "rotate(0deg)";
-    });
-  });
-  //change property type on click
-  document.querySelectorAll(".property-types").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.stopPropagation();
-      item.classList.toggle("active-property-type");
-      /* handle multi-select */
-      if (item.classList.contains("active-property-type")) {
-        filters.propertyType.push(e.target.getAttribute("data-property-type"));
-      } else {
-        filters.propertyType = filters.propertyType.filter(
-          (type) => type !== e.target.getAttribute("data-property-type")
-        );
-      }
-    });
-  });
 
-  document.querySelectorAll(".bhk-types").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.stopPropagation();
-      item.classList.toggle("active-bhk-type");
-      /* handle multi-select */
-      if (item.classList.contains("active-bhk-type")) {
-        filters.bhkType.push(e.target.getAttribute("data-bhk-type"));
-      } else {
-        filters.bhkType = filters.bhkType.filter(
-          (type) => type !== e.target.getAttribute("data-bhk-type")
-        );
-      }
-    });
-  });
+  //change property type on click
+  // document.querySelectorAll(".property-types").forEach((item) => {
+  //   item.addEventListener("click", (e) => {
+  //     e.stopPropagation();
+  //     item.classList.toggle("active-property-type");
+  //     /* handle multi-select */
+  //     if (item.classList.contains("active-property-type")) {
+  //       filters.propertyType.push(e.target.getAttribute("data-property-type"));
+  //     } else {
+  //       filters.propertyType = filters.propertyType.filter(
+  //         (type) => type !== e.target.getAttribute("data-property-type")
+  //       );
+  //     }
+  //   });
+  // });
+
+  // document.querySelectorAll(".bhk-types").forEach((item) => {
+  //   item.addEventListener("click", (e) => {
+  //     e.stopPropagation();
+  //     item.classList.toggle("active-bhk-type");
+  //     /* handle multi-select */
+  //     if (item.classList.contains("active-bhk-type")) {
+  //       filters.bhkType.push(e.target.getAttribute("data-bhk-type"));
+  //     } else {
+  //       filters.bhkType = filters.bhkType.filter(
+  //         (type) => type !== e.target.getAttribute("data-bhk-type")
+  //       );
+  //     }
+  //   });
+  // });
 
   /* handle searchbox input */
   let selectedTags = [];
@@ -235,3 +228,138 @@ window.onload = () => {
 
   /* end */
 };
+
+// Buy or Rent Toggle Button
+function toggleCanvasVisibility(selectedOption) {
+  const pgCanvas = document.querySelector(".pg");
+  const coworkingSpaceCanvas = document.querySelector(".coworkingspace");
+  const plotCanvas = document.querySelector(".plot");
+
+  if (selectedOption === "Buy") {
+    pgCanvas.classList.add("hidden");
+    coworkingSpaceCanvas.classList.add("hidden");
+    plotCanvas.classList.remove("hidden");
+  } else if (selectedOption === "Rent") {
+    pgCanvas.classList.remove("hidden");
+    coworkingSpaceCanvas.classList.remove("hidden");
+    plotCanvas.classList.add("hidden");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".toggle-button p");
+  let activeToggle = document.querySelector(".toggle-button p.active");
+  let toggleSlideLine = document.createElement("div");
+
+  toggleSlideLine.classList.add("toggle-slide-line");
+  document.querySelector(".toggle-button").appendChild(toggleSlideLine);
+
+  gsap.set(toggleSlideLine, {
+    height: 29,
+    position: "absolute",
+    top: 4,
+    zIndex: -1,
+    transformOrigin: "left center",
+    borderRadius: 5,
+  });
+
+  if (activeToggle) {
+    gsap.set(toggleSlideLine, {
+      width: activeToggle.offsetWidth,
+      left: activeToggle.offsetLeft,
+      backgroundColor: "#ffffff",
+    });
+  }
+
+  toggleButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      toggleButtons.forEach(function (p) {
+        p.classList.remove("active");
+      });
+      this.classList.add("active");
+
+      updateActiveToggle(this);
+
+      const selectedOption = this.textContent.trim();
+      toggleCanvasVisibility(selectedOption);
+    });
+  });
+
+  function updateActiveToggle(newActiveToggle) {
+    if (activeToggle !== newActiveToggle) {
+      activeToggle.classList.remove("active");
+      newActiveToggle.classList.add("active");
+
+      const tl = gsap.timeline();
+
+      const activeToggleRect = activeToggle.getBoundingClientRect();
+      const newToggleRect = newActiveToggle.getBoundingClientRect();
+      const direction =
+        newToggleRect.left < activeToggleRect.left ? "left" : "right";
+
+      tl.to(toggleSlideLine, {
+        duration: 0.3,
+        width: newActiveToggle.offsetWidth,
+        left: newActiveToggle.offsetLeft,
+        ease: "power2.out",
+      })
+        .to(
+          toggleSlideLine,
+          {
+            duration: 0.1,
+            x: direction === "left" ? "-3px" : "+3px",
+            ease: "bounce.out",
+          },
+          "-=0.1"
+        )
+        .to(toggleSlideLine, {
+          duration: 0.1,
+          x: direction === "left" ? "+3px" : "-3px",
+          ease: "bounce.out",
+        })
+        .to(toggleSlideLine, {
+          duration: 0.2,
+          x: "0px",
+          ease: "power2.inOut",
+        });
+
+      activeToggle = newActiveToggle;
+    }
+  }
+
+  const initialOption = document
+    .querySelector(".toggle-button p.active")
+    .textContent.trim();
+  toggleCanvasVisibility(initialOption);
+});
+
+// Selecting Property Type
+document.addEventListener("DOMContentLoaded", function () {
+  const listItems = document.querySelectorAll(".nav-filter ul li");
+
+  listItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      listItems.forEach((li) => li.classList.remove("active"));
+
+      item.classList.add("active");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const locationBtn = document.querySelector("nav .dropdown");
+  const navFilter = document.querySelector("nav .nav-filter");
+  const dropdown = document.querySelector(".dropdown svg");
+
+  locationBtn.addEventListener("click", function () {
+    // Toggle the 'active' class
+    navFilter.classList.toggle("active");
+
+    // Rotate the dropdown icon based on the active state
+    if (navFilter.classList.contains("active")) {
+      dropdown.style.transform = "rotate(180deg)";
+    } else {
+      dropdown.style.transform = "rotate(0deg)";
+    }
+  });
+});

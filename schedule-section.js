@@ -142,6 +142,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentMonth = today.getMonth();
     let currentYear = today.getFullYear();
 
+    // Calculate 30 days from today
+    const endDate = new Date();
+    endDate.setDate(today.getDate() + 30);
+
     function populateDropdowns() {
       monthSelect.innerHTML = "";
       yearSelect.innerHTML = "";
@@ -185,19 +189,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Current month's days
       for (let i = 1; i <= lastDate; i++) {
-        const isToday =
-          i === today.getDate() &&
-          month === today.getMonth() &&
-          year === today.getFullYear();
+        const currentDate = new Date(year, month, i);
+        const isInRange = currentDate >= today && currentDate <= endDate;
 
-        const isPast =
-          i < today.getDate() &&
-          month === today.getMonth() &&
-          year === today.getFullYear();
-
-        // Add disabled class for past dates
+        // Add inactive class for dates outside the 30-day range
         calendarGrid.innerHTML += `<button class="date" ${
-          isToday ? "" : isPast ? "disabled" : ""
+          isInRange ? "" : "disabled"
         }>${i}</button>`;
       }
 
@@ -225,24 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         prevMonthBtn.disabled = false;
       }
-
-      // Disable next button if there's no next month or year in the dropdown
-      //   const maxMonth =
-      //     today.getDate() > 15 && today.getMonth() === 11
-      //       ? 0
-      //       : today.getMonth() + 1;
-      //   const maxYear =
-      //     today.getMonth() === 11 && today.getDate() > 15
-      //       ? today.getFullYear() + 1
-      //       : today.getFullYear();
-
-      //   if (selectedMonth >= maxMonth && selectedYear >= maxYear) {
-      //     nextMonthBtn.disabled = true;
-      //     nextMonthBtn.style.display = "none";
-      //   } else {
-      //     nextMonthBtn.disabled = false;
-      //     nextMonthBtn.style.display = "block";
-      //   }
     }
 
     monthSelect.addEventListener("change", (e) => {
@@ -279,8 +258,8 @@ document.addEventListener("DOMContentLoaded", function () {
       generateCalendar(currentMonth, currentYear);
     });
 
-    populateDropdowns(); // Populate month and year dropdowns on page load
-    generateCalendar(currentMonth, currentYear); // Generate initial calendar
+    populateDropdowns();
+    generateCalendar(currentMonth, currentYear);
   });
 });
 
@@ -314,10 +293,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Selecting date and time of schedule
+// Selecting Date and Time
 document.addEventListener("DOMContentLoaded", function () {
-  const dates = document.querySelectorAll(".scheduling-container .date");
-  const times = document.querySelectorAll(".scheduling-container .time");
   const modalButtons = document.querySelectorAll(
     ".scheduling-container .blue-btn:last-child"
   );
@@ -337,19 +314,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  dates.forEach((date) => {
-    date.addEventListener("click", function () {
-      dates.forEach((d) => d.classList.remove("active"));
-      date.classList.add("active");
-      checkActiveState(); // Check if both date and time are active
+  const schedulingContainer = document.querySelectorAll(
+    ".scheduling-container"
+  );
+
+  schedulingContainer.forEach((cont) => {
+    cont.addEventListener("click", function (e) {
+      if (e.target.classList.contains("date") && !e.target.disabled) {
+        const dates = cont.querySelectorAll(".date");
+
+        dates.forEach((d) => d.classList.remove("active"));
+
+        e.target.classList.add("active");
+
+        checkActiveState();
+      }
     });
   });
 
+  const times = document.querySelectorAll(".scheduling-container .time");
   times.forEach((time) => {
     time.addEventListener("click", function () {
       times.forEach((t) => t.classList.remove("active"));
       time.classList.add("active");
-      checkActiveState(); // Check if both date and time are active
+      checkActiveState();
     });
   });
 });
@@ -410,6 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const modalButtons = document.querySelectorAll(
     "#open-schedule-calendar-modal-container"
