@@ -495,7 +495,7 @@ nav .nav-filter li:hover {
   border-radius: 3px;
   background-color: #00000090;
   color: #fff;
-  z-index: 100;
+  z-index: 1;
   font-size: 0.7rem;
   white-space: nowrap;
   opacity: 0;
@@ -516,7 +516,7 @@ nav .nav-filter li:hover {
   border-radius: 3px;
   background-color: #00000090;
   color: #fff;
-  z-index: 40;
+  z-index: -1;
   font-size: 0.7rem;
   white-space: nowrap;
   opacity: 0;
@@ -750,6 +750,8 @@ nav .nav-filter li:hover {
 
 .property-details-heading-right .share-icon {
   margin-right: 10px;
+  position: relative;
+  z-index: 20;
 }
 
 .property-details-heading-right .price {
@@ -903,10 +905,15 @@ nav .nav-filter li:hover {
   position: absolute;
   right: 20px;
   top: 20px;
+  z-index: 100;
 }
 
 .image-modal-container .close-icon:hover {
   cursor: pointer;
+}
+
+.image-modal-container .share-container ul {
+  left: -100px;
 }
 
 .image-modal-header-inner {
@@ -2635,6 +2642,8 @@ form .no-transform label {
 
 .property-containter .arrow-pair {
   margin-left: 15px;
+  position: relative;
+  z-index: 20;
 }
 
 .property-containter .small-details p:nth-child(4) {
