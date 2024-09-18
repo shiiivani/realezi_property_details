@@ -192,9 +192,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentDate = new Date(year, month, i);
         const isInRange = currentDate >= today && currentDate <= endDate;
 
+        const isToday = currentDate.toDateString() === today.toDateString();
+
         // Add inactive class for dates outside the 30-day range
         calendarGrid.innerHTML += `<button class="date" ${
-          isInRange ? "" : "disabled"
+          isInRange || isToday ? "" : "disabled"
         }>${i}</button>`;
       }
 

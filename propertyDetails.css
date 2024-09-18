@@ -3191,7 +3191,7 @@ form .no-transform label {
 }
 
 .filter-section-modal.hide {
-  left: -400px;
+  left: -500px;
   opacity: 0;
 }
 
@@ -3525,15 +3525,17 @@ input[type="range"]::-webkit-slider-thumb {
   bottom: 10px;
 }
 
-.playStore-btn .texts .launch-text {
+.googlePlay-button .texts .launch-text,
+.appstore-button .texts .launch-text {
   font-size: 1rem;
   white-space: wrap;
   margin-right: 10px;
 }
 
-.playStore-btn .texts .soon-text {
+.googlePlay-button .texts .soon-text,
+.appstore-button .texts .soon-text {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 400 !important;
   text-align: center;
   margin-left: 15px;
 }
@@ -4318,6 +4320,15 @@ input[type="range"]::-webkit-slider-thumb {
   .lower-footer .lower-upper {
     padding-top: 0 !important;
   }
+  .footer .upper-footer .columns > div:last-child li:last-child:before,
+  .footer .upper-footer .columns > div:last-child li:nth-child(4):before {
+    display: none;
+  }
+  .googlePlay-button,
+  .appstore-button {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .lower-footer .lower-bottom {
     border-top: 1px solid #919191;
     padding-top: 8px;
@@ -4416,6 +4427,11 @@ input[type="range"]::-webkit-slider-thumb {
   .footer .upper-footer .columns > div:last-child li:nth-child(4) {
     left: 60%;
   }
+  .googlePlay-button,
+  .appstore-button {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 }
 
 @media screen and (min-width: 420px) {
@@ -4497,7 +4513,12 @@ input[type="range"]::-webkit-slider-thumb {
   }
   .footer .googlePlay-button .texts,
   .footer .appstore-button .texts {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .footer .googlePlay-button,
+  .footer .appstore-button {
+    padding: 0.625rem 1rem;
   }
 }
 

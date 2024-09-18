@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   columnHeaders.forEach((header) => {
     header.addEventListener("click", function () {
+      console.log("clicked");
       const ulElement = this.closest(".columns div").querySelector("ul");
       const svg = this.closest(".columns div h4").querySelector("svg");
 

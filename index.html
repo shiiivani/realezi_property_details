@@ -261,7 +261,7 @@
             </div>
         </div>
 
-        <div class="disclamer-modal-container">
+        <div class="disclamer-modal-container active">
             <div class="disclamer-container">
                 <p>
                     Realezi only acts as a medium for advertisement / information
@@ -288,28 +288,29 @@
         </div>
 
         <div class="property-images-div mb-2">
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample" class="carousel slide pointer-event" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active w-100">
                         <div class="carousal-item-inner grid-container">
-                            <div class="first-item image-grid">
+                            <div class="first-item image-grid" data-bs-target="#carouselExample" data-bs-slide-to="0">
                                 <img src="./images/property-image-1.jpg" alt="Main Image" />
                             </div>
-                            <div class="second-third-item">
+                            <div class="second-third-item" data-bs-target="#carouselExample" data-bs-slide-to="1">
                                 <div class="second-item image-grid">
                                     <img src="./images/property-image-1.jpg" alt="Small Image 1" />
                                 </div>
-                                <div class="thrid-item image-grid">
+                                <div class="thrid-item image-grid" data-bs-target="#carouselExample"
+                                    data-bs-slide-to="2">
                                     <img src="./images/property-image-1.jpg" alt="Small Image 1" />
                                 </div>
                             </div>
-                            <div class="fourth-item image-grid">
+                            <div class="fourth-item image-grid" data-bs-target="#carouselExample" data-bs-slide-to="3">
                                 <img src="./images/property-image-1.jpg" alt="Small Image 1" />
                             </div>
-                            <div class="fifth-item image-grid">
+                            <div class="fifth-item image-grid" data-bs-target="#carouselExample" data-bs-slide-to="4">
                                 <img src="./images/property-image-1.jpg" alt="Small Image 1" />
                             </div>
-                            <div class="sixth-item image-grid">
+                            <div class="sixth-item image-grid" data-bs-target="#carouselExample" data-bs-slide-to="5">
                                 <img src="./images/property-image-1.jpg" alt="Small Image 1" />
                             </div>
                         </div>
@@ -472,7 +473,7 @@
                         <p class="category" data-target="Bathroom">Bathroom</p>
                     </div>
                 </div>
-                <div id="carouselExampleCaptions2" class="carousel slide pointer-event">
+                <div id="carouselExampleCaptions2" class="carousel slide pointer-event" data-bs-ride="carousel">
                     <div class="carousel-progress">
                         <div class="carousel-progress-bar"></div>
                     </div>
@@ -481,17 +482,20 @@
                         <span id="totalSlides" class="total-slides">3</span>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active" data-name="Kitchen">
+                        <div class="carousel-item active" data-name="Kitchen" data-bs-target="#carouselExampleCaptions2"
+                            data-bs-slide-to="0">
                             <img src="./images/property-image-1.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Kitchen</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
-                        <div class="carousel-item" data-name="Bedroom">
+                        <div class="carousel-item" data-name="Bedroom" data-bs-target="#carouselExampleCaptions2"
+                            data-bs-slide-to="1">
                             <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Bedroom</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
-                        <div class="carousel-item" data-name="Bathroom">
+                        <div class="carousel-item" data-name="Bathroom" data-bs-target="#carouselExampleCaptions2"
+                            data-bs-slide-to="2">
                             <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Bathroom</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
@@ -574,7 +578,7 @@
                     <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
                     <button class="view-brochure open-brochure-modal-container">View Brochure</button>
                 </div>
-                <div id="carouselExampleCaptions" class="carousel slide pointer-event">
+                <div id="carouselExampleCaptions" class="carousel slide pointer-event" data-bs-ride="carousel">
                     <div class="carousel-progress">
                         <div class="carousel-progress-bar"></div>
                     </div>
@@ -583,19 +587,20 @@
                         <span id="totalSlides" class="total-slides">3</span>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="0">
                             <video controls src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
                                 Your browser does not support the video tag.
                             </video>
                             <p>Kitchen</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1">
                             <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Bedroom</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2">
                             <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..." id="modalImage" />
                             <p>Bathroom</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
@@ -2716,7 +2721,7 @@
                             <li>Customers</li>
                         </ul>
                     </div>
-                    <div class="d-block d-sm-none ">
+                    <div class="d-block d-sm-none">
                         <h4 class="d-flex align-items-center">Others<span class="d-block d-sm-none mx-2 mb-1"><svg
                                     width="14" height="10" viewBox="0 0 12 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -2742,7 +2747,7 @@
                                     </button>
                                 </li>
                                 <li class="d-flex align-items-center justify-content-center"><a href="#"
-                                        class="googlePlay-button mx-4" id="launch-button">
+                                        class="googlePlay-button" id="launch-button">
                                         <span class="icon">
                                             <svg fill="currentcolor" viewBox="-52.01 0 560.035 560.035"
                                                 xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -2762,7 +2767,7 @@
                                             <span class="text-2">App store</span>
                                         </span>
                                     </a>
-                                    <a href="#" class="appstore-button mx-4">
+                                    <a href="#" class="appstore-button">
                                         <svg viewBox="0 0 512 512" class="icon" fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
