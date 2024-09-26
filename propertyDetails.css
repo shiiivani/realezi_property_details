@@ -3496,6 +3496,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 13px 0;
   text-align: left;
   white-space: nowrap;
+  font-size: 0.9rem;
 }
 
 .footer .blue-btn {
