@@ -501,6 +501,7 @@ nav .nav-filter li:hover {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
 .arrow-pair {
@@ -522,6 +523,7 @@ nav .nav-filter li:hover {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
 .share-container:hover::before,
@@ -620,6 +622,7 @@ nav .nav-filter li:hover {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
 .property-details-heading-left .manage-btn:hover:before {
@@ -668,6 +671,7 @@ nav .nav-filter li:hover {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
 .property-details-heading-div .report-btn-container:hover:before {
@@ -2493,7 +2497,7 @@ form .no-transform label {
 /* FAQ Section */
 
 .faq-container .accordion-item {
-  margin: 35px 0;
+  margin: 20px 0;
   border-radius: 0 !important;
   box-shadow: 4px 4px 4px 0 #00000010;
 }

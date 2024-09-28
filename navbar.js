@@ -350,10 +350,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const locationBtn = document.querySelector("nav .dropdown");
   const navFilter = document.querySelector("nav .nav-filter");
   const dropdown = document.querySelector(".dropdown svg");
+  const nav = document.querySelector("nav");
 
   locationBtn.addEventListener("click", function () {
     // Toggle the 'active' class
     navFilter.classList.toggle("active");
+    nav.classList.toggle("active");
 
     // Rotate the dropdown icon based on the active state
     if (navFilter.classList.contains("active")) {
