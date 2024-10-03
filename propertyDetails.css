@@ -3658,7 +3658,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
 }
 
-.lower-bottom .socials-container button {
+.lower-bottom .socials-container a {
   margin: 0 8px;
 }
 
@@ -3729,7 +3729,7 @@ input[type="range"]::-webkit-slider-thumb {
 .social-btn .text {
   position: absolute;
   color: rgb(255, 255, 255);
-  width: 120px;
+  /* width: 120px; */
   opacity: 0;
   transition-duration: 0.4s;
 }
