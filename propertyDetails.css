@@ -3420,6 +3420,10 @@ input[type="range"]::-webkit-slider-thumb {
   padding: 55px 10px 20px 10px;
 }
 
+.footer .container {
+  max-width: 1120px;
+}
+
 .footer .upper-footer ul {
   padding-left: 0;
   border-top: 0.5px solid #919191;
