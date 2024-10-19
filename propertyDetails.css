@@ -7,10 +7,10 @@
   font-family: "Familjen Grotesk", sans-serif;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 input:focus,
 select:focus {
@@ -1062,6 +1062,9 @@ main.container {
   transition: all 1s ease-in-out;
   position: relative;
   overflow-x: hidden;
+  position: sticky;
+  top: 55px;
+  z-index: 190;
 }
 
 .categories-container.fixed {
@@ -1232,9 +1235,9 @@ main.container {
   align-items: center;
 }
 
-.property-overview-content .upper-row {
-  height: 100px;
-}
+/* .property-overview-content .upper-row {
+  height: max-content;
+} */
 
 .property-overview-content button {
   padding: 8px 15px;
@@ -2718,6 +2721,8 @@ form .no-transform label {
   transition: transform 0.5s ease-in-out;
   transform: translateY(0);
   -webkit-transform: translateZ(0);
+  position: sticky;
+  top: 110px;
 }
 
 .property-details-div-right.fixed {
@@ -2790,6 +2795,18 @@ form .no-transform label {
 .schedule-container-heading {
   color: #606266 !important;
   font-size: 0.95rem;
+}
+
+.scheduling-container #visit-date {
+  border: 1px solid #a8a9a9;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+
+.scheduling-container .blue-btn:last-child {
+  width: 100%;
+  margin-top: 15px;
 }
 
 .scheduling-container .date-container {
@@ -2906,6 +2923,18 @@ form .no-transform label {
 
 .scheduling-container .blue-btn:last-child {
   background-color: #d9d9d9;
+}
+
+.scheduling-container .visit-btn {
+  background-color: #d9d9d9;
+}
+
+.scheduling-container .visit-btn:hover {
+  background-color: #d9d9d9;
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse5 1.5s infinite;
 }
 
 .scheduling-container .blue-btn:last-child:hover {
@@ -3250,7 +3279,7 @@ form .no-transform label {
   padding: 7px 12px;
   border-radius: 8px;
   border: none;
-  width: 100%;
+  width: 100% !important;
   margin-top: 10px;
 }
 
@@ -4004,6 +4033,9 @@ input[type="range"]::-webkit-slider-thumb {
   .categories-container.fixed {
     top: 96px !important;
   }
+  .categories-container {
+    top: 107px;
+  }
   .image-modal .carousel-item,
   .image-modal .carousel-inner {
     width: 90vw;
@@ -4100,9 +4132,9 @@ input[type="range"]::-webkit-slider-thumb {
   .property-overview-content > .d-flex:first-child > div {
     margin-right: 10px;
   }
-  .property-overview-content .d-flex:first-child .upper-row {
-    height: 80px;
-  }
+  /* .property-overview-content .d-flex:first-child .upper-row {
+    height: max-content;
+  } */
   .property-overview-content .d-flex:first-child .lower-row {
     margin-bottom: 40px;
   }

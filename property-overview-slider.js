@@ -20,3 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Upper-row height
+document.addEventListener("DOMContentLoaded", function () {
+  const upperRows = document.querySelectorAll(
+    ".property-overview-slider .upper-row"
+  );
+
+  if (upperRows.length > 0) {
+    const lastUpperRow = upperRows[upperRows.length - 1];
+    const lastUpperRowHeight = lastUpperRow.offsetHeight;
+
+    upperRows.forEach((row) => {
+      row.style.height = lastUpperRowHeight + 20 + "px";
+    });
+  }
+});

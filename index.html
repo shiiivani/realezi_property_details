@@ -288,7 +288,7 @@
         </div>
 
         <div class="property-images-div mb-2">
-            <div id="carouselExample" class="carousel slide pointer-event" data-bs-ride="carousel">
+            <div id="carouselExample" class="carousel slide pointer-event">
                 <div class="carousel-inner">
                     <div class="carousel-item active w-100">
                         <div class="carousal-item-inner grid-container">
@@ -677,7 +677,7 @@
                         </button>
                         <div class="property-overview-slider">
                             <div class="d-flex align-items-start justify-content-between">
-                                <div>
+                                <div style="width:100px">
                                     <div class="upper-row">
                                         <h6>Project Area</h6>
                                         <p>1.4 Acres</p>
@@ -690,7 +690,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div>
+                                <div style="width:100px">
                                     <div class="upper-row">
                                         <h6>Price</h6>
                                         <p>2Cr @ 2100 sq.ft</p>
@@ -700,7 +700,7 @@
                                         <p>6BHK</p>
                                     </div>
                                 </div>
-                                <div>
+                                <div style="width:100px">
                                     <div class="upper-row">
                                         <h6>Project Size</h6>
                                         <p>16 Units</p>
@@ -710,7 +710,7 @@
                                         <p>Mar, 2028</p>
                                     </div>
                                 </div>
-                                <div>
+                                <div style="width:100px">
                                     <div class="upper-row">
                                         <h6>Size</h6>
                                         <p>2100 sq.ft</p>
@@ -720,12 +720,13 @@
                                         <p>Jan, 2026</p>
                                     </div>
                                 </div>
-                                <div>
+                                <div style="width:100px">
                                     <div class="upper-row">
                                         <h6>Address</h6>
                                         <p>
                                             Flats for Sale in<br />
-                                            Sector 24 Rohin
+                                            Sector 24 Rohin khvfhvhed
+                                            qjdj,qbd
                                         </p>
                                     </div>
                                     <div class="lower-row">
@@ -764,18 +765,8 @@
                         <p class="schedule-container-heading">
                             Pick your visit date & visit us
                         </p>
-                        <div class="date-container active">
-                            <button class="nav-prev-button hidden" id="slideLeftDate">
-                                <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
-                                    alt="Right Aroow icon" />
-                            </button>
-                            <div class="date-container-slider d-flex justify-content-start mb-4">
-                                <!-- Dates will be dynamically generated here -->
-                            </div>
-                            <button class="nav-button" id="slideRightDate">
-                                <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon" />
-                            </button>
-                        </div>
+                        <input type="date" id="visit-date" min="" required>
+
                         <div class="calendar-container">
                             <div class="calendar-header">
                                 <select class="month-select"></select>
@@ -798,7 +789,7 @@
                             <p class="time">1:00 pm - 4:00 pm</p>
                             <p class="time">4:00 pm - 7:00 pm</p>
                         </div>
-                        <button class="blue-btn" id="open-schedule-form-modal-container">
+                        <button class="blue-btn visit-btn" id="open-schedule-form-modal-container">
                             Schedule Visit
                         </button>
                     </div>
@@ -2049,66 +2040,127 @@
             </div>
             <div class="property-details-div-right">
                 <div class="scheduling-container scheduling-container-larger-screen">
-                    <div class="scheduling-container-upper d-flex flex-column justify-content-center">
-                        <div class="property-info d-flex justify-content-center">
-                            <div class="text-center py-2">
-                                <h5>Rs.2 Cr</h5>
-                                <p class="mb-0">2100 sq. ft</p>
+                    <form method="post" action="{% url 'book-visit' %}">
+                        <div class="scheduling-container-upper d-flex flex-column justify-content-center">
+                            <div class="property-info d-flex justify-content-center">
+                                <div class="text-center py-2">
+                                    <h5>Rs. 300000</h5>
+                                    <p class="mb-0">85 sq. ft</p>
+                                </div>
+                                <div class="text-center py-2">
+                                    <h5>Rs. 300000</h5>
+                                    <p class="mb-0">Deposit</p>
+                                </div>
                             </div>
-                            <div class="text-center py-2">
-                                <h5>Rs. 3,60,000</h5>
-                                <p class="mb-0">Deposit</p>
+                            <button class="blue-btn open-brochure-modal-container">
+                                Connect with Seller
+                            </button>
+                            <div class="break d-flex align-items-center my-4">
+                                <hr />
+                                <p>or</p>
+                                <hr />
                             </div>
                         </div>
-                        <button class="blue-btn open-brochure-modal-container">
-                            Connect with Seller
+                        <p class="schedule-container-heading">
+                            Pick your visit date & visit
+                        </p>
+                        <!-- <div class="date-container active">
+                            <button class="nav-prev-button hidden" id="slideLeftDate">
+                                <img src="propertydetails/images/right-arrow-white.png" width="20px"
+                                    style="transform: rotate(180deg)" alt="Right Aroow icon" />
+                            </button>
+                            <div class="date-container-slider d-flex justify-content-start mb-4">
+
+                            </div>
+                            <button class="nav-button" id="slideRightDate">
+                                <img src="propertydetails/images/right-arrow-white.png" width="20px"
+                                    alt="Right Aroow icon" />
+                            </button>
+                        </div> -->
+                        <!-- <div class="calendar-container">
+                            <div class="calendar-header">
+                                <select class="month-select"></select>
+                                <select class="year-select"></select>
+                                <div class="nav-arrows">
+                                    <span class="prev-month" class="arrow"><img src="
+                                            propertydetails/images/chevron.png" width="10px"
+                                            alt="Left Chvron icon" /></span>
+                                    <span class="next-month" class="arrow"><img src="
+                                            propertydetails/images/chevron.png" width="10px" alt="Left Chvron icon"
+                                            style="transform: rotate(180deg)" /></span>
+                                </div>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="calendar-grid" id="calendar-grid">
+                                </div>
+                            </div>
+                        </div>  -->
+                        <style>
+                            /* Simple styling */
+                            .date-picker-container {
+                                margin: 20px;
+                            }
+
+                            input[type="text"],
+                            input[type="date"] {
+                                width: 200px;
+                                padding: 10px;
+                                font-size: 16px;
+                                margin-top: 10px;
+                            }
+                        </style>
+                        <input type="date" id="visit-date" min="" required>
+                        <input type="hidden" name="visit_date" id="selected-date" placeholder="Selected Date" readonly>
+                        <script>
+                            const visitDateInput = document.getElementById('visit-date');
+                            const selectedDateInput = document.getElementById('selected-date')
+                            const today = new Date().toISOString().split('T')[0];
+
+                            visitDateInput.setAttribute('min', today);
+
+                            visitDateInput.addEventListener('change', function () {
+                                selectedDateInput.value = visitDateInput.value;
+                            });
+                        </script>
+                        <div class="time-container d-flex align-items-center flex-wrap mt-3">
+                            <style>
+                                .time {
+                                    cursor: pointer;
+                                    padding: 10px;
+                                    border: 1px solid #ccc;
+                                    margin-bottom: 5px;
+                                    display: inline-block;
+                                }
+
+                                .time:hover {
+                                    background-color: #f0f0f0;
+                                }
+                            </style>
+                            <p class="time">10:00 am - 1:00 pm</p>
+                            <p class="time">1:00 pm - 4:00 pm</p>
+                            <p class="time">4:00 pm - 7:00 pm</p>
+                            <input type="hidden" name="visit_time" id="selectedTime"
+                                placeholder="Selected time will appear here">
+                            <input type="hidden" name="property_id" value="{{property.property_id}}">
+                            <input type="hidden" name="property_name" value="{{property.name}}">
+                            <input type="hidden" name="builder_id" value="{{property.property_user_id}}">
+                            <input type="hidden" name="builder_name" value="{{builder_name}}">
+
+                            <script>
+                                const timeElements = document.querySelectorAll('.time');
+
+                                timeElements.forEach(function (element) {
+                                    element.addEventListener('click', function () {
+                                        const selectedTime = this.textContent;
+                                        document.getElementById('selectedTime').value = selectedTime;
+                                    });
+                                });
+                            </script>
+                        </div>
+                        <button type="button" class="blue-btn visit-btn" id="open-schedule-form-modal-container">
+                            Schedule Visit
                         </button>
-                        <div class="break d-flex align-items-center my-4">
-                            <hr />
-                            <p>or</p>
-                            <hr />
-                        </div>
-                    </div>
-                    <p class="schedule-container-heading">
-                        Pick your visit date & visit
-                    </p>
-                    <div class="date-container active">
-                        <button class="nav-prev-button hidden" id="slideLeftDate">
-                            <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
-                                alt="Right Aroow icon" />
-                        </button>
-                        <div class="date-container-slider d-flex justify-content-start mb-4">
-                            <!-- Dates will be dynamically generated here -->
-                        </div>
-                        <button class="nav-button" id="slideRightDate">
-                            <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon" />
-                        </button>
-                    </div>
-                    <div class="calendar-container">
-                        <div class="calendar-header">
-                            <select class="month-select"></select>
-                            <select class="year-select"></select>
-                            <div class="nav-arrows">
-                                <span class="prev-month" class="arrow"><img src="./images/chevron.png" width="10px"
-                                        alt="Left Chvron icon" /></span>
-                                <span class="next-month" class="arrow"><img src="./images/chevron.png" width="10px"
-                                        alt="Left Chvron icon" style="transform: rotate(180deg)" /></span>
-                            </div>
-                        </div>
-                        <div class="calendar-body">
-                            <div class="calendar-grid" id="calendar-grid">
-                                <!-- Calendar days will be dynamically generated here -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-container d-flex align-items-center flex-wrap mt-3">
-                        <p class="time">10:00 am - 1:00 pm</p>
-                        <p class="time">1:00 pm - 4:00 pm</p>
-                        <p class="time">4:00 pm - 7:00 pm</p>
-                    </div>
-                    <button class="blue-btn" id="open-schedule-form-modal-container">
-                        Schedule Visit
-                    </button>
+                    </form>
                 </div>
 
                 <div class="video-section my-5 py-3">
@@ -2297,18 +2349,8 @@
                 <p class="schedule-container-heading">
                     Pick your visit date & visit us
                 </p>
-                <div class="date-container active">
-                    <button class="nav-prev-button hidden" id="slideLeftDate">
-                        <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
-                            alt="Right Aroow icon" />
-                    </button>
-                    <div class="date-container-slider d-flex justify-content-start mb-4">
-                        <!-- Dates will be dynamically generated here -->
-                    </div>
-                    <button class="nav-button" id="slideRightDate">
-                        <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon" />
-                    </button>
-                </div>
+                <input type="date" id="visit-date" min="" required>
+
                 <div class="calendar-container">
                     <div class="calendar-header">
                         <select class="month-select"></select>
@@ -2331,7 +2373,7 @@
                     <p class="time">1:00 pm - 4:00 pm</p>
                     <p class="time">4:00 pm - 7:00 pm</p>
                 </div>
-                <button class="blue-btn" id="open-schedule-form">
+                <button class="blue-btn visit-btn" id="open-schedule-form">
                     Schedule Visit
                 </button>
             </div>
