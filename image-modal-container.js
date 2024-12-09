@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalContent = imageModal.querySelector(".image-modal");
   const modalImage = document.getElementById("modalImage");
   const closeModal = document.getElementById("closeModal");
+  const additionalButton = document.querySelector(
+    ".property-photos-video-container div"
+  );
 
   function showModal(event) {
-    const imgSrc = event.target.src;
-    modalImage.src = imgSrc;
+    // const imgSrc = event.target.src;
+    // modalImage.src = imgSrc;
     imageModal.classList.add("active");
     document.body.style.overflow = "hidden";
   }
@@ -30,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
   carouselItems.forEach((item) => {
     item.addEventListener("click", showModal);
   });
+
+  additionalButton.addEventListener("click", showModal);
 
   closeModal.addEventListener("click", hideModal);
 

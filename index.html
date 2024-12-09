@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/propertyDetails.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +22,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Offside&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" />
-    <title>Realezi</title>
+    <title>Property Details</title>
 </head>
 
 <body>
@@ -164,7 +165,7 @@
     </nav>
 
     <main class="container">
-        <div class="property-details-heading-div d-flex my-5">
+        <div class="property-details-heading-div d-flex my-5 d-sm-flex d-none">
             <div class="property-details-heading-left">
                 <h1>6 BHK Independent Building Floor</h1>
                 <p>Suri Buiildtech</p>
@@ -261,7 +262,7 @@
             </div>
         </div>
 
-        <div class="disclamer-modal-container active">
+        <!-- <div class="disclamer-modal-container active">
             <div class="disclamer-container">
                 <p>
                     Realezi only acts as a medium for advertisement / information
@@ -285,7 +286,7 @@
                 </p>
                 <button class="blue-btn" id="close-disclamer">Got it!</button>
             </div>
-        </div>
+        </div> -->
 
         <div class="property-images-div mb-2">
             <div id="carouselExample" class="carousel slide pointer-event">
@@ -308,10 +309,10 @@
                                 <img src="./images/property-image-1.jpg" alt="Small Image 1" />
                             </div>
                             <div class="fifth-item image-grid" data-bs-target="#carouselExample" data-bs-slide-to="4">
-                                <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                                <img src="./images/image-not-available.png" alt="Small Image 1" />
                             </div>
                             <div class="sixth-item image-grid" data-bs-target="#carouselExample" data-bs-slide-to="5">
-                                <img src="./images/property-image-1.jpg" alt="Small Image 1" />
+                                <img src="./images/image-not-available.png" alt="Small Image 1" />
                             </div>
                         </div>
                     </div>
@@ -377,6 +378,14 @@
             </div>
         </div>
 
+        <!-- Mobile View Property Details -->
+        <div class="property-details-container d-block d-sm-none">
+            <h2>6BHK Independent Building Floor</h2>
+            <p class="property-location mb-0">Amit Nagar, Vadodra</p>
+            <p class="price">Rs.2 Cr | 2100 k/sq. ft</p>
+            <p class="realezi-tag"> Managed by Realezi</p>
+        </div>
+
         <div class="categories-container mb-3">
             <button class="nav-prev-button hidden" id="slideLeftBtn">
                 <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
@@ -388,13 +397,14 @@
                 <p class="category" data-target="floor-plan">Floor Plan</p>
                 <p class="category" data-target="brochure">Brochure</p>
                 <p class="category" data-target="explore-nearby">Explore Nearby</p>
+                <p class="category" data-target="photos-videos">Photos & Videos</p>
                 <p class="category" data-target="amenities">Amenities</p>
                 <p class="category" data-target="inventory-pool">Inventory Pool</p>
                 <p class="category" data-target="resources">Resources</p>
                 <p class="category" data-target="compare-properties">
                     Compare properties
                 </p>
-                <p class="category" data-target="qa">Q&A</p>
+                <p class="category" data-target="faq">FAQ</p>
             </div>
             <button class="nav-button" id="slideRightBtn">
                 <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon" />
@@ -471,6 +481,7 @@
                         <p class="category" data-target="Kitchen">Kitchen</p>
                         <p class="category" data-target="Bedroom">Bedroom</p>
                         <p class="category" data-target="Bathroom">Bathroom</p>
+                        <p class="category" data-target="no-image">No Image</p>
                     </div>
                 </div>
                 <div id="carouselExampleCaptions2" class="carousel slide pointer-event" data-bs-ride="carousel">
@@ -500,6 +511,13 @@
                             <p>Bathroom</p>
                             <img class="info" src="./images/error.png" width="20px" alt="Icon" />
                         </div>
+                        <div class="carousel-item" data-name="no-image" data-bs-target="#carouselExampleCaptions2"
+                            data-bs-slide-to="2">
+                            <img src="./images/image-not-available.png" class="d-block w-90" alt="..."
+                                id="modalImage" />
+                            <p>No Image</p>
+                            <img class="info" src="./images/error.png" width="20px" alt="Icon" />
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
                         data-bs-slide="prev">
@@ -515,7 +533,7 @@
             </div>
         </div>
 
-        <div class="image-modal-container image-video-modal-container" id="imageVideoModal">
+        <!-- <div class="image-modal-container image-video-modal-container" id="imageVideoModal">
             <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal" />
             <div class="image-modal">
                 <div class="image-modal-header mb-4">
@@ -618,7 +636,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="property-details-div d-flex justify-content-between align-items-start">
             <div class="property-details-div-left">
@@ -673,94 +691,69 @@
                     <div class="property-overview-content position-relative">
                         <button class="nav-prev-button hidden" id="slideLeftDetails">
                             <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
-                                alt="Right Aroow icon">
+                                alt="Right Arrow icon">
                         </button>
-                        <div class="property-overview-slider">
-                            <div class="d-flex align-items-start justify-content-between">
-                                <div style="width:100px">
-                                    <div class="upper-row">
-                                        <h6>Project Area</h6>
-                                        <p>1.4 Acres</p>
-                                    </div>
-                                    <div class="lower-row">
-                                        <h6>RERA Numer</h6>
-                                        <p>
-                                            S7000099<br />
-                                            <span style="color: #ec7100">Check status</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="width:100px">
-                                    <div class="upper-row">
-                                        <h6>Price</h6>
-                                        <p>2Cr @ 2100 sq.ft</p>
-                                    </div>
-                                    <div class="lower-row">
-                                        <h6>Configuration</h6>
-                                        <p>6BHK</p>
-                                    </div>
-                                </div>
-                                <div style="width:100px">
-                                    <div class="upper-row">
-                                        <h6>Project Size</h6>
-                                        <p>16 Units</p>
-                                    </div>
-                                    <div class="lower-row">
-                                        <h6>Possession Date</h6>
-                                        <p>Mar, 2028</p>
-                                    </div>
-                                </div>
-                                <div style="width:100px">
-                                    <div class="upper-row">
-                                        <h6>Size</h6>
-                                        <p>2100 sq.ft</p>
-                                    </div>
-                                    <div class="lower-row">
-                                        <h6>Launch Date</h6>
-                                        <p>Jan, 2026</p>
-                                    </div>
-                                </div>
-                                <div style="width:100px">
-                                    <div class="upper-row">
-                                        <h6>Address</h6>
-                                        <p>
-                                            Flats for Sale in<br />
-                                            Sector 24 Rohin khvfhvhed
-                                            qjdj,qbd
-                                        </p>
-                                    </div>
-                                    <div class="lower-row">
-                                        <h6>Property Age</h6>
-                                        <p>10+ years</p>
-                                    </div>
-                                </div>
+                        <div class="property-overview-slider ">
+                            <div class="single-detail">
+                                <h6>Project Area</h6>
+                                <p>1.4 Acres</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Price</h6>
+                                <p>2Cr @ 2100 sq.ft</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Project Size</h6>
+                                <p>16 Units</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Size</h6>
+                                <p>2100 sq.ft</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Address</h6>
+                                <p>
+                                    Flats for Sale in<br />
+                                    Sector 24 Rohin khvfhvhed
+                                    qjdj,qbd
+                                </p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>RERA Numer</h6>
+                                <p>
+                                    S7000099<br />
+                                    <span style="color: #ec7100">Check status</span>
+                                </p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Configuration</h6>
+                                <p>6BHK</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Possession Date</h6>
+                                <p>Mar, 2028</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Launch Date</h6>
+                                <p>Jan, 2026</p>
+                            </div>
+                            <div class="single-detail">
+                                <h6>Property Age</h6>
+                                <p>10+ years</p>
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightDetails">
                             <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon">
                         </button>
-                        <div class="d-flex justify-content-end">
-                            <button class="grey-btn open-brochure-modal-container d-flex align-items-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_0_567)">
-                                        <path
-                                            d="M19 12V19H5V12H3V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12H19ZM13 12.67L15.59 10.09L17 11.5L12 16.5L7 11.5L8.41 10.09L11 12.67V3H13V12.67Z"
-                                            fill="#111F3C" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_0_567">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <p>Download Brochure</p>
-                            </button>
+                        <div class="bottom-buttons d-flex align-items-center justify-content-between">
+                            <button class="open-brochure-modal-container">Contact Seller</button>
+                            <button id="open-schedule-calendar-modal-container" class="d-sm-none">Schedule
+                                Visit</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="scheduling-container-mobile-view">
+                <!-- <div class="scheduling-container-mobile-view">
                     <div class="scheduling-container">
                         <p class="schedule-container-heading">
                             Pick your visit date & visit us
@@ -780,7 +773,6 @@
                             </div>
                             <div class="calendar-body">
                                 <div class="calendar-grid" id="calendar-grid">
-                                    <!-- Calendar days will be dynamically generated here -->
                                 </div>
                             </div>
                         </div>
@@ -793,7 +785,7 @@
                             Schedule Visit
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="about-property-container section py-3 my-5" id="about-property">
                     <h4>About Property</h4>
@@ -847,9 +839,9 @@
                             <div class="square-foot-container-property active" id="3BHK-897">
                                 <p class="property-price mt-4">₹ 69.0 L</p>
                                 <div class="floor-plan-image-container">
-                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
+                                    <img src="./images/floor-plan.jpg" width="800px" alt="Property's floor plan" />
                                 </div>
-                                <div class="floor-plan-info d-flex justify-content-start">
+                                <div class="floor-plan-info mt-3 d-flex justify-content-start">
                                     <div>
                                         <p>Carpet Area:</p>
                                         <p>897 sq.ft</p>
@@ -869,7 +861,7 @@
                                 <div class="floor-plan-image-container">
                                     <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                                 </div>
-                                <div class="floor-plan-info d-flex justify-content-start">
+                                <div class="floor-plan-info mt-3 d-flex justify-content-start">
                                     <div>
                                         <p>Carpet Area:</p>
                                         <p>1323 sq.ft</p>
@@ -893,7 +885,7 @@
                             <div class="floor-plan-image-container">
                                 <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                             </div>
-                            <div class="floor-plan-info d-flex justify-content-start">
+                            <div class="floor-plan-info mt-3 d-flex justify-content-start">
                                 <div>
                                     <p>Carpet Area:</p>
                                     <p>497 sq.ft</p>
@@ -916,7 +908,7 @@
                             <div class="floor-plan-image-container">
                                 <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
                             </div>
-                            <div class="floor-plan-info d-flex justify-content-start">
+                            <div class="floor-plan-info mt-3 d-flex justify-content-start">
                                 <div>
                                     <p>Carpet Area:</p>
                                     <p>297 sq.ft</p>
@@ -974,99 +966,68 @@
                             <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
                                 alt="Left Arrow icon" />
                         </button>
-                        <div class="explore-nearby-container-slider d-flex" id="locationSlider">
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px"
-                                            alt="Scholarship Cap Icon" />
-                                        <p class="location-name">School</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                        <div class="explore-nearby-container-slider" id="locationSlider">
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/shopping-center.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Mall</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px"
-                                            alt="Scholarship Cap Icon" />
-                                        <p class="location-name">School</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Mall</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Hospital</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hospital</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Hospital</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Hospital</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hospital</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Hospital</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Restaurant</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">School</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/restaurant.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Restaurant</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>School</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px"
-                                            alt="Scholarship Cap Icon" />
-                                        <p class="location-name">School</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Hospital</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px"
-                                            alt="Scholarship Cap Icon" />
-                                        <p class="location-name">School</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Hospital</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/train.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Railway</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Railway</p>
+                                    <p>0.5 km</p>
+                                </div>
+                            </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/flights.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Airport</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Airport</p>
+                                    <p>0.5 km</p>
+                                </div>
+                            </div>
+
                         </div>
                         <button class="nav-button" id="slideRightLocations">
                             <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
@@ -1074,10 +1035,10 @@
                     </div>
                 </div>
 
-                <div class="property-photos-video-container section p-4 my-5">
+                <div id="photos-videos" class="property-photos-video-container section p-4 my-5">
                     <h4>Photos and videos</h4>
                     <hr />
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-start">
                         <div class="image-video-container">
                             <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
                                 Your browser does not support the video tag.
@@ -1108,77 +1069,62 @@
                             <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
                                 alt="Left Arrow icon" />
                         </button>
-                        <div class="amenities-container-inner-slider d-flex justify-content-start p-1"
-                            id="amenitiesSlider">
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Directions car.png" alt="" />
-                                    <p>Parking: <span>2 Open</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Chair.png" alt="" />
-                                    <p>Furnishing: <span>Semi</span></p>
-                                </div>
+                        <div class="amenities-container-inner-slider  p-1" id="amenitiesSlider">
+                            <div class="text-center">
+                                <img src="./images/Directions car.png" alt="" />
+                                <p>Parking: <span>2 Open</span></p>
                             </div>
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Pets.png" alt="" />
-                                    <p>Pet Friendly: <span>Yes</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Pool.png" alt="" />
-                                    <p>Swimming: <span>Yes</span></p>
-                                </div>
+                            <div class="text-center">
+                                <img src="./images/Chair.png" alt="" />
+                                <p>Furnishing: <span>Semi</span></p>
                             </div>
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Power.png" alt="" />
-                                    <p>Power Backup: <span>None</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Exercise.png" alt="" />
-                                    <p>Gymnasium: <span>Yes</span></p>
-                                </div>
+                            <div class="text-center">
+                                <img src="./images/Pets.png" alt="" />
+                                <p>Pet Friendly: <span>Yes</span></p>
                             </div>
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Water drop.png" alt="" />
-                                    <p>Water Source: <span>24*7</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Sports football.png" alt="" />
-                                    <p>Park: <span>Yes</span></p>
-                                </div>
+                            <div class="text-center">
+                                <img src="./images/Pool.png" alt="" />
+                                <p>Swimming: <span>Yes</span></p>
                             </div>
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Directions car.png" alt="" />
-                                    <p>Parking: <span>2 Open</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Chair.png" alt="" />
-                                    <p>Furnishing: <span>Semi</span></p>
-                                </div>
+                            <div class="text-center">
+                                <img src="./images/Power.png" alt="" />
+                                <p>Power Backup: <span>None</span></p>
                             </div>
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Pets.png" alt="" />
-                                    <p>Pet Friendly: <span>Yes</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Pool.png" alt="" />
-                                    <p>Swimming: <span>Yes</span></p>
-                                </div>
+                            <div class="text-center">
+                                <img src="./images/Exercise.png" alt="" />
+                                <p>Gymnasium: <span>Yes</span></p>
                             </div>
-                            <div style="margin-right: 40px">
-                                <div class="text-center">
-                                    <img src="./images/Power.png" alt="" />
-                                    <p>Power Backup: <span>None</span></p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="./images/Exercise.png" alt="" />
-                                    <p>Gymnasium: <span>Yes</span></p>
-                                </div>
+                            <div class="text-center">
+                                <img src="./images/Water drop.png" alt="" />
+                                <p>Water Source: <span>24*7</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Sports football.png" alt="" />
+                                <p>Park: <span>Yes</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Directions car.png" alt="" />
+                                <p>Parking: <span>2 Open</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Chair.png" alt="" />
+                                <p>Furnishing: <span>Semi</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Pets.png" alt="" />
+                                <p>Pet Friendly: <span>Yes</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Pool.png" alt="" />
+                                <p>Swimming: <span>Yes</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Power.png" alt="" />
+                                <p>Power Backup: <span>None</span></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./images/Exercise.png" alt="" />
+                                <p>Gymnasium: <span>Yes</span></p>
                             </div>
                         </div>
                         <button class="nav-button" id="slideRightAmenities">
@@ -1205,73 +1151,65 @@
                             <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
                                 alt="Left Arrow icon" />
                         </button>
-                        <div class="inventory-container-slider d-flex">
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px"
-                                            alt="Scholarship Cap Icon" />
-                                        <p class="location-name">School</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                        <div class="inventory-container-slider">
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">School</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/scholarship-cap.png" width="15px"
-                                            alt="Scholarship Cap Icon" />
-                                        <p class="location-name">School</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>ABC School</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>ABC School</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Hospital</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hospital</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Hospital</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Hospital</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hospital</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Hospital</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
-                            <div style="margin-right: 15px">
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Hospital</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hospital</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/scholarship-cap.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">School</p>
                                 </div>
-                                <div class="nearby-locations">
-                                    <div class="d-flex align-items-center justify-content-start">
-                                        <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
-                                        <p class="location-name">Hospital</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hospital</p>
-                                        <p>0.5 km</p>
-                                    </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>ABC School</p>
+                                    <p>0.5 km</p>
+                                </div>
+                            </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Hospital</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Hospital</p>
+                                    <p>0.5 km</p>
+                                </div>
+                            </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Hospital</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Hospital</p>
+                                    <p>0.5 km</p>
+                                </div>
+                            </div>
+                            <div class="nearby-locations">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <img src="./images/hospital.png" width="15px" alt="Scholarship Cap Icon" />
+                                    <p class="location-name">Hospital</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p>Hospital</p>
+                                    <p>0.5 km</p>
                                 </div>
                             </div>
                         </div>
@@ -1548,7 +1486,7 @@
                     </div>
                 </div>
 
-                <div class="faq-container py-3 my-5">
+                <div id="faq" class="faq-container section py-3 my-5">
                     <h4>FAQs</h4>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
@@ -2052,7 +1990,7 @@
                                     <p class="mb-0">Deposit</p>
                                 </div>
                             </div>
-                            <button class="blue-btn open-brochure-modal-container">
+                            <button class="blue-btn open-confirmation-modal">
                                 Connect with Seller
                             </button>
                             <div class="break d-flex align-items-center my-4">

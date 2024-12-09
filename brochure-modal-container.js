@@ -43,6 +43,65 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelectorAll(".open-confirmation-modal");
+  const confirmationModal = document.querySelector(
+    ".brochure-modal-container .confirmation-popup-modal"
+  );
+  const modalContent = document.querySelector(
+    ".brochure-modal-container .modals"
+  );
+  const modal = document.querySelector(".brochure-modal-container");
+
+  btn.forEach((button) => {
+    button.addEventListener("click", function () {
+      confirmationModal.style.display = "block";
+      modalContent.style.display = "none";
+      modal.style.display = "flex";
+      modal.offsetHeight;
+      modal.classList.add("show");
+      modal.classList.remove("hide");
+      const video = confirmationModal.querySelector("video");
+      video.play();
+
+      setTimeout(function () {
+        video.classList.add("shrink");
+        confirmationModal.classList.add("show");
+      }, 3500);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const submitButtons = document.querySelectorAll(".submit-btn");
+  const modals = document.querySelectorAll(".modals");
+  const confirmationPopupModals = document.querySelectorAll(
+    ".confirmation-popup-modal"
+  );
+  const closeIcons = document.querySelectorAll(".modal-container .close-icon");
+
+  submitButtons.forEach((button, index) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      modals[index].style.display = "none";
+      const form = modals[index].querySelector("form");
+      if (form) form.reset();
+
+      const confirmationModal = confirmationPopupModals[index];
+      confirmationModal.style.display = "block";
+
+      const video = confirmationModal.querySelector("video");
+      video.play();
+
+      setTimeout(function () {
+        video.classList.add("shrink");
+        confirmationModal.classList.add("show");
+      }, 3500);
+    });
+  });
+});
+
 // Otp sent message
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".modals form").forEach((form) => {
@@ -137,16 +196,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 3500);
     });
   });
-
-  // closeIcons.forEach((closeIcon, index) => {
-  //   closeIcon.addEventListener("click", function () {
-  //     const confirmationModal = confirmationPopupModals[index];
-  // const video = confirmationModal.querySelector("video");
-
-  // confirmationPopupModals[index].style.display = "none";
-  // modals[index].style.display = "block";
-  // confirmationModal.classList.remove("show");
-  // video.classList.remove("shrink");
-  // });
-  // });
 });
