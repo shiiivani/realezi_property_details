@@ -2,44 +2,22 @@
 //   const slider = document.querySelector(".property-overview-slider");
 //   const slideRightBtn = document.getElementById("slideRightDetails");
 //   const slideLeftBtn = document.getElementById("slideLeftDetails");
-//   const div = document.querySelector(".property-overview-slider .d-flex");
 
 //   slideRightBtn.addEventListener("click", function () {
 //     slideLeftBtn.classList.remove("hidden");
 //     slider.scrollBy({
-//       left: 180,
+//       left: 100,
 //       behavior: "smooth",
 //     });
-//     div.style.marginLeft = "40px";
 //   });
 
 //   slideLeftBtn.addEventListener("click", function () {
 //     slider.scrollBy({
-//       left: -180,
+//       left: -150,
 //       behavior: "smooth",
 //     });
 //   });
 // });
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".property-overview-slider");
-  const slideRightBtn = document.getElementById("slideRightDetails");
-  const slideLeftBtn = document.getElementById("slideLeftDetails");
-
-  slideRightBtn.addEventListener("click", function () {
-    slideLeftBtn.classList.remove("hidden");
-    slider.scrollBy({
-      left: 100,
-      behavior: "smooth",
-    });
-  });
-
-  slideLeftBtn.addEventListener("click", function () {
-    slider.scrollBy({
-      left: -150,
-      behavior: "smooth",
-    });
-  });
-});
 
 // Upper-row height
 document.addEventListener("DOMContentLoaded", function () {
@@ -55,4 +33,26 @@ document.addEventListener("DOMContentLoaded", function () {
       row.style.height = lastUpperRowHeight + 20 + "px";
     });
   }
+});
+
+// Expand property overview
+document.addEventListener("DOMContentLoaded", function () {
+  const propertyOverview = document.querySelector(
+    ".property-overview-content .property-overview-slider"
+  );
+  const viewMoreBtn = document.querySelector(".view-more-property-overview");
+  const text = document.querySelector(".view-more-property-overview p");
+  const arrow = document.querySelector(".view-more-property-overview img");
+
+  viewMoreBtn.addEventListener("click", function () {
+    propertyOverview.classList.toggle("expand");
+    arrow.classList.toggle("rotate");
+
+    if (propertyOverview.classList.contains("expand")) {
+      console.log("working");
+      text.textContent = "Close this Information";
+    } else {
+      text.textContent = "View more Information";
+    }
+  });
 });

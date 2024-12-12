@@ -25,6 +25,11 @@ ul {
   list-style: none;
 }
 
+a {
+  color: unset;
+  text-decoration: none !important;
+}
+
 button {
   white-space: nowrap;
 }
@@ -517,7 +522,6 @@ nav .nav-filter li:hover {
   border-radius: 3px;
   background-color: #00000090;
   color: #fff;
-  z-index: -1;
   font-size: 0.7rem;
   white-space: nowrap;
   opacity: 0;
@@ -958,7 +962,7 @@ nav .nav-filter li:hover {
 }
 
 .image-categories {
-  flex-wrap: wrap;
+  overflow-x: auto;
 }
 
 .image-categories .category {
@@ -967,6 +971,7 @@ nav .nav-filter li:hover {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 20px;
+  white-space: nowrap;
 }
 
 .image-categories .category:hover {
@@ -976,6 +981,40 @@ nav .nav-filter li:hover {
 .image-categories .category.active {
   background-color: #ffffff;
   color: #000000;
+}
+
+.image-modal .property-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.image-modal .property-image #modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-modal .property-image p {
+  background: #d9d9d980;
+  color: #434343;
+  padding: 5px 10px;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  font-size: 0.85rem;
+}
+
+.image-modal .property-image .info {
+  background: #d9d9d980;
+  color: #434343;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  width: 30px !important;
+  height: auto !important;
 }
 
 .image-modal .carousel-item {
@@ -1055,7 +1094,7 @@ main.container {
 .property-details-container h2 {
   color: #434343;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0px;
 }
 
@@ -1110,9 +1149,9 @@ main.container {
   border-bottom: 3px solid #111f3c;
 }
 
-.categories-container p:first-child {
+/* .categories-container p:first-child {
   margin-left: 30px;
-}
+} */
 
 .categories-slider {
   display: flex;
@@ -1241,6 +1280,7 @@ main.container {
   color: #606266;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .property-overview-content p {
@@ -1287,13 +1327,70 @@ main.container {
   grid-gap: 10px;
 }
 
-.property-overview-container .bottom-buttons button {
-  border-radius: 20px;
+.view-more-property-overview p {
+  color: #111f3c;
+  font-size: 0.85rem;
+}
+
+.view-more-property-overview img.rotate {
+  transform: rotate(180deg);
+}
+
+.property-overview-container .bottom-buttons > button {
+  border-radius: 8px;
   background-color: #111f3c;
   border: none;
   white-space: nowrap;
   font-size: 0.9rem;
   color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+
+.bottom-buttons .share-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.property-overview-container .bottom-buttons .share-container,
+.property-overview-container .bottom-buttons .save-btn {
+  width: 50%;
+  border: 0.5px solid #111f3c;
+  background-color: #111f3c20;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.property-overview-container .bottom-buttons .share-container li {
+  font-size: 0.9rem;
+}
+
+.tablet-view-button {
+  display: none;
+}
+
+.tablet-view-button button {
+  border-radius: 10px;
+  padding: 8px 15px;
+  margin-left: 0px;
+}
+
+.tablet-view-button button:last-child {
+  background-color: #ec7100;
+  color: #ffffff;
+  border: none;
+}
+
+.tablet-view-button button:first-child {
+  background-color: #ec710020;
+  color: #ec7100;
+  border: 0.5px solid #ec7100;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 767px) {
+  .tablet-view-button {
+    display: flex;
+  }
 }
 
 /* About Property Section */
@@ -1449,10 +1546,11 @@ main.container {
 
 .explore-nearby-container-slider {
   display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-template-rows: repeat(2, auto);
   grid-gap: 10px;
   transition: transform 0.5s ease;
+  grid-auto-flow: column;
   overflow-x: auto;
 }
 
@@ -1586,7 +1684,9 @@ main.container {
 
 .amenities-container-inner-slider {
   display: grid;
-  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
   grid-gap: 15px;
   transition: transform 0.5s ease;
   overflow-x: auto;
@@ -3487,6 +3587,38 @@ input[type="range"]::-webkit-slider-thumb {
   color: #111f3c;
 }
 
+/* Mobile view CTA */
+.cta-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 8px;
+  z-index: 100;
+  box-shadow: 2px 2px 15px 5px #00000020;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.cta-buttons button {
+  padding: 15px 5px;
+  border-radius: 5px;
+  flex: 0.49;
+  font-size: 1rem;
+}
+
+.cta-buttons button:first-child {
+  border: 0.5px solid #ec7100;
+  color: #ec7100;
+  background-color: #ec710020;
+}
+
+.cta-buttons button:last-child {
+  border: none;
+  color: #ffffff;
+  background-color: #ec7100;
+}
+
 /* Footer */
 .footer {
   color: #ffffff;
@@ -4167,9 +4299,13 @@ input[type="range"]::-webkit-slider-thumb {
     overflow-x: hidden;
   }
   .property-overview-content .property-overview-slider {
-    overflow-x: auto;
-    grid-template-columns: repeat(5, minmax(130px, 1fr));
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .property-overview-content .property-overview-slider.expand {
+    height: max-content;
   }
 
   /* .property-overview-slider .d-flex > div {
@@ -4286,7 +4422,11 @@ input[type="range"]::-webkit-slider-thumb {
 
 @media screen and (max-width: 576px) {
   .categories-container {
-    width: 95%;
+    width: 100%;
+    padding: 0 5px;
+  }
+  .categories-container p {
+    padding: 10px 15px;
   }
   #nav-search-box-div {
     padding-left: 5px !important;
@@ -4309,6 +4449,23 @@ input[type="range"]::-webkit-slider-thumb {
   .image-video-container .play-btn {
     width: 50px;
   }
+  .loan-container {
+    border-radius: 15px;
+  }
+  .loan-container-content .content {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0px;
+    justify-content: space-between;
+  }
+  .loan-container-content h2 {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+  .loan-container-content .content button {
+    margin-top: 0px;
+    padding: 3px 10px;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -4316,7 +4473,10 @@ input[type="range"]::-webkit-slider-thumb {
     display: none !important;
   }
   .image-modal-container {
-    padding: 30px;
+    padding: 0px;
+  }
+  .image-modal-header {
+    padding: 15px;
   }
   .image-modal button {
     font-size: 0.7rem;
@@ -4479,6 +4639,11 @@ input[type="range"]::-webkit-slider-thumb {
   .floor-plan-info div {
     margin-bottom: 20px;
     margin-top: 15px;
+    font-size: 0.8rem;
+    margin-right: 20px;
+  }
+  .floor-plan-info div p:last-child {
+    font-size: 0.75rem;
   }
   .floor-plan-properties-categories > p:last-child {
     display: none;

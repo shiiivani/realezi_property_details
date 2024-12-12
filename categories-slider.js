@@ -1,24 +1,24 @@
 // Categories section slider
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".categories-slider");
-  const slideRightBtn = document.getElementById("slideRightBtn");
-  const slideLeftBtn = document.getElementById("slideLeftBtn");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const slider = document.querySelector(".categories-slider");
+//   const slideRightBtn = document.getElementById("slideRightBtn");
+//   const slideLeftBtn = document.getElementById("slideLeftBtn");
 
-  slideRightBtn.addEventListener("click", function () {
-    slideLeftBtn.classList.remove("hidden");
-    slider.scrollBy({
-      left: 100,
-      behavior: "smooth",
-    });
-  });
+//   slideRightBtn.addEventListener("click", function () {
+//     slideLeftBtn.classList.remove("hidden");
+//     slider.scrollBy({
+//       left: 100,
+//       behavior: "smooth",
+//     });
+//   });
 
-  slideLeftBtn.addEventListener("click", function () {
-    slider.scrollBy({
-      left: -150,
-      behavior: "smooth",
-    });
-  });
-});
+//   slideLeftBtn.addEventListener("click", function () {
+//     slider.scrollBy({
+//       left: -150,
+//       behavior: "smooth",
+//     });
+//   });
+// });
 
 // Fixing Categories container on top of the screen
 // document.addEventListener("scroll", function () {

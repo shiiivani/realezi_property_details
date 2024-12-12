@@ -289,7 +289,16 @@
         </div> -->
 
         <div class="property-images-div mb-2">
-            <div id="carouselExample" class="carousel slide pointer-event">
+            <div id="carouselExample" class="carousel slide pointer-event" data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-indicators d-md-none">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active w-100">
                         <div class="carousal-item-inner grid-container">
@@ -364,7 +373,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -373,7 +382,7 @@
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
@@ -387,38 +396,38 @@
         </div>
 
         <div class="categories-container mb-3">
-            <button class="nav-prev-button hidden" id="slideLeftBtn">
+            <!-- <button class="nav-prev-button hidden" id="slideLeftBtn">
                 <img src="./images/right-arrow.png" width="15px" style="transform: rotate(180deg)"
                     alt="Right Aroow icon" />
-            </button>
+            </button> -->
             <div class="categories-slider d-flex align-items-center justify-content-between">
                 <p class="category" data-target="overview">Overview</p>
                 <p class="category" data-target="about-property">About Property</p>
-                <p class="category" data-target="floor-plan">Floor Plan</p>
-                <p class="category" data-target="brochure">Brochure</p>
                 <p class="category" data-target="explore-nearby">Explore Nearby</p>
-                <p class="category" data-target="photos-videos">Photos & Videos</p>
                 <p class="category" data-target="amenities">Amenities</p>
-                <p class="category" data-target="inventory-pool">Inventory Pool</p>
+                <p class="category" data-target="floor-plan">Floor Plan</p>
+                <p class="category" data-target="photos-videos">Photos & Videos</p>
+                <p class="category" data-target="brochure">Brochure</p>
+                <!-- <p class="category" data-target="inventory-pool">Inventory Pool</p> -->
                 <p class="category" data-target="resources">Resources</p>
                 <p class="category" data-target="compare-properties">
                     Compare properties
                 </p>
                 <p class="category" data-target="faq">FAQ</p>
             </div>
-            <button class="nav-button" id="slideRightBtn">
+            <!-- <button class="nav-button" id="slideRightBtn">
                 <img src="./images/right-arrow.png" width="15px" alt="Right Aroow icon" />
-            </button>
+            </button> -->
         </div>
 
         <div class="image-modal-container" id="imageModal">
-            <img class="close-icon" src="./images/close.png" width="20px" alt="Close icon" id="closeModal" />
+            <img class="close-icon" src="./images/close.png" width="15px" alt="Close icon" id="closeModal" />
             <div class="image-modal">
                 <div class="image-modal-header mb-4">
                     <div class="image-modal-header-inner d-flex justify-content-between">
                         <div class="image-modal-header-inner-left d-flex">
-                            <h4>6 BHK Independent Building Floor</h4>
-                            <div class="d-flex align-items-center">
+                            <h4 class="mb-1">6 BHK Independent Building Floor</h4>
+                            <div class="d-flex align-items-center d-none d-sm-flex">
                                 <div class="share-container">
                                     <button class="d-flex align-items-center">
                                         <img src="./images/Share.png" width="20px" alt="Share icon" />
@@ -463,7 +472,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="image-modal-header-inner-right d-flex">
+                        <div class="image-modal-header-inner-right d-flex d-none d-sm-flex">
                             <button class="d-flex align-items-center open-brochure-modal-container">
                                 <img src="./images/phone-blue.png" width="20px" alt="Phone Icon" />
                                 <p>Contact Seller</p>
@@ -474,17 +483,48 @@
                         </div>
                     </div>
                     <p class="price">Rs.2 Cr @ 2100 sq. ft</p>
-                    <button class="view-brochure open-brochure-modal-container mx-0 mb-3">
+                    <button class="view-brochure open-brochure-modal-container mx-0 mb-3 d-none d-sm-block">
                         View Brochure
                     </button>
                     <div class="image-categories d-flex align-items-center">
-                        <p class="category" data-target="Kitchen">Kitchen</p>
-                        <p class="category" data-target="Bedroom">Bedroom</p>
-                        <p class="category" data-target="Bathroom">Bathroom</p>
-                        <p class="category" data-target="no-image">No Image</p>
+                        <a href="#kitchen">
+                            <p class="category" data-target="Kitchen">Kitchen</p>
+                        </a>
+                        <a href="#bedroom">
+                            <p class="category" data-target="Bedroom">Bedroom</p>
+                        </a>
+                        <a href="#bathroom">
+                            <p class="category" data-target="Bathroom">Bathroom</p>
+                        </a>
+                        <a href="#noImage">
+                            <p class="category" data-target="no-image">No Image</p>
+                        </a>
                     </div>
                 </div>
-                <div id="carouselExampleCaptions2" class="carousel slide pointer-event" data-bs-ride="carousel">
+                <div class="d-block d-sm-none">
+                    <div class="property-image" id="kitchen">
+                        <img src="./images/property-image-1.jpg" class="d-block w-90" alt="..." id="modalImage" />
+                        <p>Kitchen</p>
+                        <img class="info" src="./images/error.png" width="20px" alt="Icon" />
+                    </div>
+                    <div class="property-image" id="bedroom">
+                        <img src="./images/property-image-2.jpg" class="d-block w-90" alt="..." id="modalImage" />
+                        <p>Bedroom</p>
+                        <img class="info" src="./images/error.png" width="20px" alt="Icon" />
+                    </div>
+                    <div class="property-image" id="bathroom">
+                        <img src="./images/property-image-3.jpg" class="d-block w-90" alt="..." id="modalImage" />
+                        <p>Bathroom</p>
+                        <img class="info" src="./images/error.png" width="20px" alt="Icon" />
+                    </div>
+                    <div class="property-image" id="noImage">
+                        <img src="./images/image-not-available.png" class="d-block w-90" alt="..." id="modalImage" />
+                        <p>No Image</p>
+                        <img class="info" src="./images/error.png" width="20px" alt="Icon" />
+                    </div>
+                </div>
+                <div id="carouselExampleCaptions2" class="carousel slide pointer-event d-none d-sm-flex"
+                    data-bs-ride="carousel">
                     <div class="carousel-progress">
                         <div class="carousel-progress-bar"></div>
                     </div>
@@ -643,7 +683,7 @@
                 <div class="property-overview-container section mb-5" id="overview">
                     <div class="property-overview-header-container d-flex justify-content-between my-4">
                         <h4>ABC Property Overview</h4>
-                        <div class="property-overview-btn-container d-flex">
+                        <div class="property-overview-btn-container d-flex d-sm-flex d-none">
                             <div class="share-container">
                                 <button class="d-flex align-items-center">
                                     <img src="./images/Share.png" width="25px" alt="Share icon" />
@@ -689,10 +729,10 @@
                         </div>
                     </div>
                     <div class="property-overview-content position-relative">
-                        <button class="nav-prev-button hidden" id="slideLeftDetails">
+                        <!-- <button class="nav-prev-button hidden" id="slideLeftDetails">
                             <img src="./images/right-arrow-white.png" width="20px" style="transform: rotate(180deg)"
                                 alt="Right Arrow icon">
-                        </button>
+                        </button> -->
                         <div class="property-overview-slider ">
                             <div class="single-detail">
                                 <h6>Project Area</h6>
@@ -742,13 +782,69 @@
                                 <p>10+ years</p>
                             </div>
                         </div>
-                        <button class="nav-button" id="slideRightDetails">
+                        <div
+                            class="view-more-property-overview text-center d-flex align-items-center justify-content-center gap-1  d-md-none">
+                            <p class="mb-0">View more Information</p>
+                            <img src="./images/down-arrow-blue.png" width="15px">
+                        </div>
+                        <div class="align-items-center justify-content-between tablet-view-button mt-2">
+                            <button class="connect-with-seller open-brochure-modal-container">
+                                Connect with Seller
+                            </button>
+                            <button id="open-schedule-calendar-modal-container" class="connect-with-seller">
+                                Schedule Visit
+                            </button>
+                        </div>
+                        <!-- <button class="nav-button" id="slideRightDetails">
                             <img src="./images/right-arrow-white.png" width="20px" alt="Right Aroow icon">
-                        </button>
-                        <div class="bottom-buttons d-flex align-items-center justify-content-between">
-                            <button class="open-brochure-modal-container">Contact Seller</button>
-                            <button id="open-schedule-calendar-modal-container" class="d-sm-none">Schedule
-                                Visit</button>
+                        </button> -->
+
+                    </div>
+                    <div class="bottom-buttons mt-4 d-md-none">
+                        <button>Ask For Details</button>
+                        <div class="d-flex gap-2 mt-2">
+                            <div class="share-container d-flex align-items-center justify-content-center">
+                                <button class="share-btn d-flex align-items-center justify-content-center">
+                                    <img src="./images/Share.png" width="25px" alt="Share icon" />
+                                    <p>Share</p>
+                                </button>
+                                <ul>
+                                    <li>Share it with family and friends</li>
+                                    <li>
+                                        <button onclick="copyLink()">
+                                            <img src="./images/clip.png" width="20px" alt="Clip icon" />
+                                            <p>Copy to Clipboard</p>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onclick="shareToFacebook()">
+                                            <img src="./images/facebook.png" width="20px" alt="Facebook icon" />
+                                            <p>Facebook</p>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onclick="shareToEmail()">
+                                            <img src="./images/gmail.png" width="20px" alt="Gmail icon" />
+                                            <p>Mail</p>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onclick="shareToWhatsApp()">
+                                            <img src="./images/whatsapp.png" width="20px" alt="Whatsapp icon" />
+                                            <p>Whatsapp</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="save-btn d-flex align-items-center justify-content-center arrow-pair">
+                                <div>
+                                    <img src="./images/send.png" width="27px" alt="Send icon"
+                                        class="realezi-arrow arrow" />
+                                    <img src="./images/realezi-filled-arrow.png" width="27px" alt="Realazi arrow"
+                                        class="filled-arrow arrow hidden" />
+                                </div>
+                                <p>Save</p>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -787,7 +883,7 @@
                     </div>
                 </div> -->
 
-                <div class="about-property-container section py-3 my-5" id="about-property">
+                <div class="about-property-container section my-5" id="about-property">
                     <h4>About Property</h4>
                     <div class="about-property-content-container my-3">
                         <div class="about-property-content-inner m-3" id="aboutPropertyContent">
@@ -814,152 +910,7 @@
                     </div>
                 </div>
 
-                <div class="property-floor-plan-container section py-3 my-5" id="floor-plan">
-                    <h4>ABC Property Floor Plan</h4>
-                    <div class="floor-plan-container my-4">
-                        <div class="floor-plan-properties-categories-container d-flex justify-content-start">
-                            <div class="floor-plan-properties-categories active" data-target="1BHK-floor-plan">
-                                <p>1BHK</p>
-                                <p>1.75Cr</p>
-                            </div>
-                            <div class="floor-plan-properties-categories" data-target="2BHK-floor-plan">
-                                <p>2BHK</p>
-                                <p>2.3Cr - 2.38Cr</p>
-                            </div>
-                            <div class="floor-plan-properties-categories" data-target="3BHK-floor-plan">
-                                <p>3BHK</p>
-                                <p>4.52Cr - 4.61Cr</p>
-                            </div>
-                        </div>
-                        <div class="3BHK-floor-plan floor-plan mt-5" id="3BHK-floor-plan">
-                            <div class="square-foot-container d-flex justify-content-start">
-                                <p class="active" data-target="3BHK-897">897 SQ.FT</p>
-                                <p data-target="3BHK-1323">1323 SQ.FT</p>
-                            </div>
-                            <div class="square-foot-container-property active" id="3BHK-897">
-                                <p class="property-price mt-4">₹ 69.0 L</p>
-                                <div class="floor-plan-image-container">
-                                    <img src="./images/floor-plan.jpg" width="800px" alt="Property's floor plan" />
-                                </div>
-                                <div class="floor-plan-info mt-3 d-flex justify-content-start">
-                                    <div>
-                                        <p>Carpet Area:</p>
-                                        <p>897 sq.ft</p>
-                                    </div>
-                                    <div>
-                                        <p>Rera IDP-</p>
-                                        <p>BPL-21-3015</p>
-                                    </div>
-                                    <div>
-                                        <p>Possession Status</p>
-                                        <p>Mar, 2026</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="square-foot-container-property" id="3BHK-1323">
-                                <p class="property-price mt-4">₹ 99.0 L</p>
-                                <div class="floor-plan-image-container">
-                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
-                                </div>
-                                <div class="floor-plan-info mt-3 d-flex justify-content-start">
-                                    <div>
-                                        <p>Carpet Area:</p>
-                                        <p>1323 sq.ft</p>
-                                    </div>
-                                    <div>
-                                        <p>Rera IDP-</p>
-                                        <p>BPL-21-3015</p>
-                                    </div>
-                                    <div>
-                                        <p>Possession Status</p>
-                                        <p>Mar, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="2BHK-floor-plan floor-plan mt-5" id="2BHK-floor-plan">
-                            <div class="square-foot-container d-flex justify-content-start">
-                                <p class="active">897 SQ.FT</p>
-                            </div>
-                            <p class="property-price mt-4">₹ 59.0 L</p>
-                            <div class="floor-plan-image-container">
-                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
-                            </div>
-                            <div class="floor-plan-info mt-3 d-flex justify-content-start">
-                                <div>
-                                    <p>Carpet Area:</p>
-                                    <p>497 sq.ft</p>
-                                </div>
-                                <div>
-                                    <p>Rera IDP-</p>
-                                    <p>BPL-21-3015</p>
-                                </div>
-                                <div>
-                                    <p>Possession Status</p>
-                                    <p>Mar, 2025</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="1BHK-floor-plan floor-plan active mt-5" id="1BHK-floor-plan">
-                            <div class="square-foot-container d-flex justify-content-start">
-                                <p class="active">297 SQ.FT</p>
-                            </div>
-                            <p class="property-price mt-4">₹ 29.0 L</p>
-                            <div class="floor-plan-image-container">
-                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
-                            </div>
-                            <div class="floor-plan-info mt-3 d-flex justify-content-start">
-                                <div>
-                                    <p>Carpet Area:</p>
-                                    <p>297 sq.ft</p>
-                                </div>
-                                <div>
-                                    <p>Rera IDP-</p>
-                                    <p>BPL-21-3015</p>
-                                </div>
-                                <div>
-                                    <p>Possession Status</p>
-                                    <p>Mar, 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="brochure-container section py-3 my-5" id="brochure">
-                    <h4>ABC Property Brochure</h4>
-                    <div class="brochure-container-inner">
-                        <button class="nav-prev-button hidden" id="slideLeftBrochures">
-                            <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
-                                alt="Left Arrow icon" />
-                        </button>
-                        <div class="brochure-container-inner-slider d-flex justify-content-start">
-                            <div class="image-container">
-                                <img src="./images/brochure/1.png" alt="Brochure" />
-                            </div>
-                            <div class="image-container">
-                                <img src="./images/brochure/2.png" alt="Brochure" />
-                            </div>
-                            <div class="image-container">
-                                <img src="./images/brochure/3.png" alt="Brochure" />
-                            </div>
-                            <div class="image-container">
-                                <img src="./images/brochure/4.png" alt="Brochure" />
-                            </div>
-                            <div class="image-container">
-                                <img src="./images/brochure/4.png" alt="Brochure" />
-                            </div>
-                        </div>
-                        <button class="nav-button" id="slideRightBrochures">
-                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
-                        </button>
-                        <button class="view-btn open-brochure-modal-container">
-                            View Brochure
-                        </button>
-                    </div>
-                </div>
-
-                <div class="explore-nearby-container section py-3 my-5" id="explore-nearby">
+                <div class="explore-nearby-container section mt-1" id="explore-nearby">
                     <h4>Explore Nearby</h4>
                     <div class="explore-nearby-inner-container my-4">
                         <button class="nav-prev-button hidden" id="slideLeftLocations">
@@ -1027,42 +978,14 @@
                                     <p>0.5 km</p>
                                 </div>
                             </div>
-
                         </div>
-                        <button class="nav-button" id="slideRightLocations">
+                        <button class="nav-button d-md-block d-none" id="slideRightLocations">
                             <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
                         </button>
                     </div>
                 </div>
 
-                <div id="photos-videos" class="property-photos-video-container section p-4 my-5">
-                    <h4>Photos and videos</h4>
-                    <hr />
-                    <div class="d-flex justify-content-start">
-                        <div class="image-video-container">
-                            <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
-                                Your browser does not support the video tag.
-                            </video>
-                            <img src="./images/play-button.png" width="50px" class="play-btn"
-                                alt="Youtube Play button" />
-                        </div>
-                        <div class="image-video-container">
-                            <img src="./images/property-image-1.jpg" class="property-image clickable-image"
-                                alt="Property Image" id="imageVidemodalImageVideososModal" />
-                        </div>
-                        <div class="image-video-container">
-                            <img src="./images/property-image-2.jpg" class="property-image clickable-image"
-                                alt="Property Image" id="modalImageVideos" />
-                        </div>
-                        <div class="image-video-container">
-                            <img src="./images/property-image-3.jpg" class="property-image clickable-image"
-                                alt="Property Image" id="modalImageVideos" />
-                            <p class="assets-numbers">+15</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="amenities-container py-3 my-5 section" id="amenities">
+                <div class="amenities-container my-5 section" id="amenities">
                     <h4>ABC Property Amenities</h4>
                     <div class="amenities-container-inner my-4">
                         <button class="nav-prev-button hidden" id="slideLeftAmenities">
@@ -1127,7 +1050,7 @@
                                 <p>Gymnasium: <span>Yes</span></p>
                             </div>
                         </div>
-                        <button class="nav-button" id="slideRightAmenities">
+                        <button class="nav-button d-md-block d-none" id="slideRightAmenities">
                             <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
                         </button>
                     </div>
@@ -1138,13 +1061,186 @@
                         <img src="./images/bro.png" width="130px" alt="" />
                         <div class="content">
                             <h2>Get your dream home with us</h2>
-                            <h3>Apply for easy home loans</h3>
-                            <button>Check for home loan</button>
+                            <h3 class="d-sm-block d-none">Apply for easy home loans</h3>
+                            <button class="d-flex align-items-center">Check <span class="d-sm-block d-none">for home
+                                    loan</span></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="inventory-container section py-3 my-5" id="inventory-pool">
+                <div class="property-floor-plan-container section py-3 mt-3" id="floor-plan">
+                    <h4>ABC Property Floor Plan</h4>
+                    <div class="floor-plan-container my-4">
+                        <div class="floor-plan-properties-categories-container d-flex justify-content-start">
+                            <div class="floor-plan-properties-categories active" data-target="1BHK-floor-plan">
+                                <p>1BHK</p>
+                                <p>1.75Cr</p>
+                            </div>
+                            <div class="floor-plan-properties-categories" data-target="2BHK-floor-plan">
+                                <p>2BHK</p>
+                                <p>2.3Cr - 2.38Cr</p>
+                            </div>
+                            <div class="floor-plan-properties-categories" data-target="3BHK-floor-plan">
+                                <p>3BHK</p>
+                                <p>4.52Cr - 4.61Cr</p>
+                            </div>
+                        </div>
+                        <div class="3BHK-floor-plan floor-plan mt-4" id="3BHK-floor-plan">
+                            <div class="square-foot-container d-flex justify-content-start">
+                                <p class="active" data-target="3BHK-897">897 SQ.FT</p>
+                                <p data-target="3BHK-1323">1323 SQ.FT</p>
+                            </div>
+                            <div class="square-foot-container-property active" id="3BHK-897">
+                                <p class="property-price mt-4">₹ 69.0 L</p>
+                                <div class="floor-plan-image-container">
+                                    <img src="./images/floor-plan.jpg" width="800px" alt="Property's floor plan" />
+                                </div>
+                                <div class="floor-plan-info mt-3 d-flex justify-content-start">
+                                    <div>
+                                        <p>Carpet Area:</p>
+                                        <p>897 sq.ft</p>
+                                    </div>
+                                    <div>
+                                        <p>Rera IDP-</p>
+                                        <p>BPL-21-3015</p>
+                                    </div>
+                                    <div>
+                                        <p>Possession Status</p>
+                                        <p>Mar, 2026</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="square-foot-container-property" id="3BHK-1323">
+                                <p class="property-price mt-4">₹ 99.0 L</p>
+                                <div class="floor-plan-image-container">
+                                    <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
+                                </div>
+                                <div class="floor-plan-info mt-3 d-flex justify-content-start">
+                                    <div>
+                                        <p>Carpet Area:</p>
+                                        <p>1323 sq.ft</p>
+                                    </div>
+                                    <div>
+                                        <p>Rera IDP-</p>
+                                        <p>BPL-21-3015</p>
+                                    </div>
+                                    <div>
+                                        <p>Possession Status</p>
+                                        <p>Mar, 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="2BHK-floor-plan floor-plan mt-4" id="2BHK-floor-plan">
+                            <div class="square-foot-container d-flex justify-content-start">
+                                <p class="active">897 SQ.FT</p>
+                            </div>
+                            <p class="property-price mt-4">₹ 59.0 L</p>
+                            <div class="floor-plan-image-container">
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
+                            </div>
+                            <div class="floor-plan-info mt-3 d-flex justify-content-start">
+                                <div>
+                                    <p>Carpet Area:</p>
+                                    <p>497 sq.ft</p>
+                                </div>
+                                <div>
+                                    <p>Rera IDP-</p>
+                                    <p>BPL-21-3015</p>
+                                </div>
+                                <div>
+                                    <p>Possession Status</p>
+                                    <p>Mar, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="1BHK-floor-plan floor-plan active mt-4" id="1BHK-floor-plan">
+                            <div class="square-foot-container d-flex justify-content-start">
+                                <p class="active">297 SQ.FT</p>
+                            </div>
+                            <p class="property-price mt-4">₹ 29.0 L</p>
+                            <div class="floor-plan-image-container">
+                                <img src="./images/floor-plan.png" width="800px" alt="Property's floor plan" />
+                            </div>
+                            <div class="floor-plan-info mt-3 d-flex justify-content-start">
+                                <div>
+                                    <p>Carpet Area:</p>
+                                    <p>297 sq.ft</p>
+                                </div>
+                                <div>
+                                    <p>Rera IDP-</p>
+                                    <p>BPL-21-3015</p>
+                                </div>
+                                <div>
+                                    <p>Possession Status</p>
+                                    <p>Mar, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="photos-videos" class="property-photos-video-container section p-4">
+                    <h4>Photos and videos</h4>
+                    <hr />
+                    <div class="d-flex justify-content-start">
+                        <div class="image-video-container">
+                            <video src="./videos/1.mp4" id="modalImageVideos" class="clickable-video">
+                                Your browser does not support the video tag.
+                            </video>
+                            <img src="./images/play-button.png" width="50px" class="play-btn"
+                                alt="Youtube Play button" />
+                        </div>
+                        <div class="image-video-container">
+                            <img src="./images/property-image-1.jpg" class="property-image clickable-image"
+                                alt="Property Image" id="imageVidemodalImageVideososModal" />
+                        </div>
+                        <div class="image-video-container">
+                            <img src="./images/property-image-2.jpg" class="property-image clickable-image"
+                                alt="Property Image" id="modalImageVideos" />
+                        </div>
+                        <div class="image-video-container">
+                            <img src="./images/property-image-3.jpg" class="property-image clickable-image"
+                                alt="Property Image" id="modalImageVideos" />
+                            <p class="assets-numbers">+15</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brochure-container section my-5" id="brochure">
+                    <h4>ABC Property Brochure</h4>
+                    <div class="brochure-container-inner">
+                        <button class="nav-prev-button hidden" id="slideLeftBrochures">
+                            <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
+                                alt="Left Arrow icon" />
+                        </button>
+                        <div class="brochure-container-inner-slider d-flex justify-content-start">
+                            <div class="image-container">
+                                <img src="./images/brochure/1.png" alt="Brochure" />
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/2.png" alt="Brochure" />
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/3.png" alt="Brochure" />
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/4.png" alt="Brochure" />
+                            </div>
+                            <div class="image-container">
+                                <img src="./images/brochure/4.png" alt="Brochure" />
+                            </div>
+                        </div>
+                        <button class="nav-button" id="slideRightBrochures">
+                            <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
+                        </button>
+                        <button class="view-btn open-brochure-modal-container">
+                            View Brochure
+                        </button>
+                    </div>
+                </div>
+
+                <!-- <div class="inventory-container section py-3 my-5" id="inventory-pool">
                     <h4>Inventory Pool</h4>
                     <div class="inventory-inner-container my-4">
                         <button class="nav-prev-button hidden" id="slideLeftInventory">
@@ -1217,7 +1313,7 @@
                             <img src="./images/right-arrow.png" width="15px" alt="Left Arrow icon" />
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="resources-container section py-3 my-5" id="resources">
                     <h4>Helpful Resources</h4>
@@ -1262,7 +1358,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="nav-button" id="slideRightResources">
+                        <button class="nav-button d-none d-md-block" id="slideRightResources">
                             <img src="./images/right-arrow.png" width="15px" alt="Right Arrow icon" />
                         </button>
                     </div>
@@ -1409,7 +1505,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="nav-button" id="slideRightProperties">
+                        <button class="nav-button d-none d-md-block" id="slideRightProperties">
                             <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
                         </button>
                     </div>
@@ -1610,7 +1706,7 @@
                 </div>
 
                 <div class="listed-properties-container py-3 my-5">
-                    <h4>Resale Projects in Kolar Road</h4>
+                    <h4>Similar Proerties</h4>
                     <button class="nav-prev-button hidden" id="slideLeftRelatedProperties">
                         <img src="./images/right-arrow-white.png" width="25px" style="transform: rotate(180deg)"
                             alt="Right Aroow icon" />
@@ -1971,7 +2067,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="nav-button" id="slideRightRelatedProperties">
+                    <button class="nav-button d-none d-sm-block" id="slideRightRelatedProperties">
                         <img src="./images/right-arrow-white.png" width="25px" alt="Right Arrow icon" />
                     </button>
                 </div>
@@ -2591,6 +2687,11 @@
                 <button class="blue-btn close-icon">View 1364 properties</button>
             </div>
         </div>
+
+        <div class="cta-buttons d-flex d-sm-none align-items-center justify-content-between gap-2">
+            <button class="open-brochure-modal-container">Contact Seller</button>
+            <button id="open-schedule-calendar-modal-container">Schedule Visit</button>
+        </div>
     </main>
 
     <footer class="footer mt-5">
@@ -2934,7 +3035,7 @@
     <script defer src="./schedule-section.js"></script>
     <script defer src="./disclamer-modal.js"></script>
     <script defer src="./compare-properties-slider.js"></script>
-    <script defer src="./inventorySlider.js"></script>
+    <!-- <script defer src="./inventorySlider.js"></script> -->
     <script defer src="./rive-animations.js"></script>
     <script defer src="./related-properties-slider.js"></script>
     <script defer src="share-functionality.js"></script>
