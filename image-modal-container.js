@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const propertyImagesDiv = document.querySelector(".property-images-div");
   const carouselItems =
-    propertyImagesDiv.querySelectorAll(".carousel-item img");
+    propertyImagesDiv.querySelectorAll(".splide__slide img");
   const carouselInner = propertyImagesDiv.querySelector(".carousel-inner");
   const imageModal = document.getElementById("imageModal");
   const modalHeader = imageModal.querySelector(".image-modal-header");
