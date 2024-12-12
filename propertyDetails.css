@@ -803,16 +803,24 @@ nav .nav-filter li:hover {
   display: none;
 }
 
-.property-images-div .carousel-item {
+.property-images-div .splide__slide {
   width: 100%;
   height: 100%;
 }
 
-.property-images-div .carousel-item img {
+.property-images-div .splide__slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.splide__arrow--next {
+  display: none !important;
+}
+
+.splide__arrow--prev {
+  display: none !important;
 }
 
 .first-item {

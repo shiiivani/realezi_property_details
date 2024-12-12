@@ -1,21 +1,21 @@
 // Opening filter section
-document.addEventListener("DOMContentLoaded", function () {
-  const searchBtn = document.getElementById("pl-search-tag-div");
-  const filterSection = document.querySelector(".filter-section-modal");
-  const closeBtns = document.querySelectorAll(
-    ".filter-section-modal .close-icon"
-  );
+// document.addEventListener("DOMContentLoaded", function () {
+//   const searchBtn = document.getElementById("pl-search-tag-div");
+//   const filterSection = document.querySelector(".filter-section-modal");
+//   const closeBtns = document.querySelectorAll(
+//     ".filter-section-modal .close-icon"
+//   );
 
-  searchBtn.addEventListener("click", function () {
-    filterSection.classList.remove("hide");
-  });
+//   searchBtn.addEventListener("click", function () {
+//     filterSection.classList.remove("hide");
+//   });
 
-  closeBtns.forEach(function (closeBtn) {
-    closeBtn.addEventListener("click", function () {
-      filterSection.classList.add("hide");
-    });
-  });
-});
+//   closeBtns.forEach(function (closeBtn) {
+//     closeBtn.addEventListener("click", function () {
+//       filterSection.classList.add("hide");
+//     });
+//   });
+// });
 
 // Budget Range
 document.addEventListener("DOMContentLoaded", function () {
